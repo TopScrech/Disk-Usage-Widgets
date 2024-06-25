@@ -10,7 +10,7 @@ struct MediumWidgetView: View {
     
     var body: some View {
         HStack {
-            Graph(innerRadius: 40, angularInset: 4, cornerRadius: 3, showOverlay: false)
+            Graph(innerRadius: 40, angularInset: 4, cornerRadius: 5, showOverlay: false)
             
             VStack {
                 Text("Preview SSD")

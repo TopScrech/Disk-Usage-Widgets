@@ -17,20 +17,6 @@ extension FileManager {
         return 0
     }
     
-    func volumeTotalDiskSpace(_ url: URL) throws -> Int {
-        do {
-            let values = try url.resourceValues(forKeys: [.volumeTotalCapacityKey])
-            
-            if let totalCapacity = values.volumeTotalCapacity {
-                return totalCapacity
-            }
-        } catch let error {
-            print("FileManager+VolumeSize: Problem while requesting volume total capacity: \(error)")
-        }
-        
-        return 0
-    }
-    
     func volumeUsedDiskSpace(_ url: URL) throws -> Int64 {
         do {
             // Fetch total capacity
@@ -43,9 +29,24 @@ extension FileManager {
             let usedCapacity = Int64(totalCapacity) - freeCapacity
             
             return usedCapacity
+            
         } catch let error {
             print("FileManager+VolumeSize: Error while calculating used disk space: \(error)")
             throw error
         }
+    }
+    
+    func volumeTotalDiskSpace(_ url: URL) throws -> Int {
+        do {
+            let values = try url.resourceValues(forKeys: [.volumeTotalCapacityKey])
+            
+            if let totalCapacity = values.volumeTotalCapacity {
+                return totalCapacity
+            }
+        } catch let error {
+            print("FileManager+VolumeSize: Problem while requesting volume total capacity: \(error)")
+        }
+        
+        return 0
     }
 }
