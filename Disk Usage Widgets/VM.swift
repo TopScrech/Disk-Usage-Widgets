@@ -1,4 +1,5 @@
 import ScrechKit
+import DiskArbitration
 
 @Observable
 final class VM {
@@ -16,10 +17,23 @@ final class VM {
         
         for volume in volumes {
             do {
-                let resourceValues = try volume.resourceValues(forKeys: [.volumeNameKey, .volumeLocalizedNameKey])
+                let keys: Set<URLResourceKey> = [
+                    .volumeNameKey,
+                    .volumeLocalizedNameKey,
+                    .volumeIsLocalKey,
+                    .volumeTypeNameKey,
+                    .volumeIsEjectableKey,
+                    .volumeIsEncryptedKey
+                ]
                 
-                guard let volumeName = resourceValues.volumeName,
-                      let volumeLocalizedName = resourceValues.volumeLocalizedName
+                let resourceValues = try volume.resourceValues(forKeys: keys)
+                
+                guard let name = resourceValues.volumeName,
+                      let localizedName = resourceValues.volumeLocalizedName,
+                      let isLocal = resourceValues.volumeIsLocal,
+                      let type = resourceValues.volumeTypeName,
+                      let isEjectable = resourceValues.volumeIsEjectable,
+                      let isEncrypted = resourceValues.volumeIsEncrypted
                 else { return }
                 
                 let space =      try fm.volumeFreeDiskSpace(volume)
@@ -27,13 +41,15 @@ final class VM {
                 
                 let disk = DiskEntry(
                     url: volume,
-                    name: volumeName,
-                    localizedName: volumeLocalizedName,
+                    name: name,
+                    type: type.uppercased(),
+                    isLocal: isLocal,
+                    isEjectable: isEjectable,
+                    isEncrypted: isEncrypted,
+                    localizedName: localizedName,
                     freeSpaceBytes: space,
                     totalSpaceBytes: totalSpace
                 )
-                
-                print(disk.freeSpaceBytes)
                 
                 foundDisks.append(disk)
             } catch {
@@ -42,5 +58,29 @@ final class VM {
         }
         
         disks = foundDisks
+    }
+    
+    
+    func ejectDisk(_ diskPath: String) {
+        guard let session = DASessionCreate(kCFAllocatorDefault) else {
+            print("Failed to create DASession")
+            return
+        }
+        
+        let volumePath = diskPath as CFString
+        
+        guard let diskURL = URL(string: volumePath as String),
+              let disk = DADiskCreateFromVolumePath(kCFAllocatorDefault, session, diskURL as CFURL)
+        else {
+            print("Failed to create disk reference")
+            return
+        }
+        DADiskEject(disk, DADiskEjectOptions(kDADiskEjectOptionDefault), { disk, status, context in
+            if status as! Int == kDAReturnSuccess {
+                print("Disk ejected successfully")
+            } else {
+                print("Failed to eject disk")
+            }
+        }, nil)
     }
 }

@@ -14,13 +14,7 @@ struct Graph: View {
         self.showOverlay = showOverlay
     }
     
-    let data: [DiskEntry] = [.init(
-        url: URL(string: ""),
-        name: "Preview SSD",
-        localizedName: "Превью SSD",
-        freeSpaceBytes: 500000000000,
-        totalSpaceBytes: 1000000000000
-    )]
+    let data: [DiskEntry] = [Preview.disk]
     
     var body: some View {
         VStack {

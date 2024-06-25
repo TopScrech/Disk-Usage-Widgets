@@ -13,7 +13,25 @@ struct HomeView: View {
         VStack {
             Table(vm.disks) {
                 TableColumn("Name") { disk in
-                    Text(disk.name)
+                    Label(disk.name, systemImage: disk.isLocal ? "externaldrive" : "externaldrive.connected.to.line.below")
+                }
+                
+                TableColumn("isEjectable") { disk in
+                    if disk.isEjectable {
+                        Button("Eject (not tested)") {
+                            if let url = disk.url?.path {
+                                vm.ejectDisk(url)
+                            }
+                        }
+                    }
+                }
+                
+                TableColumn("isEncrypted") { disk in
+                    Text(disk.isEncrypted ? "+" : "")
+                }
+                
+                TableColumn("Type") { disk in
+                    Text(disk.type)
                 }
                 
                 TableColumn("Free Space") { disk in
@@ -22,6 +40,10 @@ struct HomeView: View {
                 
                 TableColumn("Total Space") { disk in
                     Text(disk.totalSpace)
+                }
+                
+                TableColumn("Total Space") { disk in
+                    Text(disk.url?.path ?? "-")
                 }
             }
             .onReceive(publisher) { _ in
