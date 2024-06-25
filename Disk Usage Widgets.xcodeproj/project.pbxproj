@@ -70,6 +70,7 @@
 		F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Simple Entry.swift"; sourceTree = "<group>"; };
 		F397D7932C2AF4A60069F3EB /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		F397D7952C2AF4BE0069F3EB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		F3AC30672C2B69530089F583 /* Disk-Usage-Widgets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Disk-Usage-Widgets-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F3B508782C2ADD4600FCAE39 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widgets.swift"; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		F3CEC0032C2ABA6800B44CE4 /* Disk Usage Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				F3AC30672C2B69530089F583 /* Disk-Usage-Widgets-Info.plist */,
 				F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */,
 				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F33812CC2C2ABBCD00415506 /* VM.swift */,
@@ -499,6 +501,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Disk-Usage-Widgets-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,6 +534,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Disk-Usage-Widgets-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
