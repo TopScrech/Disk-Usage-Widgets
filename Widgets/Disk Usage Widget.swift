@@ -25,8 +25,6 @@ struct DiskUsageWidgetView: View {
 }
 
 struct DiskUsageWidget: Widget {
-    @Environment(\.widgetFamily) private var family
-    
     private let kind = "Disk Usage Widgets"
     private let provider = Provider()
     
