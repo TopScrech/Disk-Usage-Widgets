@@ -34,8 +34,8 @@ struct SmallWidget: Widget {
             }
         }
         //        .supportedFamilies([.systemSmall])
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Small Widget")
+        .description("This is an example widget")
     }
 }
 

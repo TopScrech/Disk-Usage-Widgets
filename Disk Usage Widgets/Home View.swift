@@ -10,7 +10,7 @@ struct HomeView: View {
 #endif
     
     var body: some View {
-        VStack {            
+        VStack {
             Table(vm.disks) {
                 TableColumn("Name") { disk in
                     Text(disk.name)
