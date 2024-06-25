@@ -31,46 +31,8 @@ struct SmallWidgetView: View {
     }
 }
 
-struct SmallWidget: Widget {
-    private let kind = "Widgets"
-    private let provider = Provider()
-    
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: provider) { entry in
-            if #available(macOS 14, iOS 17, *) {
-                SmallWidgetView(entry)
-                    .containerBackground(.ultraThickMaterial, for: .widget)
-            } else {
-                SmallWidgetView(entry)
-                    .padding()
-                    .background()
-            }
-        }
-        .supportedFamilies([.systemSmall])
-        .configurationDisplayName("Small Widget")
-        .description("This is an example widget")
-    }
-}
-
-struct SpaceUsageWidget: Widget {
-    @Environment(\.widgetFamily) private var family
-    
-    private let kind = "Disk Usage Widgets"
-    private let provider = Provider()
-    
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: provider) { entry in
-            DiskUsageWidgetView(entry)
-                .containerBackground(.ultraThinMaterial, for: .widget)
-        }
-        .supportedFamilies([.systemSmall, .systemMedium])
-        .configurationDisplayName("Disk Usage")
-        .description("This is an example")
-    }
-}
-
 #Preview(as: .systemSmall) {
-    SmallWidget()
+    DiskUsageWidget()
 } timeline: {
     SimpleEntry(date: Date(), emoji: "")
 }

@@ -7,8 +7,7 @@ struct MediumWidgetView: View {
     init(_ entry: Provider.Entry) {
         self.entry = entry
     }
-    @Environment(\.widgetFamily) private var family
-
+    
     var body: some View {
         HStack {
             Graph(innerRadius: 40, angularInset: 4, cornerRadius: 5, showOverlay: false)
@@ -24,17 +23,7 @@ struct MediumWidgetView: View {
                     Image(systemName: "externaldrive")
                     
                     Text(Date(), format: .dateTime.hour().minute())
-                    switch family {
-                    case .systemSmall:
-                        Text("Small")
-                        
-                    case .systemMedium:
-                        Text("Med")
-                        
-                    default:
-                        Text("Error")
-                    }
-
+                    
                     //                    Button {
                     //
                     //                    } label: {
@@ -76,32 +65,11 @@ struct MediumWidgetView: View {
                 .caption2()
             }
         }
-        .containerBackground(.ultraThickMaterial, for: .widget)
-    }
-}
-
-struct MediumWidget: Widget {
-    let kind = "Medium Widget"
-    
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(macOS 14, *) {
-                MediumWidgetView(entry)
-                    .containerBackground(.ultraThickMaterial, for: .widget)
-            } else {
-                MediumWidgetView(entry)
-                    .padding()
-                    .background()
-            }
-        }
-        .supportedFamilies([.systemMedium])
-        .configurationDisplayName("Memium Widget")
-        .description("This is an example widget")
     }
 }
 
 #Preview(as: .systemMedium) {
-    MediumWidget()
+    DiskUsageWidget()
 } timeline: {
     SimpleEntry(date: Date(), emoji: "")
 }
