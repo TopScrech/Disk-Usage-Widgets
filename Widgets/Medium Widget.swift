@@ -7,7 +7,8 @@ struct MediumWidgetView: View {
     init(_ entry: Provider.Entry) {
         self.entry = entry
     }
-    
+    @Environment(\.widgetFamily) private var family
+
     var body: some View {
         HStack {
             Graph(innerRadius: 40, angularInset: 4, cornerRadius: 5, showOverlay: false)
@@ -23,7 +24,17 @@ struct MediumWidgetView: View {
                     Image(systemName: "externaldrive")
                     
                     Text(Date(), format: .dateTime.hour().minute())
-                    
+                    switch family {
+                    case .systemSmall:
+                        Text("Small")
+                        
+                    case .systemMedium:
+                        Text("Med")
+                        
+                    default:
+                        Text("Error")
+                    }
+
                     //                    Button {
                     //
                     //                    } label: {

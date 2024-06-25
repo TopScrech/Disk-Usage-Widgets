@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F326A3C22C2B7FBB00459E3C /* Disk Usage Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */; };
 		F33812CB2C2ABBA500415506 /* File Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CA2C2ABBA500415506 /* File Manager.swift */; };
 		F33812CD2C2ABBCD00415506 /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CC2C2ABBCD00415506 /* VM.swift */; };
 		F33812CF2C2AC1B200415506 /* Disk Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CE2C2AC1B200415506 /* Disk Entry.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widget.swift"; sourceTree = "<group>"; };
 		F33812CA2C2ABBA500415506 /* File Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File Manager.swift"; sourceTree = "<group>"; };
 		F33812CC2C2ABBCD00415506 /* VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.swift; sourceTree = "<group>"; };
 		F33812CE2C2AC1B200415506 /* Disk Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Entry.swift"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */,
 				F397D7802C2AEE020069F3EB /* Small Widget.swift */,
 				F397D78C2C2AF26C0069F3EB /* Medium Widget.swift */,
+				F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */,
 				F397D7932C2AF4A60069F3EB /* Graph.swift */,
 				F397D7822C2AEE030069F3EB /* Assets.xcassets */,
 				F397D7842C2AEE030069F3EB /* Info.plist */,
@@ -277,6 +280,7 @@
 				F397D78E2C2AF2B90069F3EB /* Disk Entry.swift in Sources */,
 				F397D77F2C2AEE020069F3EB /* Widgets Bundle.swift in Sources */,
 				F397D7812C2AEE020069F3EB /* Small Widget.swift in Sources */,
+				F326A3C22C2B7FBB00459E3C /* Disk Usage Widget.swift in Sources */,
 				F397D78D2C2AF26C0069F3EB /* Medium Widget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,9 +321,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgets/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Widgets";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -330,10 +334,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,9 +354,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgets/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Widgets";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -362,10 +367,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
