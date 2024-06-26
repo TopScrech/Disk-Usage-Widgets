@@ -16,6 +16,7 @@ struct HomeView: View {
                     Label(disk.name, systemImage: disk.isLocal ? "externaldrive" : "externaldrive.connected.to.line.below")
                 }
                 
+#if canImport(DiskArbitration)
                 TableColumn("isEjectable") { disk in
                     if disk.isEjectable {
                         Button("Eject (not tested)") {
@@ -25,6 +26,7 @@ struct HomeView: View {
                         }
                     }
                 }
+#endif
                 
                 TableColumn("isEncrypted") { disk in
                     Text(disk.isEncrypted ? "+" : "")

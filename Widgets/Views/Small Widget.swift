@@ -8,6 +8,10 @@ struct SmallWidgetView: View {
         self.entry = entry
     }
     
+    private var disk: DiskEntry? {
+        entry.disks.first
+    }
+    
     var body: some View {
         VStack {
             Graph(
@@ -16,7 +20,7 @@ struct SmallWidgetView: View {
                 cornerRadius: 3
             )
             
-            Label("Preview SSD", systemImage: "externaldrive")
+            Label(disk?.name ?? "Unknown", systemImage: "externaldrive")
                 .bold()
                 .footnote()
                 .foregroundStyle(.secondary)

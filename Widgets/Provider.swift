@@ -13,23 +13,21 @@ struct Provider: TimelineProvider {
             date: Date(),
             emoji: "😀"
         )
+        
         completion(entry)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
+        let vm = VM()
+        vm.listAvailableDisks()
+        
         let entries: [SimpleEntry] = [
             .init(
                 date: Date(),
-                emoji: ""
+                emoji: "",
+                disks: [Preview.disk]
             )
         ]
-        
-        //        let currentDate = Date()
-        //        for hourOffset in 0 ..< 5 {
-        //            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-        //            let entry = SimpleEntry(date: entryDate, emoji: "😀")
-        //            entries.append(entry)
-        //        }
         
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
