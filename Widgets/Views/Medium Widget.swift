@@ -19,8 +19,7 @@ struct MediumWidgetView: View {
                     disk,
                     innerRadius: 40,
                     angularInset: 4,
-                    cornerRadius: 5,
-                    showOverlay: false
+                    cornerRadius: 5
                 )
             }
             
