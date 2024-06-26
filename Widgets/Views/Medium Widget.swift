@@ -32,6 +32,14 @@ struct MediumWidgetView: View {
         disk?.usedSpacePercentage ?? "-"
     }
     
+    private var buildNumber: String {
+        if let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            buildNumber
+        } else {
+            "Unknown"
+        }
+    }
+    
     var body: some View {
         HStack {
             if let disk {

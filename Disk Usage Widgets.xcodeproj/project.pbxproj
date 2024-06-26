@@ -21,7 +21,6 @@
 		F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DD2C2AD3DE00415506 /* SwiftUI.framework */; };
 		F397D77F2C2AEE020069F3EB /* Widgets Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */; };
 		F397D7812C2AEE020069F3EB /* Small Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D7802C2AEE020069F3EB /* Small Widget.swift */; };
-		F397D7832C2AEE030069F3EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F397D7822C2AEE030069F3EB /* Assets.xcassets */; };
 		F397D7882C2AEE030069F3EB /* WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F397D78D2C2AF26C0069F3EB /* Medium Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D78C2C2AF26C0069F3EB /* Medium Widget.swift */; };
 		F397D78E2C2AF2B90069F3EB /* Disk Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CE2C2AC1B200415506 /* Disk Entry.swift */; };
@@ -31,7 +30,8 @@
 		F397D7962C2AF4BE0069F3EB /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D7952C2AF4BE0069F3EB /* Provider.swift */; };
 		F3CEC0052C2ABA6800B44CE4 /* Disk Usage Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */; };
 		F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0062C2ABA6800B44CE4 /* Home View.swift */; };
-		F3CEC0092C2ABA6900B44CE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CEC0082C2ABA6900B44CE4 /* Assets.xcassets */; };
+		F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
+		F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,6 @@
 		F397D77A2C2AEE020069F3EB /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Widgets Bundle.swift"; sourceTree = "<group>"; };
 		F397D7802C2AEE020069F3EB /* Small Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Small Widget.swift"; sourceTree = "<group>"; };
-		F397D7822C2AEE030069F3EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F397D7842C2AEE030069F3EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F397D7852C2AEE030069F3EB /* Widgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widgets.entitlements; sourceTree = "<group>"; };
 		F397D78C2C2AF26C0069F3EB /* Medium Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medium Widget.swift"; sourceTree = "<group>"; };
@@ -82,8 +81,8 @@
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widgets.swift"; sourceTree = "<group>"; };
 		F3CEC0062C2ABA6800B44CE4 /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
-		F3CEC0082C2ABA6900B44CE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3CEC00D2C2ABA6900B44CE4 /* Disk_Usage_Widgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Disk_Usage_Widgets.entitlements; sourceTree = "<group>"; };
+		F3DB25472C2C514C00A0C066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +134,6 @@
 				F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */,
 				F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */,
 				F326A3C82C2B8D8100459E3C /* Views */,
-				F397D7822C2AEE030069F3EB /* Assets.xcassets */,
 				F397D7842C2AEE030069F3EB /* Info.plist */,
 				F397D7852C2AEE030069F3EB /* Widgets.entitlements */,
 			);
@@ -173,7 +171,7 @@
 				F33812CE2C2AC1B200415506 /* Disk Entry.swift */,
 				F326A3C32C2B884400459E3C /* Preview Disk.swift */,
 				F33812CA2C2ABBA500415506 /* File Manager.swift */,
-				F3CEC0082C2ABA6900B44CE4 /* Assets.xcassets */,
+				F3DB25472C2C514C00A0C066 /* Assets.xcassets */,
 				F3CEC00D2C2ABA6900B44CE4 /* Disk_Usage_Widgets.entitlements */,
 			);
 			path = "Disk Usage Widgets";
@@ -269,7 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F397D7832C2AEE030069F3EB /* Assets.xcassets in Resources */,
+				F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3CEC0092C2ABA6900B44CE4 /* Assets.xcassets in Resources */,
+				F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
