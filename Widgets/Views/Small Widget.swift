@@ -38,7 +38,7 @@ struct SmallWidgetView: View {
                 .padding(.top, 5)
         }
         .overlay(alignment: .topLeading) {
-            if !entry.configuration.showBuildNumber {
+            if entry.configuration.showBuildNumber {
                 Text("B\(buildNumber)")
                     .caption2()
                     .foregroundStyle(.secondary)

@@ -63,7 +63,7 @@ struct MediumWidgetView: View {
                     
                     Text(Date(), format: .dateTime.hour().minute())
                     
-                    if !entry.configuration.showBuildNumber {
+                    if entry.configuration.showBuildNumber {
                         Text("B\(buildNumber)")
                     }
                     
