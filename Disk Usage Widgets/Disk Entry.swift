@@ -12,6 +12,10 @@ struct DiskEntry: Identifiable {
     let freeSpaceBytes: Int64
     let totalSpaceBytes: Int
     
+    var icon: String {
+        isLocal ? "externaldrive" : "externaldrive.connected.to.line.below"
+    }
+    
     var freeSpace: String {
         formatBytes(freeSpaceBytes)
     }

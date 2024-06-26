@@ -59,8 +59,7 @@ struct MediumWidgetView: View {
                     .lineLimit(1)
                 
                 HStack {
-                    Image(systemName: "externaldrive")
-#warning("ICON")
+                    Image(systemName: disk?.icon ?? "")
                     
                     if entry.configuration.showRefreshTime {
                         Text(Date(), format: .dateTime.hour().minute())

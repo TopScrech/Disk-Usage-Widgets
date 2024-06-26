@@ -36,9 +36,8 @@ struct SmallWidgetView: View {
             }
             
             HStack {
-                Label(name, systemImage: "externaldrive")
+                Label(name, systemImage: disk?.icon ?? "")
                     .bold()
-//                    .footnote()
                     .foregroundStyle(.secondary)
                     .padding(.top, 5)
                     .lineLimit(1)
