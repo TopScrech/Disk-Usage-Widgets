@@ -40,11 +40,15 @@ struct HomeView: View {
                     Text(disk.freeSpace)
                 }
                 
+                TableColumn("Used Space") { disk in
+                    Text(disk.usedSpace)
+                }
+                
                 TableColumn("Total Space") { disk in
                     Text(disk.totalSpace)
                 }
                 
-                TableColumn("Total Space") { disk in
+                TableColumn("Path") { disk in
                     Text(disk.url?.path ?? "-")
                 }
             }

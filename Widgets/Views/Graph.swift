@@ -39,7 +39,7 @@ struct Graph: View {
                     angularInset: angularInset
                 )
                 .cornerRadius(cornerRadius)
-                .foregroundStyle(by: .value("Category", disk.totalSpace))
+                .foregroundStyle(by: .value("Category", disk.usedSpace))
             }
             .chartLegend(.hidden)
             .overlay {
