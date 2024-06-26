@@ -8,6 +8,9 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     
     @Parameter(title: "Show build number", default: false)
     var showBuildNumber: Bool
+    
+    @Parameter(title: "Show refresh button", default: true)
+    var showRefreshButton: Bool
 }
 
 struct RefreshIntent: AppIntent {

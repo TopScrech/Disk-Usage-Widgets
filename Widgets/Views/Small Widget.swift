@@ -20,6 +20,10 @@ struct SmallWidgetView: View {
         }
     }
     
+    private var name: String {
+        disk?.name ?? "Unknown"
+    }
+    
     var body: some View {
         VStack {
             if let disk {
@@ -31,25 +35,35 @@ struct SmallWidgetView: View {
                 )
             }
             
-            Label(disk?.name ?? "Unknown", systemImage: "externaldrive")
-                .bold()
-                .footnote()
-                .foregroundStyle(.secondary)
-                .padding(.top, 5)
+            HStack {
+                Label(name, systemImage: "externaldrive")
+                    .bold()
+                    .footnote()
+                    .foregroundStyle(.secondary)
+                    .padding(.top, 5)
+                    .lineLimit(1)
+            }
         }
         .overlay(alignment: .topLeading) {
-            if entry.configuration.showBuildNumber {
-                Text("B\(buildNumber)")
-                    .caption2()
-                    .foregroundStyle(.secondary)
-                    .offset(x: -5, y: -5)
+            if entry.configuration.showRefreshButton {
+                Button(intent: RefreshIntent()) {
+                    Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
+                        .caption2()
+                }
+                .offset(x: -10, y: -10)
             }
         }
         .overlay(alignment: .topTrailing) {
-            Text(entry.date, format: .dateTime.hour().minute())
-                .caption2()
-                .foregroundStyle(.secondary)
-                .offset(x: 5, y: -5)
+            VStack(alignment: .trailing) {
+                Text(entry.date, format: .dateTime.hour().minute())
+                
+                if entry.configuration.showBuildNumber {
+                    Text("B\(buildNumber)")
+                }
+            }
+            .caption2()
+            .foregroundStyle(.secondary)
+            .offset(x: 5, y: -5)
         }
     }
 }
@@ -59,6 +73,7 @@ struct SmallWidgetView: View {
 } timeline: {
     SimpleEntry(
         date: Date(),
-        configuration: .init()
+        configuration: .init(),
+        disks: [Preview.disk]
     )
 }

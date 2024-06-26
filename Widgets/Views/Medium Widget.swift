@@ -79,13 +79,6 @@ struct MediumWidgetView: View {
                 
                 Spacer()
                 
-                Button(intent: RefreshIntent()) {
-                    Text("Update")
-                        .caption2()
-                }
-                
-                Spacer()
-                
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Available") // Available
@@ -93,7 +86,7 @@ struct MediumWidgetView: View {
                         Text("Total")   // Total
                     }
                     .foregroundStyle(.secondary)
-                    .frame(width: 70)
+                    .frame(width: 60)
                     
                     VStack(alignment: .trailing, spacing: 2) {
                         Text(available) // Available
@@ -109,10 +102,19 @@ struct MediumWidgetView: View {
                         Text("100 %")           // Total
                     }
                     .bold()
-                    .frame(width: 50)
+                    .frame(width: 60)
                 }
                 .lineLimit(1)
-                .caption2()
+                .footnote()
+            }
+        }
+        .overlay(alignment: .topLeading) {
+            if entry.configuration.showRefreshButton {
+                Button(intent: RefreshIntent()) {
+                    Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
+                        .caption2()
+                }
+                .offset(x: -10, y: -10)
             }
         }
     }
