@@ -4,14 +4,16 @@ struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(
             date: Date(),
-            emoji: "😀"
+            emoji: "😀",
+            disks: [Preview.disk]
         )
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(
             date: Date(),
-            emoji: "😀"
+            emoji: "😀",
+            disks: [Preview.disk]
         )
         
         completion(entry)
@@ -25,7 +27,7 @@ struct Provider: TimelineProvider {
             .init(
                 date: Date(),
                 emoji: "",
-                disks: [Preview.disk]
+                disks: vm.disks
             )
         ]
         

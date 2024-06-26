@@ -12,6 +12,14 @@ struct SmallWidgetView: View {
         entry.disks.first
     }
     
+    private var buildNumber: String {
+        if let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            buildNumber
+        } else {
+            "Unknown"
+        }
+    }
+    
     var body: some View {
         VStack {
             if let disk {
@@ -28,6 +36,12 @@ struct SmallWidgetView: View {
                 .footnote()
                 .foregroundStyle(.secondary)
                 .padding(.top, 5)
+        }
+        .overlay(alignment: .topLeading) {
+            Text("B\(buildNumber)")
+                .caption2()
+                .foregroundStyle(.secondary)
+                .offset(x: -5, y: -5)
         }
         .overlay(alignment: .topTrailing) {
             Text(entry.date, format: .dateTime.hour().minute())

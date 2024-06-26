@@ -63,6 +63,8 @@ struct MediumWidgetView: View {
                     
                     Text(Date(), format: .dateTime.hour().minute())
                     
+                    Text("B\(buildNumber)")
+                    
                     //                    Button {
                     //
                     //                    } label: {
