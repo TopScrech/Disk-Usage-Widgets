@@ -2,9 +2,9 @@ import ScrechKit
 
 @Observable
 final class VM {
-    let fm = FileManager.default
-    
     var disks: [DiskEntry] = []
+    
+    private let fm = FileManager.default
     
     func listAvailableDisks() {
         guard let volumes = fm.mountedVolumeURLs(includingResourceValuesForKeys: nil, options: .skipHiddenVolumes) else {

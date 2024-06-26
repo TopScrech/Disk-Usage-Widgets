@@ -28,9 +28,7 @@ struct Provider: AppIntentTimelineProvider {
         vm.listAvailableDisks()
         
 #if DEBUG
-        let entries: [SimpleEntry] = [
-            previewEntry
-        ]
+        let entries: [SimpleEntry] = [previewEntry]
 #else
         let entries: [SimpleEntry] = [
             .init(
