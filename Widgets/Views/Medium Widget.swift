@@ -1,5 +1,5 @@
-import WidgetKit
 import SwiftUI
+import WidgetKit
 
 struct MediumWidgetView: View {
     private var entry: Provider.Entry
