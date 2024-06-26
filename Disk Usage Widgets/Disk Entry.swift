@@ -16,7 +16,19 @@ struct DiskEntry: Identifiable {
         formatBytes(freeSpaceBytes)
     }
     
+    var usedSpace: String {
+        formatBytes(totalSpaceBytes - Int(freeSpaceBytes))
+    }
+    
     var totalSpace: String {
         formatBytes(totalSpaceBytes)
+    }
+    
+    var freeSpacePercentage: String {
+        String(format: "%.2f %%", (Double(freeSpaceBytes) / Double(totalSpaceBytes)) * 100)
+    }
+    
+    var usedSpacePercentage: String {
+        String(format: "%.2f %%", (Double(totalSpaceBytes - Int(freeSpaceBytes)) / Double(totalSpaceBytes)) * 100)
     }
 }
