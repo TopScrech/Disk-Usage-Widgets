@@ -60,7 +60,7 @@ struct MediumWidgetView: View {
                 
                 HStack {
                     Image(systemName: "externaldrive")
-                    #warning("ICON")
+#warning("ICON")
                     
                     if entry.configuration.showRefreshTime {
                         Text(Date(), format: .dateTime.hour().minute())
@@ -69,13 +69,6 @@ struct MediumWidgetView: View {
                     if entry.configuration.showBuildNumber {
                         Text("B\(buildNumber)")
                     }
-                    
-                    //                    Button {
-                    //
-                    //                    } label: {
-                    //                        Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
-                    //                    }
-                    //                    .buttonStyle(.plain)
                 }
                 .footnote()
                 .foregroundStyle(.secondary)
@@ -89,7 +82,7 @@ struct MediumWidgetView: View {
                         Text("Total")   // Total
                     }
                     .foregroundStyle(.secondary)
-                    .frame(width: 60)
+                    .frame(width: 55)
                     
                     VStack(alignment: .trailing, spacing: 2) {
                         Text(available) // Available

@@ -45,11 +45,15 @@ struct Graph: View {
             .chartLegend(.hidden)
             .overlay {
                 if showOverlay {
-                    VStack {
+                    VStack(spacing: -2) {
                         Text("Available")
                             .footnote()
                         
                         Text(disk.freeSpace)
+                            .frame(width: 70)
+                            .lineLimit(1)
+                            .scaledToFit()
+                            .minimumScaleFactor(0.8)
                             .bold()
                     }
                     .rounded()
