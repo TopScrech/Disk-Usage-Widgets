@@ -9,3 +9,11 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     @Parameter(title: "Show build number", default: false)
     var showBuildNumber: Bool
 }
+
+struct RefreshIntent: AppIntent {
+    static var title: LocalizedStringResource = "Refresh"
+    
+    func perform() async throws -> some IntentResult {
+        .result()
+    }
+}
