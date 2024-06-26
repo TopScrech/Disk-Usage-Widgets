@@ -28,6 +28,7 @@
 		F397D7922C2AF3B30069F3EB /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F397D7912C2AF3B30069F3EB /* ScrechKit */; };
 		F397D7942C2AF4A60069F3EB /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D7932C2AF4A60069F3EB /* Graph.swift */; };
 		F397D7962C2AF4BE0069F3EB /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D7952C2AF4BE0069F3EB /* Provider.swift */; };
+		F39AA8462C2C962600CD84F4 /* Intent Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AA8452C2C962600CD84F4 /* Intent Configuration.swift */; };
 		F3CEC0052C2ABA6800B44CE4 /* Disk Usage Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */; };
 		F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0062C2ABA6800B44CE4 /* Home View.swift */; };
 		F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Simple Entry.swift"; sourceTree = "<group>"; };
 		F397D7932C2AF4A60069F3EB /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		F397D7952C2AF4BE0069F3EB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		F39AA8452C2C962600CD84F4 /* Intent Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Intent Configuration.swift"; sourceTree = "<group>"; };
 		F3AC30672C2B69530089F583 /* Disk-Usage-Widgets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Disk-Usage-Widgets-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F3B508782C2ADD4600FCAE39 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 			children = (
 				F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */,
 				F397D7952C2AF4BE0069F3EB /* Provider.swift */,
+				F39AA8452C2C962600CD84F4 /* Intent Configuration.swift */,
 				F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */,
 				F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */,
 				F326A3C82C2B8D8100459E3C /* Views */,
@@ -297,6 +300,7 @@
 				F326A3C62C2B8CA000459E3C /* VM.swift in Sources */,
 				F326A3C72C2B8CAD00459E3C /* File Manager.swift in Sources */,
 				F397D78D2C2AF26C0069F3EB /* Medium Widget.swift in Sources */,
+				F39AA8462C2C962600CD84F4 /* Intent Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

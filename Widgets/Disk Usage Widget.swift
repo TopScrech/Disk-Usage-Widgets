@@ -29,7 +29,11 @@ struct DiskUsageWidget: Widget {
     private let provider = Provider()
     
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: provider) { entry in
+        AppIntentConfiguration(
+            kind: kind,
+            intent: ConfigurationAppIntent.self,
+            provider: provider
+        ) { entry in
             DiskUsageWidgetView(entry)
                 .containerBackground(.ultraThinMaterial, for: .widget)
         }

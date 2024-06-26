@@ -1,21 +1,29 @@
 import WidgetKit
 
-struct Provider: TimelineProvider {
+struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(
         date: Date(),
         emoji: "😀",
         disks: [Preview.disk]
     )
     
-    func placeholder(in context: Context) -> SimpleEntry {
+    func placeholder(
+        in context: Context
+    ) -> SimpleEntry {
         previewEntry
     }
     
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        completion(previewEntry)
+    func snapshot(
+        for configuration: ConfigurationAppIntent,
+        in context: Context
+    ) -> SimpleEntry {
+        previewEntry
     }
     
-    func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
+    func timeline(
+        for configuration: ConfigurationAppIntent,
+        in context: Context
+    ) -> Timeline<SimpleEntry> {
         let vm = VM()
         vm.listAvailableDisks()
         
@@ -32,7 +40,7 @@ struct Provider: TimelineProvider {
             policy: .atEnd
         )
         
-        completion(timeline)
+        return timeline
     }
     
     //    @available(macOSApplicationExtension 15, *)
