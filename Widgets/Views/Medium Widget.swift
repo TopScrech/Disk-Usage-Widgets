@@ -8,12 +8,24 @@ struct MediumWidgetView: View {
         self.entry = entry
     }
     
+    private var disk: DiskEntry? {
+        entry.disks.first
+    }
+    
     var body: some View {
         HStack {
-            Graph(innerRadius: 40, angularInset: 4, cornerRadius: 5, showOverlay: false)
+            if let disk {
+                Graph(
+                    disk,
+                    innerRadius: 40,
+                    angularInset: 4,
+                    cornerRadius: 5,
+                    showOverlay: false
+                )
+            }
             
             VStack {
-                Text("Preview SSD")
+                Text(disk?.name ?? "Unknown")
                     .title3()
                     .rounded()
                     .lineLimit(1)

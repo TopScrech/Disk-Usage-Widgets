@@ -9,7 +9,7 @@ final class Preview {
         isEjectable: true,
         isEncrypted: true,
         localizedName: "Превью SSD",
-        freeSpaceBytes: 500000000000,
-        totalSpaceBytes: 1000000000000
+        freeSpaceBytes: 900000000000,
+        totalSpaceBytes: 900000000000 * 2
     )
 }

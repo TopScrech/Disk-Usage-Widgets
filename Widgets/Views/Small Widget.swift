@@ -14,11 +14,14 @@ struct SmallWidgetView: View {
     
     var body: some View {
         VStack {
-            Graph(
-                innerRadius: 40,
-                angularInset: 4,
-                cornerRadius: 3
-            )
+            if let disk {
+                Graph(
+                    disk,
+                    innerRadius: 40,
+                    angularInset: 4,
+                    cornerRadius: 3
+                )
+            }
             
             Label(disk?.name ?? "Unknown", systemImage: "externaldrive")
                 .bold()
