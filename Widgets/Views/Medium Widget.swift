@@ -79,6 +79,13 @@ struct MediumWidgetView: View {
                 
                 Spacer()
                 
+                Button(intent: ConfigurationAppIntent()) {
+                    Text("Update")
+                        .caption2()
+                }
+                
+                Spacer()
+                
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Available") // Available
@@ -110,12 +117,32 @@ struct MediumWidgetView: View {
         }
     }
 }
+//
+//struct RestartServerIntent: AppIntent {
+//    static var title: LocalizedStringResource = "Restart Server"
+//    
+//    @Parameter(title: "Server id", default: "")
+//    var id: String
+//        
+//    init() {}
+//    
+//    init(id: String) {
+//        self.id = id
+//    }
+//    
+//    func perform() async throws -> some IntentResult {
+//        PteroNet.powerSignal(id, signal: .restart)
+//        
+//        return .result()
+//    }
+//}
 
 #Preview(as: .systemMedium) {
     DiskUsageWidget()
 } timeline: {
     SimpleEntry(
         date: Date(),
-        configuration: .init()
+        configuration: .init(),
+        disks: [Preview.disk]
     )
 }
