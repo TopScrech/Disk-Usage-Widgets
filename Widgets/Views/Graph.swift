@@ -1,5 +1,6 @@
 import SwiftUI
 import Charts
+import WidgetKit
 
 struct Graph: View {
     let disk: DiskEntry
@@ -31,15 +32,15 @@ struct Graph: View {
                     angularInset: angularInset
                 )
                 .cornerRadius(cornerRadius)
-                .foregroundStyle(by: .value("Category", disk.freeSpace))
+                .foregroundStyle(.green.gradient)
                 
                 SectorMark(
-                    angle: .value("Total", disk.totalSpaceBytes),
+                    angle: .value("Total", disk.totalSpaceBytes - Int(disk.freeSpaceBytes)),
                     innerRadius: innerRadius,
                     angularInset: angularInset
                 )
+                .foregroundStyle(.blue.gradient)
                 .cornerRadius(cornerRadius)
-                .foregroundStyle(by: .value("Category", disk.usedSpace))
             }
             .chartLegend(.hidden)
             .overlay {
@@ -56,4 +57,14 @@ struct Graph: View {
             }
         }
     }
+}
+
+#Preview(as: .systemSmall) {
+    DiskUsageWidget()
+} timeline: {
+    SimpleEntry(
+        date: Date(),
+        configuration: .init(),
+        disks: [Preview.disk]
+    )
 }

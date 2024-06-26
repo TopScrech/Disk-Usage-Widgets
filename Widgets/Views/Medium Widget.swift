@@ -60,8 +60,11 @@ struct MediumWidgetView: View {
                 
                 HStack {
                     Image(systemName: "externaldrive")
+                    #warning("ICON")
                     
-                    Text(Date(), format: .dateTime.hour().minute())
+                    if entry.configuration.showRefreshTime {
+                        Text(Date(), format: .dateTime.hour().minute())
+                    }
                     
                     if entry.configuration.showBuildNumber {
                         Text("B\(buildNumber)")
@@ -114,7 +117,8 @@ struct MediumWidgetView: View {
                     Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
                         .caption2()
                 }
-                .offset(x: -10, y: -10)
+                .clipShape(.circle)
+                .offset(x: -12, y: -8)
             }
         }
     }

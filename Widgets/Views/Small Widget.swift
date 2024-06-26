@@ -50,12 +50,15 @@ struct SmallWidgetView: View {
                     Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
                         .caption2()
                 }
-                .offset(x: -10, y: -10)
+                .clipShape(.circle)
+                .offset(x: -12, y: -8)
             }
         }
         .overlay(alignment: .topTrailing) {
             VStack(alignment: .trailing) {
-                Text(entry.date, format: .dateTime.hour().minute())
+                if entry.configuration.showRefreshTime {
+                    Text(entry.date, format: .dateTime.hour().minute())
+                }
                 
                 if entry.configuration.showBuildNumber {
                     Text("B\(buildNumber)")
