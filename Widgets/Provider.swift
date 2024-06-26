@@ -1,22 +1,18 @@
 import WidgetKit
 
 struct Provider: TimelineProvider {
+    private let previewEntry = SimpleEntry(
+        date: Date(),
+        emoji: "😀",
+        disks: [Preview.disk]
+    )
+    
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(
-            date: Date(),
-            emoji: "😀",
-            disks: [Preview.disk]
-        )
+        previewEntry
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(
-            date: Date(),
-            emoji: "😀",
-            disks: [Preview.disk]
-        )
-        
-        completion(entry)
+        completion(previewEntry)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
@@ -31,12 +27,16 @@ struct Provider: TimelineProvider {
             )
         ]
         
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(
+            entries: entries,
+            policy: .atEnd
+        )
+        
         completion(timeline)
     }
     
     //    @available(macOSApplicationExtension 15, *)
     //    func relevances() async -> WidgetRelevances<Void> {
-    // Generate a list containing the contexts this widget is relevant in
+    // Generate a list containing the contexts this widget is releva1nt in
     //    }
 }
