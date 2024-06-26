@@ -79,7 +79,6 @@
 		F397D7952C2AF4BE0069F3EB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F39AA8452C2C962600CD84F4 /* Intent Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Intent Configuration.swift"; sourceTree = "<group>"; };
 		F3AC30672C2B69530089F583 /* Disk-Usage-Widgets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Disk-Usage-Widgets-Info.plist"; sourceTree = SOURCE_ROOT; };
-		F3B508782C2ADD4600FCAE39 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widgets.swift"; sourceTree = "<group>"; };
 		F3CEC0062C2ABA6800B44CE4 /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
@@ -146,7 +145,6 @@
 		F3CEBFF82C2ABA6800B44CE4 = {
 			isa = PBXGroup;
 			children = (
-				F3B508782C2ADD4600FCAE39 /* Provider.swift */,
 				F3CEC0032C2ABA6800B44CE4 /* Disk Usage Widgets */,
 				F397D77D2C2AEE020069F3EB /* Widgets */,
 				F33812DA2C2AD3DE00415506 /* Frameworks */,

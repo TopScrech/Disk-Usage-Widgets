@@ -3,7 +3,7 @@ import WidgetKit
 struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(
         date: Date(),
-        emoji: "😀",
+        configuration: ConfigurationAppIntent(),
         disks: [Preview.disk]
     )
     
@@ -27,13 +27,19 @@ struct Provider: AppIntentTimelineProvider {
         let vm = VM()
         vm.listAvailableDisks()
         
+#if DEBUG
+        let entries: [SimpleEntry] = [
+            previewEntry
+        ]
+#else
         let entries: [SimpleEntry] = [
             .init(
                 date: Date(),
-                emoji: "",
+                configuration: configuration,
                 disks: vm.disks
             )
         ]
+#endif
         
         let timeline = Timeline(
             entries: entries,

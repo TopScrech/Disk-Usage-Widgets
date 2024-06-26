@@ -63,7 +63,9 @@ struct MediumWidgetView: View {
                     
                     Text(Date(), format: .dateTime.hour().minute())
                     
-                    Text("B\(buildNumber)")
+                    if !entry.configuration.showBuildNumber {
+                        Text("B\(buildNumber)")
+                    }
                     
                     //                    Button {
                     //
@@ -112,5 +114,8 @@ struct MediumWidgetView: View {
 #Preview(as: .systemMedium) {
     DiskUsageWidget()
 } timeline: {
-    SimpleEntry(date: Date(), emoji: "")
+    SimpleEntry(
+        date: Date(),
+        configuration: .init()
+    )
 }

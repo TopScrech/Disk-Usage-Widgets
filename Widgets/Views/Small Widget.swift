@@ -38,10 +38,12 @@ struct SmallWidgetView: View {
                 .padding(.top, 5)
         }
         .overlay(alignment: .topLeading) {
-            Text("B\(buildNumber)")
-                .caption2()
-                .foregroundStyle(.secondary)
-                .offset(x: -5, y: -5)
+            if !entry.configuration.showBuildNumber {
+                Text("B\(buildNumber)")
+                    .caption2()
+                    .foregroundStyle(.secondary)
+                    .offset(x: -5, y: -5)
+            }
         }
         .overlay(alignment: .topTrailing) {
             Text(entry.date, format: .dateTime.hour().minute())
@@ -55,5 +57,8 @@ struct SmallWidgetView: View {
 #Preview(as: .systemSmall) {
     DiskUsageWidget()
 } timeline: {
-    SimpleEntry(date: Date(), emoji: "")
+    SimpleEntry(
+        date: Date(),
+        configuration: .init()
+    )
 }
