@@ -2,6 +2,14 @@ import SwiftUI
 
 struct HomeView: View {
     private var vm = VM()
+    @Environment(\.openWindow) private var openWindow
+    @Environment(\.dismissWindow) private var dismissWindow
+    
+    @Binding private var showMenuBarExtra: Bool
+    
+    init(_ showMenuBarExtra: Binding<Bool>) {
+        _showMenuBarExtra = showMenuBarExtra
+    }
     
 #if os(macOS)
     private let publisher = NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)
@@ -11,6 +19,19 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
+            Button(showMenuBarExtra ? "Switch to app" : "Switch to MenuBar") {
+                showMenuBarExtra.toggle()
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    if showMenuBarExtra {
+                        openWindow(id: "app")
+                    } else {
+                        dismissWindow(id: "app")
+                    }
+                }
+            }
+            .padding(.top)
+            
             Table(vm.disks) {
                 TableColumn("Name") { disk in
                     Label(disk.name, systemImage: disk.icon)
@@ -58,11 +79,15 @@ struct HomeView: View {
             vm.listAvailableDisks()
         }
         .task {
+            if showMenuBarExtra {
+                dismissWindow(id: "app")
+            }
+            
             vm.listAvailableDisks()
         }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(.constant(true))
 }

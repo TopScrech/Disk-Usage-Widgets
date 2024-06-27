@@ -10,6 +10,6 @@ final class Preview {
         isEncrypted: true,
         localizedName: "Превью SSD",
         freeSpaceBytes: 900110000000,
-        totalSpaceBytes: 900000000000 * 2
+        totalSpaceBytes: 900110000000 * 2
     )
 }

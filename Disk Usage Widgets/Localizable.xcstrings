@@ -41,6 +41,9 @@
         }
       }
     },
+    "App" : {
+
+    },
     "Available" : {
       "localizations" : {
         "ru" : {
@@ -81,6 +84,9 @@
         }
       }
     },
+    "Eject (not tested)" : {
+
+    },
     "Error" : {
       "localizations" : {
         "ru" : {
@@ -94,7 +100,13 @@
     "Free Space" : {
 
     },
+    "isEjectable" : {
+
+    },
     "isEncrypted" : {
+
+    },
+    "Menu Bar Extra" : {
 
     },
     "Name" : {
@@ -156,6 +168,12 @@
           }
         }
       }
+    },
+    "Switch to app" : {
+
+    },
+    "Switch to MenuBar" : {
+
     },
     "This is an example" : {
 

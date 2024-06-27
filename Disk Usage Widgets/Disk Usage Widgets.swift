@@ -2,16 +2,18 @@ import ScrechKit
 
 @main
 struct DiskUsageWidgets: App {
+    @AppStorage("showMenuBarExtra") private var showMenuBarExtra = true
+    
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("App", id: "app") {
             NavigationStack {
-                HomeView()
+                HomeView($showMenuBarExtra)
             }
         }
         
 #if os(macOS)
-        MenuBarExtra("Disk Usage", systemImage: "externaldrive") {
-            HomeView()
+        MenuBarExtra("Menu Bar Extra", systemImage: "externaldrive", isInserted: $showMenuBarExtra) {
+            HomeView($showMenuBarExtra)
                 .frame(width: 600, height: 200)
         }
         .menuBarExtraStyle(.window)
