@@ -17,11 +17,7 @@ struct MediumWidgetView: View {
     }
     
     private var total: String {
-        if entry.configuration.showTotalSpace {
-            disk?.totalSpace ?? "-"
-        } else {
-            ""
-        }
+        disk?.totalSpace ?? "-"
     }
     
     private var used: String {
@@ -85,9 +81,12 @@ struct MediumWidgetView: View {
                     .frame(width: 55)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(available) // Available
-                        Text(used)     // Used
-                        Text(total)   // Total
+                        Text(available)     // Available
+                        Text(used)         // Used
+                        
+                        if entry.configuration.showTotalSpace {
+                            Text(total) // Total
+                        }
                     }
                     .bold()
                     .frame(width: 60)
