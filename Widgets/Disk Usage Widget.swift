@@ -18,6 +18,9 @@ struct DiskUsageWidgetView: View {
         case .systemMedium:
             MediumWidgetView(entry)
             
+        case .systemLarge:
+            LargeWidgetView(entry)
+            
         default:
             Text("Error")
         }
@@ -34,10 +37,13 @@ struct DiskUsageWidget: Widget {
             intent: ConfigurationAppIntent.self,
             provider: provider
         ) { entry in
+            
+#warning("Enable .systemExtraLarge")
+            
             DiskUsageWidgetView(entry)
                 .containerBackground(.ultraThinMaterial, for: .widget)
         }
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge/*, .systemExtraLarge*/])
         .configurationDisplayName("Disk Usage")
         .description("This is an example")
     }

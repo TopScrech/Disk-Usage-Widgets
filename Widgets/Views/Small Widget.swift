@@ -12,14 +12,6 @@ struct SmallWidgetView: View {
         entry.disks.first
     }
     
-    private var buildNumber: String {
-        if let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-            buildNumber
-        } else {
-            "Unknown"
-        }
-    }
-    
     private var name: String {
         disk?.name ?? "Unknown"
     }
@@ -60,7 +52,7 @@ struct SmallWidgetView: View {
                 }
                 
                 if entry.configuration.showBuildNumber {
-                    Text("B\(buildNumber)")
+                    Text("B\(Utilities.buildNumber)")
                 }
             }
             .caption2()
@@ -76,6 +68,6 @@ struct SmallWidgetView: View {
     SimpleEntry(
         date: Date(),
         configuration: .init(),
-        disks: [Preview.disk]
+        disks: [Utilities.previewDisk]
     )
 }

@@ -10,8 +10,8 @@
 		F32409222C2D3D5700403979 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32409212C2D3D5700403979 /* Localizable.xcstrings */; };
 		F32409232C2D3D5700403979 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32409212C2D3D5700403979 /* Localizable.xcstrings */; };
 		F326A3C22C2B7FBB00459E3C /* Disk Usage Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */; };
-		F326A3C42C2B884400459E3C /* Preview Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Preview Disk.swift */; };
-		F326A3C52C2B889D00459E3C /* Preview Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Preview Disk.swift */; };
+		F326A3C42C2B884400459E3C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Utilities.swift */; };
+		F326A3C52C2B889D00459E3C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Utilities.swift */; };
 		F326A3C62C2B8CA000459E3C /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CC2C2ABBCD00415506 /* VM.swift */; };
 		F326A3C72C2B8CAD00459E3C /* File Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CA2C2ABBA500415506 /* File Manager.swift */; };
 		F326A3CB2C2B916100459E3C /* VM Eject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C92C2B916100459E3C /* VM Eject.swift */; };
@@ -19,6 +19,7 @@
 		F33812CD2C2ABBCD00415506 /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CC2C2ABBCD00415506 /* VM.swift */; };
 		F33812CF2C2AC1B200415506 /* Disk Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CE2C2AC1B200415506 /* Disk Entry.swift */; };
 		F33812D22C2AC50600415506 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F33812D12C2AC50600415506 /* ScrechKit */; };
+		F371A5112C2D6EA6006BDF0D /* Large Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5102C2D6EA6006BDF0D /* Large Widget.swift */; };
 		F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DB2C2AD3DE00415506 /* WidgetKit.framework */; };
 		F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DD2C2AD3DE00415506 /* SwiftUI.framework */; };
 		F397D77F2C2AEE020069F3EB /* Widgets Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */; };
@@ -64,13 +65,14 @@
 /* Begin PBXFileReference section */
 		F32409212C2D3D5700403979 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widget.swift"; sourceTree = "<group>"; };
-		F326A3C32C2B884400459E3C /* Preview Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview Disk.swift"; sourceTree = "<group>"; };
+		F326A3C32C2B884400459E3C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F326A3C92C2B916100459E3C /* VM Eject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VM Eject.swift"; sourceTree = "<group>"; };
 		F33812CA2C2ABBA500415506 /* File Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File Manager.swift"; sourceTree = "<group>"; };
 		F33812CC2C2ABBCD00415506 /* VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.swift; sourceTree = "<group>"; };
 		F33812CE2C2AC1B200415506 /* Disk Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Entry.swift"; sourceTree = "<group>"; };
 		F33812DB2C2AD3DE00415506 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F33812DD2C2AD3DE00415506 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F371A5102C2D6EA6006BDF0D /* Large Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Large Widget.swift"; sourceTree = "<group>"; };
 		F397D77A2C2AEE020069F3EB /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Widgets Bundle.swift"; sourceTree = "<group>"; };
 		F397D7802C2AEE020069F3EB /* Small Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Small Widget.swift"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				F397D7932C2AF4A60069F3EB /* Graph.swift */,
 				F397D7802C2AEE020069F3EB /* Small Widget.swift */,
 				F397D78C2C2AF26C0069F3EB /* Medium Widget.swift */,
+				F371A5102C2D6EA6006BDF0D /* Large Widget.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,16 +171,16 @@
 			isa = PBXGroup;
 			children = (
 				F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */,
+				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F3AC30672C2B69530089F583 /* Disk-Usage-Widgets-Info.plist */,
 				F32409212C2D3D5700403979 /* Localizable.xcstrings */,
 				F3DB25472C2C514C00A0C066 /* Assets.xcassets */,
 				F3CEC00D2C2ABA6900B44CE4 /* Disk_Usage_Widgets.entitlements */,
-				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F33812CC2C2ABBCD00415506 /* VM.swift */,
 				F326A3C92C2B916100459E3C /* VM Eject.swift */,
 				F33812CE2C2AC1B200415506 /* Disk Entry.swift */,
-				F326A3C32C2B884400459E3C /* Preview Disk.swift */,
 				F33812CA2C2ABBA500415506 /* File Manager.swift */,
+				F326A3C32C2B884400459E3C /* Utilities.swift */,
 			);
 			path = "Disk Usage Widgets";
 			sourceTree = "<group>";
@@ -296,12 +299,13 @@
 			files = (
 				F397D7942C2AF4A60069F3EB /* Graph.swift in Sources */,
 				F397D7902C2AF36C0069F3EB /* Simple Entry.swift in Sources */,
-				F326A3C52C2B889D00459E3C /* Preview Disk.swift in Sources */,
+				F326A3C52C2B889D00459E3C /* Utilities.swift in Sources */,
 				F397D7962C2AF4BE0069F3EB /* Provider.swift in Sources */,
 				F397D78E2C2AF2B90069F3EB /* Disk Entry.swift in Sources */,
 				F397D77F2C2AEE020069F3EB /* Widgets Bundle.swift in Sources */,
 				F397D7812C2AEE020069F3EB /* Small Widget.swift in Sources */,
 				F326A3C22C2B7FBB00459E3C /* Disk Usage Widget.swift in Sources */,
+				F371A5112C2D6EA6006BDF0D /* Large Widget.swift in Sources */,
 				F326A3C62C2B8CA000459E3C /* VM.swift in Sources */,
 				F326A3C72C2B8CAD00459E3C /* File Manager.swift in Sources */,
 				F397D78D2C2AF26C0069F3EB /* Medium Widget.swift in Sources */,
@@ -313,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F326A3C42C2B884400459E3C /* Preview Disk.swift in Sources */,
+				F326A3C42C2B884400459E3C /* Utilities.swift in Sources */,
 				F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */,
 				F33812CB2C2ABBA500415506 /* File Manager.swift in Sources */,
 				F33812CF2C2AC1B200415506 /* Disk Entry.swift in Sources */,
@@ -570,7 +574,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Disk-Usage-Widgets-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Debug";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

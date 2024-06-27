@@ -31,15 +31,7 @@ struct MediumWidgetView: View {
     private var usedPercentage: String {
         disk?.usedSpacePercentage ?? "-"
     }
-    
-    private var buildNumber: String {
-        if let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-            buildNumber
-        } else {
-            "Unknown"
-        }
-    }
-    
+        
     private var icon: String {
         disk?.icon ?? ""
     }
@@ -68,7 +60,7 @@ struct MediumWidgetView: View {
                     }
                     
                     if entry.configuration.showBuildNumber {
-                        Text("B\(buildNumber)")
+                        Text("B\(Utilities.buildNumber)")
                     }
                 }
                 .footnote()
@@ -124,6 +116,6 @@ struct MediumWidgetView: View {
     SimpleEntry(
         date: Date(),
         configuration: .init(),
-        disks: [Preview.disk]
+        disks: [Utilities.previewDisk]
     )
 }
