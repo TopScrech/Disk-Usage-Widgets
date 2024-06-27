@@ -136,7 +136,7 @@ fileprivate struct LargeDiskCard: View {
     }
 }
 
-#Preview(as: .systemLarge) {
+#Preview(as: .systemExtraLarge) {
     DiskUsageWidget()
 } timeline: {
     SimpleEntry(

@@ -18,8 +18,13 @@ struct DiskUsageWidgetView: View {
         case .systemMedium:
             MediumWidgetView(entry)
             
+#if DEBUG
         case .systemLarge:
             LargeWidgetView(entry)
+            
+        case .systemExtraLarge:
+            ExtraLargeWidgetView(entry)
+#endif
             
         default:
             Text("Error")

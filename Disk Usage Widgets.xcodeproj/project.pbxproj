@@ -20,6 +20,7 @@
 		F33812CF2C2AC1B200415506 /* Disk Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CE2C2AC1B200415506 /* Disk Entry.swift */; };
 		F33812D22C2AC50600415506 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F33812D12C2AC50600415506 /* ScrechKit */; };
 		F371A5112C2D6EA6006BDF0D /* Large Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5102C2D6EA6006BDF0D /* Large Widget.swift */; };
+		F371A5172C2D7976006BDF0D /* Extra Large Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5162C2D7976006BDF0D /* Extra Large Widget.swift */; };
 		F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DB2C2AD3DE00415506 /* WidgetKit.framework */; };
 		F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DD2C2AD3DE00415506 /* SwiftUI.framework */; };
 		F397D77F2C2AEE020069F3EB /* Widgets Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */; };
@@ -73,6 +74,7 @@
 		F33812DB2C2AD3DE00415506 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F33812DD2C2AD3DE00415506 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		F371A5102C2D6EA6006BDF0D /* Large Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Large Widget.swift"; sourceTree = "<group>"; };
+		F371A5162C2D7976006BDF0D /* Extra Large Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extra Large Widget.swift"; sourceTree = "<group>"; };
 		F397D77A2C2AEE020069F3EB /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Widgets Bundle.swift"; sourceTree = "<group>"; };
 		F397D7802C2AEE020069F3EB /* Small Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Small Widget.swift"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				F397D7802C2AEE020069F3EB /* Small Widget.swift */,
 				F397D78C2C2AF26C0069F3EB /* Medium Widget.swift */,
 				F371A5102C2D6EA6006BDF0D /* Large Widget.swift */,
+				F371A5162C2D7976006BDF0D /* Extra Large Widget.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F371A5172C2D7976006BDF0D /* Extra Large Widget.swift in Sources */,
 				F397D7942C2AF4A60069F3EB /* Graph.swift in Sources */,
 				F397D7902C2AF36C0069F3EB /* Simple Entry.swift in Sources */,
 				F326A3C52C2B889D00459E3C /* Utilities.swift in Sources */,
@@ -367,7 +371,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -400,7 +404,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -555,7 +559,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -590,7 +594,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
