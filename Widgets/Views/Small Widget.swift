@@ -64,7 +64,7 @@ struct SmallWidgetView: View {
                 }
             }
             .caption2()
-            .foregroundStyle(.secondary)
+            .foregroundStyle(.tertiary)
             .offset(x: 5, y: -5)
         }
     }

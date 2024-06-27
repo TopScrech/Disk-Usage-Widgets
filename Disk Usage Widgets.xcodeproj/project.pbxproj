@@ -134,13 +134,13 @@
 			isa = PBXGroup;
 			children = (
 				F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */,
+				F397D7842C2AEE030069F3EB /* Info.plist */,
+				F397D7852C2AEE030069F3EB /* Widgets.entitlements */,
 				F397D7952C2AF4BE0069F3EB /* Provider.swift */,
 				F39AA8452C2C962600CD84F4 /* Intent Configuration.swift */,
 				F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */,
 				F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */,
 				F326A3C82C2B8D8100459E3C /* Views */,
-				F397D7842C2AEE030069F3EB /* Info.plist */,
-				F397D7852C2AEE030069F3EB /* Widgets.entitlements */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
