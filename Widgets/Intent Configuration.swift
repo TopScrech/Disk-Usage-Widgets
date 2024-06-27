@@ -15,6 +15,9 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     
     @Parameter(title: "Show refresh time", default: true)
     var showRefreshTime: Bool
+    
+    @Parameter(title: "Show total space", default: true)
+    var showTotalSpace: Bool
 }
 
 struct RefreshIntent: AppIntent {

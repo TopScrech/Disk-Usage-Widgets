@@ -17,7 +17,11 @@ struct MediumWidgetView: View {
     }
     
     private var total: String {
-        disk?.totalSpace ?? "-"
+        if entry.configuration.showTotalSpace {
+            disk?.totalSpace ?? "-"
+        } else {
+            ""
+        }
     }
     
     private var used: String {
@@ -31,7 +35,7 @@ struct MediumWidgetView: View {
     private var usedPercentage: String {
         disk?.usedSpacePercentage ?? "-"
     }
-        
+    
     private var icon: String {
         disk?.icon ?? ""
     }
@@ -70,9 +74,12 @@ struct MediumWidgetView: View {
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Available") // Available
-                        Text("Used")     // Used
-                        Text("Total")   // Total
+                        Text("Available")     // Available
+                        Text("Used")         // Used
+                        
+                        if entry.configuration.showTotalSpace {
+                            Text("Total") // Total
+                        }
                     }
                     .foregroundStyle(.secondary)
                     .frame(width: 55)
@@ -88,7 +95,10 @@ struct MediumWidgetView: View {
                     VStack(alignment: .trailing, spacing: 2) {
                         Text(availablePercentage) // Available
                         Text(usedPercentage)     // Used
-                        Text("100 %")           // Total
+                        
+                        if entry.configuration.showTotalSpace {
+                            Text("100 %")     // Total
+                        }
                     }
                     .bold()
                     .frame(width: 60)
