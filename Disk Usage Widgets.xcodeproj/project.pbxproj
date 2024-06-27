@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F32409222C2D3D5700403979 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32409212C2D3D5700403979 /* Localizable.xcstrings */; };
+		F32409232C2D3D5700403979 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32409212C2D3D5700403979 /* Localizable.xcstrings */; };
 		F326A3C22C2B7FBB00459E3C /* Disk Usage Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */; };
 		F326A3C42C2B884400459E3C /* Preview Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Preview Disk.swift */; };
 		F326A3C52C2B889D00459E3C /* Preview Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Preview Disk.swift */; };
@@ -60,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F32409212C2D3D5700403979 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widget.swift"; sourceTree = "<group>"; };
 		F326A3C32C2B884400459E3C /* Preview Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview Disk.swift"; sourceTree = "<group>"; };
 		F326A3C92C2B916100459E3C /* VM Eject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VM Eject.swift"; sourceTree = "<group>"; };
@@ -164,16 +167,17 @@
 		F3CEC0032C2ABA6800B44CE4 /* Disk Usage Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				F3AC30672C2B69530089F583 /* Disk-Usage-Widgets-Info.plist */,
 				F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */,
+				F3AC30672C2B69530089F583 /* Disk-Usage-Widgets-Info.plist */,
+				F32409212C2D3D5700403979 /* Localizable.xcstrings */,
+				F3DB25472C2C514C00A0C066 /* Assets.xcassets */,
+				F3CEC00D2C2ABA6900B44CE4 /* Disk_Usage_Widgets.entitlements */,
 				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F33812CC2C2ABBCD00415506 /* VM.swift */,
 				F326A3C92C2B916100459E3C /* VM Eject.swift */,
 				F33812CE2C2AC1B200415506 /* Disk Entry.swift */,
 				F326A3C32C2B884400459E3C /* Preview Disk.swift */,
 				F33812CA2C2ABBA500415506 /* File Manager.swift */,
-				F3DB25472C2C514C00A0C066 /* Assets.xcassets */,
-				F3CEC00D2C2ABA6900B44CE4 /* Disk_Usage_Widgets.entitlements */,
 			);
 			path = "Disk Usage Widgets";
 			sourceTree = "<group>";
@@ -248,6 +252,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = F3CEBFF82C2ABA6800B44CE4;
 			packageReferences = (
@@ -268,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32409222C2D3D5700403979 /* Localizable.xcstrings in Resources */,
 				F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32409232C2D3D5700403979 /* Localizable.xcstrings in Resources */,
 				F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +459,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -508,6 +516,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};

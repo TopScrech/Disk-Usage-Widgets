@@ -40,6 +40,10 @@ struct MediumWidgetView: View {
         }
     }
     
+    private var icon: String {
+        disk?.icon ?? ""
+    }
+    
     var body: some View {
         HStack {
             if let disk {
@@ -52,15 +56,13 @@ struct MediumWidgetView: View {
             }
             
             VStack {
-                Text(disk?.name ?? "Unknown")
+                Label(disk?.name ?? "Unknown", systemImage: icon)
                     .title3()
                     .semibold()
                     .rounded()
                     .lineLimit(1)
                 
                 HStack {
-                    Image(systemName: disk?.icon ?? "")
-                    
                     if entry.configuration.showRefreshTime {
                         Text(Date(), format: .dateTime.hour().minute())
                     }
@@ -70,7 +72,7 @@ struct MediumWidgetView: View {
                     }
                 }
                 .footnote()
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.tertiary)
                 
                 Spacer()
                 
