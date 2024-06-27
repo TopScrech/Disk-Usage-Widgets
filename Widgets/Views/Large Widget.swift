@@ -23,6 +23,16 @@ struct LargeWidgetView: View {
                     if disks.count > 0 {
                         LargeDiskCard(entry, disk: disks[0])
                             .frame(height: height)
+                            .overlay(alignment: .topTrailing) {
+                                if !entry.configuration.showRefreshButton {
+                                    Button(intent: RefreshIntent()) {
+                                        Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
+                                            .caption2()
+                                    }
+                                    .clipShape(.circle)
+                                    .offset(x: 12, y: -8)
+                                }
+                            }
                     }
                     
                     Divider()
