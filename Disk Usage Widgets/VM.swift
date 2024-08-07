@@ -47,7 +47,9 @@ final class VM {
                   let type =          resourceValues.volumeTypeName,
                   let isEjectable =   resourceValues.volumeIsEjectable,
                   let isEncrypted =   resourceValues.volumeIsEncrypted
-            else { return nil }
+            else {
+                return nil
+            }
             
             let space =      try fm.volumeFreeDiskSpace(volume)
             let totalSpace = try fm.volumeTotalDiskSpace(volume)

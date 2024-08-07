@@ -48,7 +48,7 @@ struct DiskUsageWidget: Widget {
             DiskUsageWidgetView(entry)
                 .containerBackground(.ultraThinMaterial, for: .widget)
         }
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge/*, .systemExtraLarge*/])
+        .supportedFamilies([.systemSmall, .systemMedium/*, .systemLarge, .systemExtraLarge*/])
         .configurationDisplayName("Disk Usage")
         .description("This is an example")
     }
