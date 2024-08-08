@@ -27,7 +27,7 @@
 		F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DD2C2AD3DE00415506 /* SwiftUI.framework */; };
 		F397D77F2C2AEE020069F3EB /* Widgets Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */; };
 		F397D7812C2AEE020069F3EB /* Small Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D7802C2AEE020069F3EB /* Small Widget.swift */; };
-		F397D7882C2AEE030069F3EB /* WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F397D7882C2AEE030069F3EB /* Widgets Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F397D78D2C2AF26C0069F3EB /* Medium Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D78C2C2AF26C0069F3EB /* Medium Widget.swift */; };
 		F397D78E2C2AF2B90069F3EB /* Disk Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CE2C2AC1B200415506 /* Disk Entry.swift */; };
 		F397D7902C2AF36C0069F3EB /* Simple Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */; };
@@ -58,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				F397D7882C2AEE030069F3EB /* WidgetsExtension.appex in Embed Foundation Extensions */,
+				F397D7882C2AEE030069F3EB /* Widgets Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +78,7 @@
 		F3573BBB2C64CFF90051259E /* App Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Settings.swift"; sourceTree = "<group>"; };
 		F371A5102C2D6EA6006BDF0D /* Large Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Large Widget.swift"; sourceTree = "<group>"; };
 		F371A5162C2D7976006BDF0D /* Extra Large Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extra Large Widget.swift"; sourceTree = "<group>"; };
-		F397D77A2C2AEE020069F3EB /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Widgets Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Widgets Bundle.swift"; sourceTree = "<group>"; };
 		F397D7802C2AEE020069F3EB /* Small Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Small Widget.swift"; sourceTree = "<group>"; };
 		F397D7842C2AEE030069F3EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */,
-				F397D77A2C2AEE020069F3EB /* WidgetsExtension.appex */,
+				F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,9 +195,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F397D7792C2AEE020069F3EB /* WidgetsExtension */ = {
+		F397D7792C2AEE020069F3EB /* Widgets Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "WidgetsExtension" */;
+			buildConfigurationList = F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "Widgets Extension" */;
 			buildPhases = (
 				F397D7762C2AEE020069F3EB /* Sources */,
 				F397D7772C2AEE020069F3EB /* Frameworks */,
@@ -207,12 +207,12 @@
 			);
 			dependencies = (
 			);
-			name = WidgetsExtension;
+			name = "Widgets Extension";
 			packageProductDependencies = (
 				F397D7912C2AF3B30069F3EB /* ScrechKit */,
 			);
 			productName = WidgetsExtension;
-			productReference = F397D77A2C2AEE020069F3EB /* WidgetsExtension.appex */;
+			productReference = F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		F3CEC0002C2ABA6800B44CE4 /* Disk Usage Widgets */ = {
@@ -273,7 +273,7 @@
 			projectRoot = "";
 			targets = (
 				F3CEC0002C2ABA6800B44CE4 /* Disk Usage Widgets */,
-				F397D7792C2AEE020069F3EB /* WidgetsExtension */,
+				F397D7792C2AEE020069F3EB /* Widgets Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -342,7 +342,7 @@
 /* Begin PBXTargetDependency section */
 		F397D7872C2AEE030069F3EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F397D7792C2AEE020069F3EB /* WidgetsExtension */;
+			target = F397D7792C2AEE020069F3EB /* Widgets Extension */;
 			targetProxy = F397D7862C2AEE030069F3EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -549,7 +549,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Disk-Usage-Widgets-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Widgets";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Widgets Debug";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -558,7 +558,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.9;
+				MARKETING_VERSION = 0.9.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -593,7 +593,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.9;
+				MARKETING_VERSION = 0.9.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -607,7 +607,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "WidgetsExtension" */ = {
+		F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "Widgets Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F397D78A2C2AEE030069F3EB /* Debug */,

@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F397D7792C2AEE020069F3EB"
-               BuildableName = "WidgetsExtension.appex"
-               BlueprintName = "WidgetsExtension"
+               BuildableName = "Widgets Extension.appex"
+               BlueprintName = "Widgets Extension"
                ReferencedContainer = "container:Disk Usage Widgets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F397D7792C2AEE020069F3EB"
-            BuildableName = "WidgetsExtension.appex"
-            BlueprintName = "WidgetsExtension"
+            BuildableName = "Widgets Extension.appex"
+            BlueprintName = "Widgets Extension"
             ReferencedContainer = "container:Disk Usage Widgets.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>

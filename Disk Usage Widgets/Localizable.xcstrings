@@ -191,19 +191,6 @@
     "Show total space" : {
 
     },
-    "This is an example" : {
-
-    },
-    "This is an example widget" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This is an example widget"
-          }
-        }
-      }
-    },
     "Total" : {
       "localizations" : {
         "ru" : {
@@ -238,6 +225,9 @@
       }
     },
     "Used Space" : {
+
+    },
+    "Widget configuration" : {
 
     }
   },

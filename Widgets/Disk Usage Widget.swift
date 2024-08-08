@@ -50,6 +50,6 @@ struct DiskUsageWidget: Widget {
         }
         .supportedFamilies([.systemSmall, .systemMedium/*, .systemLarge, .systemExtraLarge*/])
         .configurationDisplayName("Disk Usage")
-        .description("This is an example")
+        .description("Widget configuration")
     }
 }
