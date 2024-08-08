@@ -7,16 +7,20 @@ struct DiskUsageWidgets: App {
     var body: some Scene {
         WindowGroup("App", id: "app") {
             NavigationStack {
-                HomeView($showMenuBarExtra)
+                HomeView()
             }
         }
         
 #if os(macOS)
         MenuBarExtra("Menu Bar Extra", systemImage: "externaldrive", isInserted: $showMenuBarExtra) {
-            HomeView($showMenuBarExtra)
+            HomeView()
                 .frame(width: 600, height: 200)
         }
         .menuBarExtraStyle(.window)
+        
+        Settings {
+            AppSettings($showMenuBarExtra)
+        }
 #endif
     }
 }

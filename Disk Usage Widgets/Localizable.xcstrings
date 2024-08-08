@@ -44,6 +44,16 @@
     "App" : {
 
     },
+    "App Version: %@ B%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "App Version: %1$@ B%2$@"
+          }
+        }
+      }
+    },
     "Available" : {
       "localizations" : {
         "ru" : {
@@ -74,6 +84,9 @@
         }
       }
     },
+    "Disable MenuBar app" : {
+
+    },
     "Disk Usage" : {
       "localizations" : {
         "ru" : {
@@ -85,6 +98,9 @@
       }
     },
     "Eject (not tested)" : {
+
+    },
+    "Enable MenuBar app" : {
 
     },
     "Error" : {
@@ -173,12 +189,6 @@
       }
     },
     "Show total space" : {
-
-    },
-    "Switch to app" : {
-
-    },
-    "Switch to MenuBar" : {
 
     },
     "This is an example" : {
