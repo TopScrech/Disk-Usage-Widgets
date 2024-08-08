@@ -5,7 +5,7 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     static let intentClassName = "ServerUsageIntent"
     
     static var title: LocalizedStringResource = "Configuration"
-    static var description = IntentDescription("")
+    static var description: IntentDescription = " "
     
     @Parameter(title: "Show refresh button", default: false)
     var showRefreshButton: Bool
