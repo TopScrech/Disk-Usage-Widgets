@@ -369,7 +369,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.9.1;
+				MARKETING_VERSION = 0.9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -402,7 +402,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.9.1;
+				MARKETING_VERSION = 0.9.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
