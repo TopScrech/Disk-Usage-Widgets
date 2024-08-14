@@ -48,7 +48,7 @@ struct SmallWidgetView: View {
         .overlay(alignment: .topTrailing) {
             VStack(alignment: .trailing) {
                 if entry.configuration.showRefreshTime {
-                    Text(entry.date, format: .dateTime.hour().minute())
+                    Text(entry.date, format: .dateTime.hour().minute().second())
                 }
                 
                 if entry.configuration.showBuildNumber {

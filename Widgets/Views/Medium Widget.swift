@@ -56,7 +56,7 @@ struct MediumWidgetView: View {
                 
                 HStack {
                     if entry.configuration.showRefreshTime {
-                        Text(Date(), format: .dateTime.hour().minute())
+                        Text(Date(), format: .dateTime.hour().minute().second())
                     }
                     
                     if entry.configuration.showBuildNumber {

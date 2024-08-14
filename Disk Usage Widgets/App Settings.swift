@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 struct AppSettings: View {
     @Environment(\.openWindow) private var openWindow
@@ -15,6 +16,10 @@ struct AppSettings: View {
         VStack(spacing: 20) {
             Button(showMenuBarExtra ? "Disable MenuBar app" : "Enable MenuBar app") {
                 showMenuBarExtra.toggle()
+            }
+            
+            Button("Debug") {
+                WidgetCenter.shared.reloadAllTimelines()
             }
             
             Text("App Version: \(appVersion) B\(buildNumber)")
