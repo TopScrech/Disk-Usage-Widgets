@@ -17,7 +17,14 @@ struct Provider: AppIntentTimelineProvider {
         for configuration: ConfigurationAppIntent,
         in context: Context
     ) -> SimpleEntry {
-        previewEntry
+        let vm = VM()
+        vm.listAvailableDisks()
+        
+        return SimpleEntry(
+            date: Date(),
+            configuration: configuration,
+            disks: vm.disks
+        )
     }
     
     func timeline(
