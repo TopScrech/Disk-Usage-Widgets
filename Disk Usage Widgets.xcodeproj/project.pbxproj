@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		F33812D22C2AC50600415506 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F33812D12C2AC50600415506 /* ScrechKit */; };
 		F3573BBC2C64CFF90051259E /* App Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3573BBB2C64CFF90051259E /* App Settings.swift */; };
 		F3573BBD2C64CFF90051259E /* App Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3573BBB2C64CFF90051259E /* App Settings.swift */; };
+		F358F03F2D2C1F3300BCC07B /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */; };
 		F371A5112C2D6EA6006BDF0D /* Large Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5102C2D6EA6006BDF0D /* Large Widget.swift */; };
 		F371A5172C2D7976006BDF0D /* Extra Large Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5162C2D7976006BDF0D /* Extra Large Widget.swift */; };
 		F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DB2C2AD3DE00415506 /* WidgetKit.framework */; };
@@ -111,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F358F03F2D2C1F3300BCC07B /* LaunchAtLogin in Frameworks */,
 				F33812D22C2AC50600415506 /* ScrechKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +234,7 @@
 			name = "Disk Usage Widgets";
 			packageProductDependencies = (
 				F33812D12C2AC50600415506 /* ScrechKit */,
+				F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */,
 			);
 			productName = "Disk Usage Widgets";
 			productReference = F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */;
@@ -256,7 +259,6 @@
 				};
 			};
 			buildConfigurationList = F3CEBFFC2C2ABA6800B44CE4 /* Build configuration list for PBXProject "Disk Usage Widgets" */;
-			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -267,7 +269,9 @@
 			mainGroup = F3CEBFF82C2ABA6800B44CE4;
 			packageReferences = (
 				F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */,
+				F358F03D2D2C1F3300BCC07B /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 			);
+			preferredProjectObjectVersion = 77;
 			productRefGroup = F3CEC0022C2ABA6800B44CE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -369,7 +373,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.9.2;
+				MARKETING_VERSION = 0.9.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -402,7 +406,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.9.2;
+				MARKETING_VERSION = 0.9.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -558,7 +562,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.9.2;
+				MARKETING_VERSION = 0.9.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -593,7 +597,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 0.9.2;
+				MARKETING_VERSION = 0.9.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -645,6 +649,14 @@
 				kind = branch;
 			};
 		};
+		F358F03D2D2C1F3300BCC07B /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TopScrech/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -652,6 +664,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
 			productName = ScrechKit;
+		};
+		F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F358F03D2D2C1F3300BCC07B /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
 		};
 		F397D7912C2AF3B30069F3EB /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
