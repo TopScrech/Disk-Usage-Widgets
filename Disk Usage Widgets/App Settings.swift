@@ -1,5 +1,6 @@
 import SwiftUI
 import WidgetKit
+import LaunchAtLogin
 
 struct AppSettings: View {
     @Environment(\.openWindow) private var openWindow
@@ -24,6 +25,8 @@ struct AppSettings: View {
             
             Text("App Version: \(appVersion) B\(buildNumber)")
                 .foregroundStyle(.secondary)
+            
+            LaunchAtLogin.Toggle()
         }
         .padding(50)
         
