@@ -1,5 +1,5 @@
 {
-  "originHash" : "7e1302cfd3eea6beb6be4525681dd8683927ed0b3404f84d5ad98d856e897229",
+  "originHash" : "e7b983fabc6fbf96c473abd3e6abe69af8890f1a21f62ef1f3a93989da8234fe",
   "pins" : [
     {
       "identity" : "launchatlogin",
@@ -16,7 +16,7 @@
       "location" : "https://github.com/TopScrech/ScrechKit",
       "state" : {
         "branch" : "main",
-        "revision" : "944c3487f894bf03bb53590d64bd96d65af0e00b"
+        "revision" : "ee68ee7e4b50d9e155b8f886e7f377e08e1f1fa8"
       }
     }
   ],
