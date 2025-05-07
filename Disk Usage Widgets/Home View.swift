@@ -4,9 +4,13 @@ struct HomeView: View {
     private var vm = VM()
     
 #if os(macOS)
-    private let publisher = NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)
+    private let publisher = NotificationCenter.default.publisher(
+        for: NSApplication.didBecomeActiveNotification
+    )
 #else
-    private let publisher = NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)
+    private let publisher = NotificationCenter.default.publisher(
+        for: UIApplication.didBecomeActiveNotification
+    )
 #endif
     
     var body: some View {
