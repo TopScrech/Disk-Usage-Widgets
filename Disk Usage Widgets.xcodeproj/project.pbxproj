@@ -149,6 +149,14 @@
 			path = Widgets;
 			sourceTree = "<group>";
 		};
+		F39DE6222DCB505F0068894F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F3573BBB2C64CFF90051259E /* App Settings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		F3CEBFF82C2ABA6800B44CE4 = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */,
-				F3573BBB2C64CFF90051259E /* App Settings.swift */,
 				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F3DDD23C2D921C3F002CB1B9 /* macOS.plist */,
 				F3CEC00D2C2ABA6900B44CE4 /* macOS.entitlements */,
@@ -183,6 +190,7 @@
 				F33812CE2C2AC1B200415506 /* Disk Entry.swift */,
 				F33812CA2C2ABBA500415506 /* File Manager.swift */,
 				F326A3C32C2B884400459E3C /* Utilities.swift */,
+				F39DE6222DCB505F0068894F /* Settings */,
 			);
 			path = "Disk Usage Widgets";
 			sourceTree = "<group>";
