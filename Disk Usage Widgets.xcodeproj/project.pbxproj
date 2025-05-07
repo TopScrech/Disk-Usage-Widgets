@@ -20,7 +20,6 @@
 		F33812CF2C2AC1B200415506 /* Disk Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CE2C2AC1B200415506 /* Disk Entry.swift */; };
 		F33812D22C2AC50600415506 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F33812D12C2AC50600415506 /* ScrechKit */; };
 		F3573BBC2C64CFF90051259E /* App Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3573BBB2C64CFF90051259E /* App Settings.swift */; };
-		F3573BBD2C64CFF90051259E /* App Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3573BBB2C64CFF90051259E /* App Settings.swift */; };
 		F358F03F2D2C1F3300BCC07B /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */; };
 		F371A5112C2D6EA6006BDF0D /* Large Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5102C2D6EA6006BDF0D /* Large Widget.swift */; };
 		F371A5172C2D7976006BDF0D /* Extra Large Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F371A5162C2D7976006BDF0D /* Extra Large Widget.swift */; };
@@ -303,7 +302,6 @@
 				F397D78E2C2AF2B90069F3EB /* Disk Entry.swift in Sources */,
 				F397D77F2C2AEE020069F3EB /* Widgets Bundle.swift in Sources */,
 				F397D7812C2AEE020069F3EB /* Small Widget.swift in Sources */,
-				F3573BBD2C64CFF90051259E /* App Settings.swift in Sources */,
 				F326A3C22C2B7FBB00459E3C /* Disk Usage Widget.swift in Sources */,
 				F371A5112C2D6EA6006BDF0D /* Large Widget.swift in Sources */,
 				F326A3C62C2B8CA000459E3C /* VM.swift in Sources */,
