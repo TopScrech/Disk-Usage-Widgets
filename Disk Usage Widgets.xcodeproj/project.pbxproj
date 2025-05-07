@@ -79,7 +79,7 @@
 		F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Widgets Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Widgets Bundle.swift"; sourceTree = "<group>"; };
 		F397D7802C2AEE020069F3EB /* Small Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Small Widget.swift"; sourceTree = "<group>"; };
-		F397D7842C2AEE030069F3EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F397D7842C2AEE030069F3EB /* Widgets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Widgets.plist; sourceTree = "<group>"; };
 		F397D7852C2AEE030069F3EB /* Widgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widgets.entitlements; sourceTree = "<group>"; };
 		F397D78C2C2AF26C0069F3EB /* Medium Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medium Widget.swift"; sourceTree = "<group>"; };
 		F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Simple Entry.swift"; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widgets.swift"; sourceTree = "<group>"; };
 		F3CEC0062C2ABA6800B44CE4 /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
-		F3CEC00D2C2ABA6900B44CE4 /* Disk_Usage_Widgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Disk_Usage_Widgets.entitlements; sourceTree = "<group>"; };
+		F3CEC00D2C2ABA6900B44CE4 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		F3DB25472C2C514C00A0C066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3DDD23C2D921C3F002CB1B9 /* macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = macOS.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */,
-				F397D7842C2AEE030069F3EB /* Info.plist */,
+				F397D7842C2AEE030069F3EB /* Widgets.plist */,
 				F397D7852C2AEE030069F3EB /* Widgets.entitlements */,
 				F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */,
 				F39AA8452C2C962600CD84F4 /* Intent Configuration.swift */,
@@ -175,9 +175,9 @@
 				F3573BBB2C64CFF90051259E /* App Settings.swift */,
 				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F3DDD23C2D921C3F002CB1B9 /* macOS.plist */,
+				F3CEC00D2C2ABA6900B44CE4 /* macOS.entitlements */,
 				F32409212C2D3D5700403979 /* Localizable.xcstrings */,
 				F3DB25472C2C514C00A0C066 /* Assets.xcassets */,
-				F3CEC00D2C2ABA6900B44CE4 /* Disk_Usage_Widgets.entitlements */,
 				F33812CC2C2ABBCD00415506 /* VM.swift */,
 				F326A3C92C2B916100459E3C /* VM Eject.swift */,
 				F33812CE2C2AC1B200415506 /* Disk Entry.swift */,
@@ -345,7 +345,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_FILE = Widgets/Widgets.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Debug";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -377,7 +377,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_FILE = Widgets/Widgets.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -531,7 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Disk Usage Widgets/Disk_Usage_Widgets.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Disk Usage Widgets/macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
@@ -565,7 +565,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Disk Usage Widgets/Disk_Usage_Widgets.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Disk Usage Widgets/macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
