@@ -14,7 +14,7 @@ struct HomeView: View {
 #endif
     
     var body: some View {
-        VStack {            
+        VStack {
             Table(vm.disks) {
                 TableColumn("Name") { disk in
                     Label(disk.name, systemImage: disk.icon)
@@ -51,7 +51,6 @@ struct HomeView: View {
                     }
                 }
 #endif
-                
                 TableColumn("isEncrypted") { disk in
                     Text(disk.isEncrypted ? "+" : "")
                 }
