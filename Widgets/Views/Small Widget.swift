@@ -30,7 +30,7 @@ struct SmallWidgetView: View {
             HStack {
                 Label(name, systemImage: disk?.icon ?? "")
                     .bold()
-                    .foregroundStyle(.secondary)
+                    .secondary()
                     .padding(.top, 5)
                     .lineLimit(1)
             }
@@ -56,7 +56,7 @@ struct SmallWidgetView: View {
                 }
             }
             .caption2()
-            .foregroundStyle(.tertiary)
+            .tertiary()
             .offset(x: 5, y: -5)
         }
     }

@@ -24,7 +24,7 @@ struct AppSettings: View {
             }
             
             Text("App Version: \(appVersion) B\(buildNumber)")
-                .foregroundStyle(.secondary)
+                .secondary()
             
             LaunchAtLogin.Toggle()
         }

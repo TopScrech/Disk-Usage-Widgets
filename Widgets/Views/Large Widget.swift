@@ -101,7 +101,7 @@ fileprivate struct LargeDiskCard: View {
                     }
                 }
                 .footnote()
-                .foregroundStyle(.tertiary)
+                .tertiary()
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
@@ -109,7 +109,7 @@ fileprivate struct LargeDiskCard: View {
                         Text("Used")     // Used
                         Text("Total")   // Total
                     }
-                    .foregroundStyle(.secondary)
+                    .secondary()
                     .frame(width: 80)
                     
                     VStack(alignment: .trailing, spacing: 2) {
