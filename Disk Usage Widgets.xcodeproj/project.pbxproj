@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,14 +55,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		F33812EE2C2AD3DF00415506 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 				F397D7882C2AEE030069F3EB /* Widgets Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -100,22 +98,18 @@
 /* Begin PBXFrameworksBuildPhase section */
 		F397D7772C2AEE020069F3EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F397D7922C2AF3B30069F3EB /* ScrechKit in Frameworks */,
 				F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */,
 				F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3CEBFFE2C2ABA6800B44CE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F358F03F2D2C1F3300BCC07B /* LaunchAtLogin in Frameworks */,
 				F33812D22C2AC50600415506 /* ScrechKit in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -207,8 +201,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = "Widgets Extension";
 			packageProductDependencies = (
 				F397D7912C2AF3B30069F3EB /* ScrechKit */,
@@ -271,7 +263,7 @@
 				F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */,
 				F358F03D2D2C1F3300BCC07B /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 			);
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = F3CEC0022C2ABA6800B44CE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,28 +277,23 @@
 /* Begin PBXResourcesBuildPhase section */
 		F397D7782C2AEE020069F3EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F32409222C2D3D5700403979 /* Localizable.xcstrings in Resources */,
 				F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3CEBFFF2C2ABA6800B44CE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F32409232C2D3D5700403979 /* Localizable.xcstrings in Resources */,
 				F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F397D7762C2AEE020069F3EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F371A5172C2D7976006BDF0D /* Extra Large Widget.swift in Sources */,
 				F397D7942C2AF4A60069F3EB /* Graph.swift in Sources */,
@@ -324,11 +311,9 @@
 				F397D78D2C2AF26C0069F3EB /* Medium Widget.swift in Sources */,
 				F39AA8462C2C962600CD84F4 /* Intent Configuration.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F3CEBFFD2C2ABA6800B44CE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F326A3C42C2B884400459E3C /* Utilities.swift in Sources */,
 				F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */,
@@ -339,7 +324,6 @@
 				F3573BBC2C64CFF90051259E /* App Settings.swift in Sources */,
 				F3CEC0052C2ABA6800B44CE4 /* Disk Usage Widgets.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -352,7 +336,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F397D78A2C2AEE030069F3EB /* Debug */ = {
+		F397D78A2C2AEE030069F3EB /* Debug configuration for PBXNativeTarget "Widgets Extension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -384,7 +368,7 @@
 			};
 			name = Debug;
 		};
-		F397D78B2C2AEE030069F3EB /* Release */ = {
+		F397D78B2C2AEE030069F3EB /* Release configuration for PBXNativeTarget "Widgets Extension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -416,7 +400,7 @@
 			};
 			name = Release;
 		};
-		F3CEC00E2C2ABA6900B44CE4 /* Debug */ = {
+		F3CEC00E2C2ABA6900B44CE4 /* Debug configuration for PBXProject "Disk Usage Widgets" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -484,7 +468,7 @@
 			};
 			name = Debug;
 		};
-		F3CEC00F2C2ABA6900B44CE4 /* Release */ = {
+		F3CEC00F2C2ABA6900B44CE4 /* Release configuration for PBXProject "Disk Usage Widgets" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -544,7 +528,7 @@
 			};
 			name = Release;
 		};
-		F3CEC0112C2ABA6900B44CE4 /* Debug */ = {
+		F3CEC0112C2ABA6900B44CE4 /* Debug configuration for PBXNativeTarget "Disk Usage Widgets" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -578,7 +562,7 @@
 			};
 			name = Debug;
 		};
-		F3CEC0122C2ABA6900B44CE4 /* Release */ = {
+		F3CEC0122C2ABA6900B44CE4 /* Release configuration for PBXNativeTarget "Disk Usage Widgets" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -618,28 +602,25 @@
 		F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "Widgets Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F397D78A2C2AEE030069F3EB /* Debug */,
-				F397D78B2C2AEE030069F3EB /* Release */,
+				F397D78A2C2AEE030069F3EB /* Debug configuration for PBXNativeTarget "Widgets Extension" */,
+				F397D78B2C2AEE030069F3EB /* Release configuration for PBXNativeTarget "Widgets Extension" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F3CEBFFC2C2ABA6800B44CE4 /* Build configuration list for PBXProject "Disk Usage Widgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3CEC00E2C2ABA6900B44CE4 /* Debug */,
-				F3CEC00F2C2ABA6900B44CE4 /* Release */,
+				F3CEC00E2C2ABA6900B44CE4 /* Debug configuration for PBXProject "Disk Usage Widgets" */,
+				F3CEC00F2C2ABA6900B44CE4 /* Release configuration for PBXProject "Disk Usage Widgets" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F3CEC0102C2ABA6900B44CE4 /* Build configuration list for PBXNativeTarget "Disk Usage Widgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3CEC0112C2ABA6900B44CE4 /* Debug */,
-				F3CEC0122C2ABA6900B44CE4 /* Release */,
+				F3CEC0112C2ABA6900B44CE4 /* Debug configuration for PBXNativeTarget "Disk Usage Widgets" */,
+				F3CEC0122C2ABA6900B44CE4 /* Release configuration for PBXNativeTarget "Disk Usage Widgets" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
