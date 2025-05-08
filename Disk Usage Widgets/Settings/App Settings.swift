@@ -12,7 +12,6 @@ struct AppSettings: View {
         _showMenuBarExtra = showMenuBarExtra
     }
     
-    
     var body: some View {
         VStack(spacing: 20) {
             Button(showMenuBarExtra ? "Disable MenuBar app" : "Enable MenuBar app") {
@@ -25,8 +24,9 @@ struct AppSettings: View {
             
             Text("App Version: \(appVersion) B\(buildNumber)")
                 .secondary()
-            
+#if os(macOS)
             LaunchAtLogin.Toggle()
+#endif
         }
         .padding(50)
         
@@ -62,9 +62,8 @@ struct AppSettings: View {
     }
 }
 
-#warning("iOS 18")
-//#Preview {
-//    @Previewable @State var showMenuBarExtra = false
-//    
-//    AppSettings($showMenuBarExtra)
-//}
+#Preview {
+    @Previewable @State var showMenuBarExtra = false
+    
+    AppSettings($showMenuBarExtra)
+}

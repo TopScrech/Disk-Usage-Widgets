@@ -1,7 +1,6 @@
 #if canImport(DiskArbitration)
 
 import Foundation
-import DiskArbitration
 
 extension VM {
     func ejectDisk(_ diskPath: String) {
