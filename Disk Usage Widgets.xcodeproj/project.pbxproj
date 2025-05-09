@@ -36,8 +36,8 @@
 		F3CEC0052C2ABA6800B44CE4 /* Disk Usage Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */; };
 		F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0062C2ABA6800B44CE4 /* Home View.swift */; };
 		F3D807252DCD7FA000598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807242DCD7FA000598908 /* ScrechKit */; };
-		F3D807262DCD7FA000598908 /* ScrechKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F3D807242DCD7FA000598908 /* ScrechKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F3D807292DCD7FA900598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807282DCD7FA900598908 /* ScrechKit */; };
+		F3D8072C2DCD841D00598908 /* ScrechKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F3D807282DCD7FA900598908 /* ScrechKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
 		F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -67,7 +67,6 @@
 			dstPath = "";
 			dstSubfolder = Frameworks;
 			files = (
-				F3D807262DCD7FA000598908 /* ScrechKit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 		};
@@ -76,6 +75,7 @@
 			dstPath = "";
 			dstSubfolder = Frameworks;
 			files = (
+				F3D8072C2DCD841D00598908 /* ScrechKit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 		};
