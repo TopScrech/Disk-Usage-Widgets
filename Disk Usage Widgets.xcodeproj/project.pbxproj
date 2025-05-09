@@ -35,10 +35,9 @@
 		F39AA8462C2C962600CD84F4 /* Intent Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AA8452C2C962600CD84F4 /* Intent Configuration.swift */; };
 		F3CEC0052C2ABA6800B44CE4 /* Disk Usage Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */; };
 		F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0062C2ABA6800B44CE4 /* Home View.swift */; };
-		F3D807302DCD871800598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D8072F2DCD871800598908 /* ScrechKit */; };
-		F3D807312DCD871800598908 /* ScrechKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F3D8072F2DCD871800598908 /* ScrechKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		F3D807332DCD872000598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807322DCD872000598908 /* ScrechKit */; };
-		F3D807342DCD872000598908 /* ScrechKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F3D807322DCD872000598908 /* ScrechKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F3D807252DCD7FA000598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807242DCD7FA000598908 /* ScrechKit */; };
+		F3D807292DCD7FA900598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807282DCD7FA900598908 /* ScrechKit */; };
+		F3D8072C2DCD841D00598908 /* ScrechKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F3D807282DCD7FA900598908 /* ScrechKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
 		F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -68,7 +67,6 @@
 			dstPath = "";
 			dstSubfolder = Frameworks;
 			files = (
-				F3D807342DCD872000598908 /* ScrechKit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 		};
@@ -77,7 +75,7 @@
 			dstPath = "";
 			dstSubfolder = Frameworks;
 			files = (
-				F3D807312DCD871800598908 /* ScrechKit in Embed Frameworks */,
+				F3D8072C2DCD841D00598908 /* ScrechKit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 		};
@@ -118,7 +116,7 @@
 		F397D7772C2AEE020069F3EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				F3D807302DCD871800598908 /* ScrechKit in Frameworks */,
+				F3D807292DCD7FA900598908 /* ScrechKit in Frameworks */,
 				F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */,
 				F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */,
 			);
@@ -127,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			files = (
 				F358F03F2D2C1F3300BCC07B /* LaunchAtLogin in Frameworks */,
-				F3D807332DCD872000598908 /* ScrechKit in Frameworks */,
+				F3D807252DCD7FA000598908 /* ScrechKit in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -231,7 +229,7 @@
 			);
 			name = "Widgets Extension";
 			packageProductDependencies = (
-				F3D8072F2DCD871800598908 /* ScrechKit */,
+				F3D807282DCD7FA900598908 /* ScrechKit */,
 			);
 			productName = WidgetsExtension;
 			productReference = F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */;
@@ -255,7 +253,7 @@
 			name = "Disk Usage Widgets";
 			packageProductDependencies = (
 				F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */,
-				F3D807322DCD872000598908 /* ScrechKit */,
+				F3D807242DCD7FA000598908 /* ScrechKit */,
 			);
 			productName = "Disk Usage Widgets";
 			productReference = F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */;
@@ -678,12 +676,12 @@
 			package = F358F03D2D2C1F3300BCC07B /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
 		};
-		F3D8072F2DCD871800598908 /* ScrechKit */ = {
+		F3D807242DCD7FA000598908 /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
 			productName = ScrechKit;
 		};
-		F3D807322DCD872000598908 /* ScrechKit */ = {
+		F3D807282DCD7FA900598908 /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
 			productName = ScrechKit;
