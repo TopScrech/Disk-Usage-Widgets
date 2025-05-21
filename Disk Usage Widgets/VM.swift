@@ -13,7 +13,7 @@ final class VM {
         )
         
         guard let volumes else {
-            print("Failed to retrieve mounted volume URLs.")
+            print("Failed to retrieve mounted volume URL's")
             return
         }
         
@@ -69,7 +69,7 @@ final class VM {
             return disk
             
         } catch {
-            print("Error retrieving resource values for \(volume): \(error.localizedDescription)")
+            print("Error retrieving resource values for \(volume):", error.localizedDescription)
             
             return nil
         }

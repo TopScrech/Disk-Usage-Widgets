@@ -11,7 +11,7 @@ extension FileManager {
             return usedCapacity
             
         } catch {
-            print("FileManager+VolumeSize: Error while calculating used disk space: \(error)")
+            print("FileManager+VolumeSize: Error while calculating used disk space:", error)
             throw error
         }
     }
@@ -24,7 +24,7 @@ extension FileManager {
                 return capacity
             }
         } catch {
-            print("FileManager+DirectorySize: Problem while requesting volume capacity: \(error)")
+            print("FileManager+DirectorySize: Problem while requesting volume capacity:", error)
         }
         
         return 0
@@ -38,7 +38,7 @@ extension FileManager {
                 return totalCapacity
             }
         } catch {
-            print("FileManager+VolumeSize: Problem while requesting volume total capacity: \(error)")
+            print("FileManager+VolumeSize: Problem while requesting volume total capacity:", error)
         }
         
         return 0
