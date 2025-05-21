@@ -31,7 +31,7 @@ struct HomeView: View {
                 .width(min: 60)
                 
                 TableColumn("Free Space") { disk in
-                    VStack {
+                    VStack(spacing: 0) {
                         Text(disk.freeSpace)
                         
                         Text(disk.freeSpacePercentage)
@@ -41,7 +41,7 @@ struct HomeView: View {
                 .width(min: 100)
                 
                 TableColumn("Used Space") { disk in
-                    VStack {
+                    VStack(spacing: 0) {
                         Text(disk.usedSpace)
                         
                         Text(disk.usedSpacePercentage)
