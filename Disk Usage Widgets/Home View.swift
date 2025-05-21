@@ -50,22 +50,22 @@ struct HomeView: View {
                 }
                 .width(min: 50)
                 
-#if canImport(DiskArbitration)
                 TableColumn("isEjectable") { disk in
+#if DEBUG
+                    if disk.isEjectable {
+                        Button("Eject") {
+                            if let url = disk.url?.path {
+                                vm.ejectDisk(url)
+                            } else {
+                                print("Path not found")
+                            }
+                        }
+                    }
+#else
                     Text(disk.isEjectable ? "+" : "")
-                    
-                    //                    if disk.isEjectable {
-                    //                        Button("Eject") {
-                    //                            if let url = disk.url?.path {
-                    //                                vm.ejectDisk(url)
-                    //                            } else {
-                    //                                print("Path not found")
-                    //                            }
-                    //                        }
-                    //                    }
+#endif
                 }
                 .width(min: 50)
-#endif
             }
         }
         .title3()
