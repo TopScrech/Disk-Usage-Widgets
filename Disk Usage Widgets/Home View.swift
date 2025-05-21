@@ -28,22 +28,27 @@ struct HomeView: View {
                         Text(disk.type)
                     }
                 }
+                .width(min: 50)
                 
                 TableColumn("Free Space") { disk in
                     Text(disk.freeSpace)
                 }
+                .width(min: 100)
                 
                 TableColumn("Used Space") { disk in
                     Text(disk.usedSpace)
                 }
+                .width(min: 100)
                 
                 TableColumn("Total Space") { disk in
                     Text(disk.totalSpace)
                 }
+                .width(min: 100)
                 
                 TableColumn("Path") { disk in
                     Text(disk.url?.path ?? "-")
                 }
+                .width(min: 50)
                 
 #if canImport(DiskArbitration)
                 TableColumn("isEjectable") { disk in
@@ -55,6 +60,7 @@ struct HomeView: View {
                         }
                     }
                 }
+                .width(min: 50)
 #endif
             }
         }
