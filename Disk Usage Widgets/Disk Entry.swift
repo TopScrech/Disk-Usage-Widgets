@@ -1,6 +1,6 @@
 import ScrechKit
 
-struct DiskEntry: Identifiable {
+struct DiskEntry: Identifiable, Equatable {
     let id = UUID()
     let url: URL?
     let name: String
