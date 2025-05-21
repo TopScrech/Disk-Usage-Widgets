@@ -17,10 +17,10 @@ struct DiskUsageWidgetView: View {
             
         case .systemMedium:
             MediumWidgetView(entry)
-#if DEBUG
+            
         case .systemLarge:
             LargeWidgetView(entry)
-            
+#if DEBUG
         case .systemExtraLarge:
             MediumWidgetView(entry)
 //            ExtraLargeWidgetView(entry)
