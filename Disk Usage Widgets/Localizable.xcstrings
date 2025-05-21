@@ -14,6 +14,9 @@
     " " : {
 
     },
+    "%@ 􀞚" : {
+
+    },
     "+" : {
       "localizations" : {
         "ru" : {
@@ -47,15 +50,8 @@
     "App" : {
 
     },
-    "App Version: %@ B%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version: %1$@ B%2$@"
-          }
-        }
-      }
+    "App Version" : {
+
     },
     "Available" : {
       "localizations" : {
@@ -87,12 +83,6 @@
         }
       }
     },
-    "Debug" : {
-
-    },
-    "Disable MenuBar app" : {
-
-    },
     "Disk Usage" : {
       "localizations" : {
         "ru" : {
@@ -103,10 +93,7 @@
         }
       }
     },
-    "Eject (not tested)" : {
-
-    },
-    "Enable MenuBar app" : {
+    "Encrypted" : {
 
     },
     "Error" : {
@@ -122,13 +109,7 @@
     "Free Space" : {
 
     },
-    "Hello, World!" : {
-
-    },
     "isEjectable" : {
-
-    },
-    "isEncrypted" : {
 
     },
     "Menu Bar Extra" : {
@@ -164,6 +145,9 @@
         }
       }
     },
+    "Reload all widgets" : {
+
+    },
     "Show build number" : {
       "localizations" : {
         "ru" : {
@@ -173,6 +157,9 @@
           }
         }
       }
+    },
+    "Show in MenuBar" : {
+
     },
     "Show refresh button" : {
       "localizations" : {
@@ -232,6 +219,16 @@
     },
     "Used Space" : {
 
+    },
+    "v%@ (B%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "v%1$@ (B%2$@)"
+          }
+        }
+      }
     },
     "Widget configuration" : {
 

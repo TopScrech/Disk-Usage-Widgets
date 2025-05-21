@@ -16,40 +16,41 @@ struct LargeWidgetView: View {
     
     var body: some View {
         GeometryReader { geo in
-            let height = geo.size.height * 0.33
+            let height = geo.size.height * 0.32
             
-            VStack(spacing: 0) {
+            VStack(spacing: 5) {
                 Group {
                     if disks.count > 0 {
                         LargeDiskCard(entry, disk: disks[0])
                             .frame(height: height)
-                            .overlay(alignment: .topTrailing) {
-                                if !entry.configuration.showRefreshButton {
-                                    Button(intent: RefreshIntent()) {
-                                        Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
-                                            .caption2()
-                                    }
-                                    .clipShape(.circle)
-                                    .offset(x: 12, y: -8)
-                                }
-                            }
                     }
-                    
-                    Divider()
-                        .frame(height: 0)
                     
                     if disks.count > 1 {
+                        Divider()
+                            .frame(height: 0)
+                        
                         LargeDiskCard(entry, disk: disks[1])
+                            .frame(height: height)
                     }
                     
-                    Divider()
-                        .frame(height: 0)
-                    
                     if disks.count > 2 {
+                        Divider()
+                            .frame(height: 0)
+                        
                         LargeDiskCard(entry, disk: disks[2])
                             .frame(height: height)
                     }
                 }
+            }
+        }
+        .overlay(alignment: .topTrailing) {
+            if !entry.configuration.showRefreshButton {
+                Button(intent: RefreshIntent()) {
+                    Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
+                        .caption2()
+                }
+                .clipShape(.circle)
+                .offset(x: 12, y: -8)
             }
         }
     }
@@ -101,7 +102,7 @@ fileprivate struct LargeDiskCard: View {
                     }
                 }
                 .footnote()
-                .foregroundStyle(.tertiary)
+                .tertiary()
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
@@ -109,7 +110,7 @@ fileprivate struct LargeDiskCard: View {
                         Text("Used")     // Used
                         Text("Total")   // Total
                     }
-                    .foregroundStyle(.secondary)
+                    .secondary()
                     .frame(width: 80)
                     
                     VStack(alignment: .trailing, spacing: 2) {

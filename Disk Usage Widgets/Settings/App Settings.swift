@@ -12,24 +12,29 @@ struct AppSettings: View {
         _showMenuBarExtra = showMenuBarExtra
     }
     
-    
     var body: some View {
-        VStack(spacing: 20) {
-            Button(showMenuBarExtra ? "Disable MenuBar app" : "Enable MenuBar app") {
-                showMenuBarExtra.toggle()
+        Form {
+            Toggle("Show in MenuBar", isOn: $showMenuBarExtra)
+#if os(macOS)
+            LaunchAtLogin.Toggle()
+#endif
+            HStack {
+                Text("App Version")
+                
+                Spacer()
+                
+                Text("v\(appVersion) (B\(buildNumber))")
+                    .secondary()
             }
-            
-            Button("Debug") {
+#if DEBUG
+            Button("Reload all widgets") {
                 WidgetCenter.shared.reloadAllTimelines()
             }
-            
-            Text("App Version: \(appVersion) B\(buildNumber)")
-                .foregroundStyle(.secondary)
-            
-            LaunchAtLogin.Toggle()
+#endif
         }
-        .padding(50)
-        
+        .frame(width: 500, height: 600)
+        .formStyle(.grouped)
+        .buttonStyle(.plain)
 #warning("WTF")
         //            Button(showMenuBarExtra ? "Switch to app" : "Switch to MenuBar") {
         //                showMenuBarExtra.toggle()
@@ -62,9 +67,8 @@ struct AppSettings: View {
     }
 }
 
-#warning("iOS 18")
-//#Preview {
-//    @Previewable @State var showMenuBarExtra = false
-//    
-//    AppSettings($showMenuBarExtra)
-//}
+#Preview {
+    @Previewable @State var showMenuBarExtra = false
+    
+    AppSettings($showMenuBarExtra)
+}

@@ -64,7 +64,7 @@ struct MediumWidgetView: View {
                     }
                 }
                 .footnote()
-                .foregroundStyle(.tertiary)
+                .tertiary()
                 
                 Spacer()
                 
@@ -77,7 +77,7 @@ struct MediumWidgetView: View {
                             Text("Total") // Total
                         }
                     }
-                    .foregroundStyle(.secondary)
+                    .secondary()
                     .frame(width: 55)
                     
                     VStack(alignment: .trailing, spacing: 2) {
