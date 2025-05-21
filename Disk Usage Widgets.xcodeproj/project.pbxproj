@@ -10,6 +10,7 @@
 		F32409222C2D3D5700403979 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32409212C2D3D5700403979 /* Localizable.xcstrings */; };
 		F32409232C2D3D5700403979 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32409212C2D3D5700403979 /* Localizable.xcstrings */; };
 		F32429C82DDD732F000A16E8 /* Extra Large Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32429C72DDD732F000A16E8 /* Extra Large Graph.swift */; };
+		F32429CA2DDD7657000A16E8 /* Disk Usage Widget View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32429C92DDD7657000A16E8 /* Disk Usage Widget View.swift */; };
 		F326A3C22C2B7FBB00459E3C /* Disk Usage Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */; };
 		F326A3C42C2B884400459E3C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Utilities.swift */; };
 		F326A3C52C2B889D00459E3C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Utilities.swift */; };
@@ -85,6 +86,7 @@
 /* Begin PBXFileReference section */
 		F32409212C2D3D5700403979 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F32429C72DDD732F000A16E8 /* Extra Large Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extra Large Graph.swift"; sourceTree = "<group>"; };
+		F32429C92DDD7657000A16E8 /* Disk Usage Widget View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widget View.swift"; sourceTree = "<group>"; };
 		F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widget.swift"; sourceTree = "<group>"; };
 		F326A3C32C2B884400459E3C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F326A3C92C2B916100459E3C /* VM Eject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VM Eject.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				F397D7842C2AEE030069F3EB /* Widgets.plist */,
 				F397D7852C2AEE030069F3EB /* Widgets.entitlements */,
 				F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */,
+				F32429C92DDD7657000A16E8 /* Disk Usage Widget View.swift */,
 				F39AA8452C2C962600CD84F4 /* Intent Configuration.swift */,
 				F397D7952C2AF4BE0069F3EB /* Provider.swift */,
 				F397D78F2C2AF36C0069F3EB /* Simple Entry.swift */,
@@ -328,6 +331,7 @@
 				F371A5172C2D7976006BDF0D /* Extra Large Widget.swift in Sources */,
 				F397D7942C2AF4A60069F3EB /* Graph.swift in Sources */,
 				F397D7902C2AF36C0069F3EB /* Simple Entry.swift in Sources */,
+				F32429CA2DDD7657000A16E8 /* Disk Usage Widget View.swift in Sources */,
 				F326A3C52C2B889D00459E3C /* Utilities.swift in Sources */,
 				F397D7962C2AF4BE0069F3EB /* Provider.swift in Sources */,
 				F32429C82DDD732F000A16E8 /* Extra Large Graph.swift in Sources */,
