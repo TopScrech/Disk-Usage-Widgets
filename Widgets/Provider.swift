@@ -26,7 +26,6 @@ struct Provider: AppIntentTimelineProvider {
             disks: vm.disks
         )
     }
-    
     func timeline(
         for configuration: ConfigurationAppIntent,
         in context: Context
@@ -34,9 +33,6 @@ struct Provider: AppIntentTimelineProvider {
         let vm = VM()
         vm.listAvailableDisks()
         
-#if DEBUG
-        let entries: [SimpleEntry] = [previewEntry]
-#else
         let entries: [SimpleEntry] = [
             .init(
                 date: Date(),
@@ -44,11 +40,11 @@ struct Provider: AppIntentTimelineProvider {
                 disks: vm.disks
             )
         ]
-#endif
+        let nextUpdate = Date().addingTimeInterval(5 * 60) // 5 minutes
         
         let timeline = Timeline(
             entries: entries,
-            policy: .atEnd
+            policy: .after(nextUpdate)
         )
         
         return timeline
