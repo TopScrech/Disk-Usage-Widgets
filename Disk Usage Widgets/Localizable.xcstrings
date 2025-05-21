@@ -83,6 +83,9 @@
         }
       }
     },
+    "Debug" : {
+
+    },
     "Disk Usage" : {
       "localizations" : {
         "ru" : {
