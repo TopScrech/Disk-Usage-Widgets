@@ -28,7 +28,7 @@ struct HomeView: View {
                         Text(disk.type)
                     }
                 }
-                .width(min: 50)
+                .width(min: 60)
                 
                 TableColumn("Free Space") { disk in
                     Text(disk.freeSpace)
