@@ -78,6 +78,7 @@ struct HomeView: View {
                 .width(min: 50)
             }
         }
+        .navigationTitle("Connected Disks")
         .title3()
         .scrollIndicators(.never)
         .onReceive(publisher) { _ in
@@ -85,6 +86,13 @@ struct HomeView: View {
         }
         .task {
             vm.listAvailableDisks()
+        }
+        .toolbar {
+            Button("") {
+                vm.listAvailableDisks()
+            }
+            .opacity(0)
+            .keyboardShortcut("r")
         }
     }
 }
