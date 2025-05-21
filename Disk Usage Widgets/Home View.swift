@@ -31,12 +31,22 @@ struct HomeView: View {
                 .width(min: 60)
                 
                 TableColumn("Free Space") { disk in
-                    Text(disk.freeSpace)
+                    VStack {
+                        Text(disk.freeSpace)
+                        
+                        Text(disk.freeSpacePercentage)
+                            .tertiary()
+                    }
                 }
                 .width(min: 100)
                 
                 TableColumn("Used Space") { disk in
-                    Text(disk.usedSpace)
+                    VStack {
+                        Text(disk.usedSpace)
+                        
+                        Text(disk.usedSpacePercentage)
+                            .tertiary()
+                    }
                 }
                 .width(min: 100)
                 
