@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 struct HomeView: View {
     private var vm = VM()
@@ -91,6 +92,7 @@ struct HomeView: View {
         .toolbar {
             Button("") {
                 vm.listAvailableDisks()
+                WidgetCenter.shared.reloadAllTimelines()
             }
             .opacity(0)
             .keyboardShortcut("r")

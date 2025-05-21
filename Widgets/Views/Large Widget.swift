@@ -43,6 +43,20 @@ struct LargeWidgetView: View {
                 }
             }
         }
+        .overlay(alignment: .top) {
+            HStack {
+                if entry.configuration.showRefreshTime {
+                    Text(Date(), format: .dateTime.hour().minute().second())
+                }
+                
+                if entry.configuration.showBuildNumber {
+                    Text("B\(Utilities.buildNumber)")
+                }
+            }
+            .footnote()
+            .tertiary()
+            .offset(y: -10)
+        }
         .overlay(alignment: .topTrailing) {
             if !entry.configuration.showRefreshButton {
                 Button(intent: RefreshIntent()) {
@@ -91,18 +105,6 @@ fileprivate struct LargeDiskCard: View {
                     .semibold()
                     .rounded()
                     .lineLimit(1)
-                
-                HStack {
-                    if entry.configuration.showRefreshTime {
-                        Text(Date(), format: .dateTime.hour().minute().second())
-                    }
-                    
-                    if entry.configuration.showBuildNumber {
-                        Text("B\(Utilities.buildNumber)")
-                    }
-                }
-                .footnote()
-                .tertiary()
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
