@@ -20,10 +20,10 @@ struct DiskUsageWidgetView: View {
             
         case .systemLarge:
             LargeWidgetView(entry)
-#if DEBUG
+            
         case .systemExtraLarge:
             ExtraLargeWidgetView(entry)
-#endif
+            
         default:
             Text("Error")
         }
