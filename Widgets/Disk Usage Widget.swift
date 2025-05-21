@@ -11,8 +11,6 @@ struct DiskUsageWidget: Widget {
             intent: ConfigurationAppIntent.self,
             provider: provider
         ) { entry in
-#warning("Enable .systemLarge")
-#warning("Enable .systemExtraLarge")
             DiskUsageWidgetView(entry)
                 .containerBackground(.ultraThinMaterial, for: .widget)
         }
