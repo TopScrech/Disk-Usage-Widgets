@@ -9,7 +9,7 @@ struct DiskEntry: Identifiable {
     let isEjectable: Bool
     let isEncrypted: Bool
     let localizedName: String
-    let freeSpaceBytes: Int64
+    let freeSpaceBytes: Int
     let totalSpaceBytes: Int
     
     var icon: String {
