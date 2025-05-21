@@ -19,9 +19,15 @@ struct HomeView: View {
                 TableColumn("Name") { disk in
                     Label(disk.name, systemImage: disk.icon)
                 }
+                .width(min: 150)
                 
                 TableColumn("Type") { disk in
-                    Text(disk.type)
+                    if disk.isEncrypted {
+                        Text("\(disk.type) 􀞚")
+                            .help("Encrypted")
+                    } else {
+                        Text(disk.type)
+                    }
                 }
                 
                 TableColumn("Free Space") { disk in
@@ -51,14 +57,9 @@ struct HomeView: View {
                     }
                 }
 #endif
-                TableColumn("isEncrypted") { disk in
-                    if disk.isEncrypted {
-                        Image(systemName: "lock.shield.fill")
-                            .help("Encrypted")
-                    }
-                }
             }
         }
+        .title3()
         .scrollIndicators(.never)
         .onReceive(publisher) { _ in
             vm.listAvailableDisks()

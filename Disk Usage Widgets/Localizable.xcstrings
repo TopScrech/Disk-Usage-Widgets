@@ -14,6 +14,9 @@
     " " : {
 
     },
+    "%@ 􀞚" : {
+
+    },
     "+" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -111,9 +114,6 @@
 
     },
     "isEjectable" : {
-
-    },
-    "isEncrypted" : {
 
     },
     "Menu Bar Extra" : {
