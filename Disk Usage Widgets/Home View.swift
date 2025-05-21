@@ -12,7 +12,6 @@ struct HomeView: View {
         for: UIApplication.didBecomeActiveNotification
     )
 #endif
-    
     var body: some View {
         VStack {
             Table(vm.disks) {
