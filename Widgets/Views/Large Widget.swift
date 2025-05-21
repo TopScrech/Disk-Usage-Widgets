@@ -16,7 +16,7 @@ struct LargeWidgetView: View {
     
     var body: some View {
         GeometryReader { geo in
-            let height = geo.size.height * 0.32
+            let height = geo.size.height * 0.30
             
             VStack(spacing: 5) {
                 Group {
@@ -28,6 +28,7 @@ struct LargeWidgetView: View {
                     if disks.count > 1 {
                         Divider()
                             .frame(height: 0)
+                            .padding(.vertical, 5)
                         
                         LargeDiskCard(entry, disk: disks[1])
                             .frame(height: height)
@@ -36,6 +37,7 @@ struct LargeWidgetView: View {
                     if disks.count > 2 {
                         Divider()
                             .frame(height: 0)
+                            .padding(.vertical, 5)
                         
                         LargeDiskCard(entry, disk: disks[2])
                             .frame(height: height)
@@ -44,7 +46,7 @@ struct LargeWidgetView: View {
             }
         }
         .overlay(alignment: .top) {
-            HStack {
+            HStack(spacing: 5) {
                 if entry.configuration.showRefreshTime {
                     Text(Date(), format: .dateTime.hour().minute().second())
                 }
@@ -58,7 +60,7 @@ struct LargeWidgetView: View {
             .offset(y: -10)
         }
         .overlay(alignment: .topTrailing) {
-            if !entry.configuration.showRefreshButton {
+            if entry.configuration.showRefreshButton {
                 Button(intent: RefreshIntent()) {
                     Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
                         .caption2()
@@ -91,7 +93,7 @@ fileprivate struct LargeDiskCard: View {
         HStack {
             Graph(
                 disk,
-                innerRadius: 40,
+                innerRadius: 35,
                 angularInset: 4,
                 cornerRadius: 3
             )
