@@ -2,28 +2,33 @@
 
 import Foundation
 
-extension VM {
+extension VM { // Doesn't work in sandbox
     func ejectDisk(_ diskPath: String) {
-        guard let session = DASessionCreate(kCFAllocatorDefault) else {
-            print("Failed to create DASession")
-            return
-        }
-        
-        let volumePath = diskPath as CFString
-        
-        guard let diskURL = URL(string: volumePath as String),
-              let disk = DADiskCreateFromVolumePath(kCFAllocatorDefault, session, diskURL as CFURL)
-        else {
-            print("Failed to create disk reference")
-            return
-        }
-        DADiskEject(disk, DADiskEjectOptions(kDADiskEjectOptionDefault), { disk, status, context in
-            if status as! Int == kDAReturnSuccess {
+        let process = Process()
+        process.launchPath = "/usr/sbin/diskutil"
+        process.arguments = ["eject", diskPath]
+
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = pipe
+
+        process.terminationHandler = { proc in
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            if let output = String(data: data, encoding: .utf8) {
+                print("diskutil output: \(output)")
+            }
+            if proc.terminationStatus == 0 {
                 print("Disk ejected successfully")
             } else {
-                print("Failed to eject disk")
+                print("Failed to eject disk, exit code: \(proc.terminationStatus)")
             }
-        }, nil)
+        }
+
+        do {
+            try process.run()
+        } catch {
+            print("Failed to run diskutil: \(error)")
+        }
     }
 }
 

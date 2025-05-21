@@ -52,13 +52,17 @@ struct HomeView: View {
                 
 #if canImport(DiskArbitration)
                 TableColumn("isEjectable") { disk in
-                    if disk.isEjectable {
-                        Button("Eject (not tested)") {
-                            if let url = disk.url?.path {
-                                vm.ejectDisk(url)
-                            }
-                        }
-                    }
+                    Text(disk.isEjectable ? "+" : "")
+                    
+                    //                    if disk.isEjectable {
+                    //                        Button("Eject") {
+                    //                            if let url = disk.url?.path {
+                    //                                vm.ejectDisk(url)
+                    //                            } else {
+                    //                                print("Path not found")
+                    //                            }
+                    //                        }
+                    //                    }
                 }
                 .width(min: 50)
 #endif
