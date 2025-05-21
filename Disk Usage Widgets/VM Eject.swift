@@ -1,4 +1,4 @@
-#if canImport(DiskArbitration)
+#if DEBUG
 
 import Foundation
 

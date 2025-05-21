@@ -27,8 +27,10 @@ struct AppSettings: View {
                     .secondary()
             }
 #if DEBUG
-            Button("Reload all widgets") {
-                WidgetCenter.shared.reloadAllTimelines()
+            Section("Debug") {
+                Button("Reload all widgets") {
+                    WidgetCenter.shared.reloadAllTimelines()
+                }
             }
 #endif
         }

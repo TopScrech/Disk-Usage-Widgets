@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 struct HomeView: View {
     private var vm = VM()
@@ -31,12 +32,22 @@ struct HomeView: View {
                 .width(min: 60)
                 
                 TableColumn("Free Space") { disk in
-                    Text(disk.freeSpace)
+                    VStack(spacing: 0) {
+                        Text(disk.freeSpace)
+                        
+                        Text(disk.freeSpacePercentage)
+                            .tertiary()
+                    }
                 }
                 .width(min: 100)
                 
                 TableColumn("Used Space") { disk in
-                    Text(disk.usedSpace)
+                    VStack(spacing: 0) {
+                        Text(disk.usedSpace)
+                        
+                        Text(disk.usedSpacePercentage)
+                            .tertiary()
+                    }
                 }
                 .width(min: 100)
                 
@@ -50,24 +61,26 @@ struct HomeView: View {
                 }
                 .width(min: 50)
                 
-#if canImport(DiskArbitration)
                 TableColumn("isEjectable") { disk in
+#if DEBUG
+                    if disk.isEjectable {
+                        Button("Eject") {
+                            if let url = disk.url?.path {
+                                vm.ejectDisk(url)
+                            } else {
+                                print("Path not found")
+                            }
+                        }
+                    }
+#else
                     Text(disk.isEjectable ? "+" : "")
-                    
-                    //                    if disk.isEjectable {
-                    //                        Button("Eject") {
-                    //                            if let url = disk.url?.path {
-                    //                                vm.ejectDisk(url)
-                    //                            } else {
-                    //                                print("Path not found")
-                    //                            }
-                    //                        }
-                    //                    }
+#endif
                 }
                 .width(min: 50)
-#endif
             }
         }
+        .animation(.default, value: vm.disks)
+        .navigationTitle("Connected Disks")
         .title3()
         .scrollIndicators(.never)
         .onReceive(publisher) { _ in
@@ -75,6 +88,14 @@ struct HomeView: View {
         }
         .task {
             vm.listAvailableDisks()
+        }
+        .toolbar {
+            Button("") {
+                vm.listAvailableDisks()
+                WidgetCenter.shared.reloadAllTimelines()
+            }
+            .opacity(0)
+            .keyboardShortcut("r")
         }
     }
 }
