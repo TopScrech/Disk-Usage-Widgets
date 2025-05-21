@@ -15,6 +15,7 @@
 
     },
     "+" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -91,6 +92,9 @@
       }
     },
     "Eject (not tested)" : {
+
+    },
+    "Encrypted" : {
 
     },
     "Error" : {

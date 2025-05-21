@@ -52,7 +52,10 @@ struct HomeView: View {
                 }
 #endif
                 TableColumn("isEncrypted") { disk in
-                    Text(disk.isEncrypted ? "+" : "")
+                    if disk.isEncrypted {
+                        Image(systemName: "lock.shield.fill")
+                            .help("Encrypted")
+                    }
                 }
             }
         }
