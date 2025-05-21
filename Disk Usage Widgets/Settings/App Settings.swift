@@ -13,23 +13,28 @@ struct AppSettings: View {
     }
     
     var body: some View {
-        VStack(spacing: 20) {
-            Button(showMenuBarExtra ? "Disable MenuBar app" : "Enable MenuBar app") {
-                showMenuBarExtra.toggle()
-            }
-            
-            Button("Debug") {
-                WidgetCenter.shared.reloadAllTimelines()
-            }
-            
-            Text("App Version: \(appVersion) B\(buildNumber)")
-                .secondary()
+        Form {
+            Toggle("Show in MenuBar", isOn: $showMenuBarExtra)
 #if os(macOS)
             LaunchAtLogin.Toggle()
 #endif
+            HStack {
+                Text("App Version")
+                
+                Spacer()
+                
+                Text("v\(appVersion) (B\(buildNumber))")
+                    .secondary()
+            }
+#if DEBUG
+            Button("Reload all widgets") {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
+#endif
         }
-        .padding(50)
-        
+        .frame(width: 500, height: 600)
+        .formStyle(.grouped)
+        .buttonStyle(.plain)
 #warning("WTF")
         //            Button(showMenuBarExtra ? "Switch to app" : "Switch to MenuBar") {
         //                showMenuBarExtra.toggle()

@@ -17,15 +17,14 @@ struct DiskUsageWidgetView: View {
             
         case .systemMedium:
             MediumWidgetView(entry)
-            
+#if DEBUG
         case .systemLarge:
             LargeWidgetView(entry)
             
-#if DEBUG
         case .systemExtraLarge:
-            ExtraLargeWidgetView(entry)
+            MediumWidgetView(entry)
+//            ExtraLargeWidgetView(entry)
 #endif
-            
         default:
             Text("Error")
         }
@@ -42,13 +41,12 @@ struct DiskUsageWidget: Widget {
             intent: ConfigurationAppIntent.self,
             provider: provider
         ) { entry in
-            
+#warning("Enable .systemLarge")
 #warning("Enable .systemExtraLarge")
-            
             DiskUsageWidgetView(entry)
                 .containerBackground(.ultraThinMaterial, for: .widget)
         }
-        .supportedFamilies([.systemSmall, .systemMedium/*, .systemLarge, .systemExtraLarge*/])
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge])
         .configurationDisplayName("Disk Usage")
         .description("Widget configuration")
     }
