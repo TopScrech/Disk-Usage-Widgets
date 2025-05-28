@@ -23,7 +23,7 @@ struct AppSettings: View {
                 
                 Spacer()
                 
-                Text("v\(appVersion) (B\(buildNumber))")
+                Text("v\(version) (B\(build))")
                     .secondary()
             }
 #if DEBUG
@@ -52,7 +52,7 @@ struct AppSettings: View {
         //            .padding(.top)
     }
     
-    private var appVersion: String {
+    private var version: String {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             version
         } else {
@@ -60,7 +60,7 @@ struct AppSettings: View {
         }
     }
     
-    private var buildNumber: String {
+    private var build: String {
         if let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
             build
         } else {
