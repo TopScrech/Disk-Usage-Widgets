@@ -41,7 +41,7 @@ struct AppSettings: View {
         //            Button(showMenuBarExtra ? "Switch to app" : "Switch to MenuBar") {
         //                showMenuBarExtra.toggle()
         //
-        //                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        //                delay(0.5) {
         //                    if showMenuBarExtra {
         //                        openWindow(id: "app")
         //                    } else {
