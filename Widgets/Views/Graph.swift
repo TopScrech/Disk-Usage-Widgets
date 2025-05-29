@@ -69,6 +69,6 @@ struct Graph: View {
     SimpleEntry(
         date: Date(),
         configuration: .init(),
-        disks: [Utilities.previewDisk]
+        disks: [Utils.previewDisk]
     )
 }

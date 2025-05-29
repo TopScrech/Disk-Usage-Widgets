@@ -60,7 +60,7 @@ struct ExtraLargeWidgetView: View {
                     }
                     
                     if entry.configuration.showBuildNumber {
-                        Text("B\(Utilities.buildNumber)")
+                        Text("B\(Utils.buildNumber)")
                     }
                 }
                 .tertiary()
@@ -125,6 +125,6 @@ struct ExtraLargeWidgetView: View {
     SimpleEntry(
         date: Date(),
         configuration: .init(),
-        disks: [Utilities.previewDisk]
+        disks: [Utils.previewDisk]
     )
 }

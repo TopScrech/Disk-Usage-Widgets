@@ -4,7 +4,7 @@ struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(
         date: Date(),
         configuration: ConfigurationAppIntent(),
-        disks: Utilities.previewDisks
+        disks: Utils.previewDisks
     )
     
     func placeholder(

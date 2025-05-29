@@ -60,7 +60,7 @@ struct MediumWidgetView: View {
                     }
                     
                     if entry.configuration.showBuildNumber {
-                        Text("B\(Utilities.buildNumber)")
+                        Text("B\(Utils.buildNumber)")
                     }
                 }
                 .footnote()
@@ -125,6 +125,6 @@ struct MediumWidgetView: View {
     SimpleEntry(
         date: Date(),
         configuration: .init(),
-        disks: [Utilities.previewDisk]
+        disks: [Utils.previewDisk]
     )
 }

@@ -52,7 +52,7 @@ struct LargeWidgetView: View {
                 }
                 
                 if entry.configuration.showBuildNumber {
-                    Text("B\(Utilities.buildNumber)")
+                    Text("B\(Utils.buildNumber)")
                 }
             }
             .footnote()
@@ -147,6 +147,6 @@ fileprivate struct LargeDiskCard: View {
     SimpleEntry(
         date: Date(),
         configuration: .init(),
-        disks: Utilities.previewDisks
+        disks: Utils.previewDisks
     )
 }
