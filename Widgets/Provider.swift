@@ -3,7 +3,7 @@ import WidgetKit
 struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(
         date: Date(),
-        configuration: ConfigurationAppIntent(),
+        configuration: ConfigAppIntent(),
         disks: Utils.previewDisks
     )
     
@@ -14,7 +14,7 @@ struct Provider: AppIntentTimelineProvider {
     }
     
     func snapshot(
-        for configuration: ConfigurationAppIntent,
+        for configuration: ConfigAppIntent,
         in context: Context
     ) -> SimpleEntry {
         let vm = VM()
@@ -27,7 +27,7 @@ struct Provider: AppIntentTimelineProvider {
         )
     }
     func timeline(
-        for configuration: ConfigurationAppIntent,
+        for configuration: ConfigAppIntent,
         in context: Context
     ) -> Timeline<SimpleEntry> {
         let vm = VM()

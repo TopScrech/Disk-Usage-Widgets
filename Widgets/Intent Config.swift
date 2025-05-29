@@ -1,11 +1,11 @@
 import SwiftUI
 import AppIntents
 
-struct ConfigurationAppIntent: WidgetConfigurationIntent {
+struct ConfigAppIntent: WidgetConfigurationIntent {
     static let intentClassName = "ServerUsageIntent"
     
     static var title: LocalizedStringResource = "Configuration"
-    static var description: IntentDescription = " "
+    static var description: IntentDescription = "Disk Usage Widget Configuration"
     
     @Parameter(title: "Show refresh button", default: false)
     var showRefreshButton: Bool

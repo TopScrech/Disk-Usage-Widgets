@@ -8,7 +8,7 @@ struct DiskUsageWidget: Widget {
     var body: some WidgetConfiguration {
         AppIntentConfiguration(
             kind: kind,
-            intent: ConfigurationAppIntent.self,
+            intent: ConfigAppIntent.self,
             provider: provider
         ) { entry in
             DiskUsageWidgetView(entry)
