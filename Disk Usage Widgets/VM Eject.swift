@@ -22,14 +22,14 @@ extension VM { // Doesn't work in sandbox
             if proc.terminationStatus == 0 {
                 print("Disk ejected successfully")
             } else {
-                print("Failed to eject disk, exit code:", proc.terminationStatus)
+                print("⛔️ Failed to eject disk, exit code:", proc.terminationStatus)
             }
         }
         
         do {
             try process.run()
         } catch {
-            print("Failed to run diskutil:", error)
+            print("⛔️ Failed to run diskutil:", error)
         }
     }
 }

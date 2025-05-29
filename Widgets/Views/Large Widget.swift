@@ -47,12 +47,12 @@ struct LargeWidgetView: View {
         }
         .overlay(alignment: .top) {
             HStack(spacing: 5) {
-                if entry.configuration.showRefreshTime {
+                if entry.config.showRefreshTime {
                     Text(Date(), format: .dateTime.hour().minute().second())
                 }
                 
-                if entry.configuration.showBuildNumber {
-                    Text("B\(Utilities.buildNumber)")
+                if entry.config.showBuildNumber {
+                    Text("B\(Utils.buildNumber)")
                 }
             }
             .footnote()
@@ -60,7 +60,7 @@ struct LargeWidgetView: View {
             .offset(y: -10)
         }
         .overlay(alignment: .topTrailing) {
-            if entry.configuration.showRefreshButton {
+            if entry.config.showRefreshButton {
                 Button(intent: RefreshIntent()) {
                     Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
                         .caption2()
@@ -102,11 +102,13 @@ fileprivate struct LargeDiskCard: View {
             Spacer()
             
             VStack {
-                Label(disk.name, systemImage: disk.icon)
-                    .title3()
-                    .semibold()
-                    .rounded()
-                    .lineLimit(1)
+                if entry.config.showDiskName {
+                    Label(disk.name, systemImage: disk.icon)
+                        .title3()
+                        .semibold()
+                        .rounded()
+                        .lineLimit(1)
+                }
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
@@ -146,7 +148,7 @@ fileprivate struct LargeDiskCard: View {
 } timeline: {
     SimpleEntry(
         date: Date(),
-        configuration: .init(),
-        disks: Utilities.previewDisks
+        config: .init(),
+        disks: Utils.previewDisks
     )
 }

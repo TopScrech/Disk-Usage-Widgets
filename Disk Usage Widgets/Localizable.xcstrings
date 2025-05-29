@@ -11,7 +11,7 @@
         }
       }
     },
-    " " : {
+    "-" : {
 
     },
     "%@ 􀞚" : {
@@ -23,6 +23,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+"
+          }
+        }
+      }
+    },
+    "⌘ + R to refresh" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + R для обновления"
           }
         }
       }
@@ -73,6 +83,16 @@
         }
       }
     },
+    "Build Number" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Номер Сборки"
+          }
+        }
+      }
+    },
     "Configuration" : {
       "localizations" : {
         "ru" : {
@@ -87,7 +107,24 @@
 
     },
     "Debug" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отладка"
+          }
+        }
+      }
+    },
+    "Disk Name" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название Диска"
+          }
+        }
+      }
     },
     "Disk Usage" : {
       "localizations" : {
@@ -99,8 +136,18 @@
         }
       }
     },
-    "Eject" : {
+    "Disk Usage Widget Configuration" : {
 
+    },
+    "Eject" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Извлечь"
+          }
+        }
+      }
     },
     "Encrypted" : {
 
@@ -119,7 +166,14 @@
 
     },
     "isEjectable" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Возможно извлечь"
+          }
+        }
+      }
     },
     "Menu Bar Extra" : {
 
@@ -154,43 +208,37 @@
         }
       }
     },
-    "Reload all widgets" : {
-
-    },
-    "Show build number" : {
+    "Refresh Button" : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Показать номер билда"
+            "value" : "Кнопка Обновления"
+          }
+        }
+      }
+    },
+    "Refresh Time" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время Обновления"
+          }
+        }
+      }
+    },
+    "Reload all widgets" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перезагрузить все виджеты"
           }
         }
       }
     },
     "Show in MenuBar" : {
-
-    },
-    "Show refresh button" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показать кнопку обновления"
-          }
-        }
-      }
-    },
-    "Show refresh time" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показать время обновления"
-          }
-        }
-      }
-    },
-    "Show total space" : {
 
     },
     "Total" : {
@@ -240,7 +288,14 @@
       }
     },
     "Widget configuration" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конфигурация виджета"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

@@ -1,8 +1,7 @@
 import SwiftUI
-import WidgetKit
 
 struct HomeView: View {
-    private var vm = VM()
+    @State private var vm = VM()
     
 #if os(macOS)
     private let publisher = NotificationCenter.default.publisher(
@@ -90,12 +89,8 @@ struct HomeView: View {
             vm.listAvailableDisks()
         }
         .toolbar {
-            Button("") {
-                vm.listAvailableDisks()
-                WidgetCenter.shared.reloadAllTimelines()
-            }
-            .opacity(0)
-            .keyboardShortcut("r")
+            HomeViewToolbar()
+                .environment(vm)
         }
     }
 }

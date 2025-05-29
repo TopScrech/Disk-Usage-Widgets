@@ -1,6 +1,6 @@
 import Foundation
 
-final class Utilities {
+enum Utils {
     static let previewDisk = DiskEntry(
         url: URL(string: ""),
         name: "Preview SSD",

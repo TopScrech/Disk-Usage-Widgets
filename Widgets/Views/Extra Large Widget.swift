@@ -48,19 +48,21 @@ struct ExtraLargeWidgetView: View {
             }
             
             VStack {
-                Label(disk?.name ?? "Unknown", systemImage: icon)
-                    .largeTitle()
-                    .semibold()
-                    .rounded()
-                    .lineLimit(1)
+                if entry.config.showDiskName {
+                    Label(disk?.name ?? "Unknown", systemImage: icon)
+                        .largeTitle()
+                        .semibold()
+                        .rounded()
+                        .lineLimit(1)
+                }
                 
                 HStack {
-                    if entry.configuration.showRefreshTime {
+                    if entry.config.showRefreshTime {
                         Text(Date(), format: .dateTime.hour().minute().second())
                     }
                     
-                    if entry.configuration.showBuildNumber {
-                        Text("B\(Utilities.buildNumber)")
+                    if entry.config.showBuildNumber {
+                        Text("B\(Utils.buildNumber)")
                     }
                 }
                 .tertiary()
@@ -72,7 +74,7 @@ struct ExtraLargeWidgetView: View {
                         Text("Available")     // Available
                         Text("Used")         // Used
                         
-                        if entry.configuration.showTotalSpace {
+                        if entry.config.showTotalSpace {
                             Text("Total") // Total
                         }
                     }
@@ -83,7 +85,7 @@ struct ExtraLargeWidgetView: View {
                         Text(available)     // Available
                         Text(used)         // Used
                         
-                        if entry.configuration.showTotalSpace {
+                        if entry.config.showTotalSpace {
                             Text(total) // Total
                         }
                     }
@@ -94,7 +96,7 @@ struct ExtraLargeWidgetView: View {
                         Text(availablePercentage) // Available
                         Text(usedPercentage)     // Used
                         
-                        if entry.configuration.showTotalSpace {
+                        if entry.config.showTotalSpace {
                             Text("100 %")     // Total
                         }
                     }
@@ -108,7 +110,7 @@ struct ExtraLargeWidgetView: View {
         }
         //        .largeTitle()
         .overlay(alignment: .topLeading) {
-            if entry.configuration.showRefreshButton {
+            if entry.config.showRefreshButton {
                 Button(intent: RefreshIntent()) {
                     Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
                 }
@@ -124,7 +126,7 @@ struct ExtraLargeWidgetView: View {
 } timeline: {
     SimpleEntry(
         date: Date(),
-        configuration: .init(),
-        disks: [Utilities.previewDisk]
+        config: .init(),
+        disks: [Utils.previewDisk]
     )
 }

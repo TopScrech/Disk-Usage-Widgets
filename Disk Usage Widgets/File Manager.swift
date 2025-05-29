@@ -17,7 +17,9 @@ extension FileManager {
             throw NSError(
                 domain: "FileManager+VolumeSize",
                 code: 1,
-                userInfo: [NSLocalizedDescriptionKey: "Could not get free capacity"]
+                userInfo: [
+                    NSLocalizedDescriptionKey: "Could not get free capacity"
+                ]
             )
         }
         
@@ -27,11 +29,15 @@ extension FileManager {
     func volumeTotalDiskSpace(_ url: URL) throws -> Int {
         let values = try url.resourceValues(forKeys: [.volumeTotalCapacityKey])
         
-        guard let totalCapacity = values.volumeTotalCapacity else {
+        guard
+            let totalCapacity = values.volumeTotalCapacity
+        else {
             throw NSError(
                 domain: "FileManager+VolumeSize",
                 code: 2,
-                userInfo: [NSLocalizedDescriptionKey: "Could not get total capacity"]
+                userInfo: [
+                    NSLocalizedDescriptionKey: "Could not get total capacity"
+                ]
             )
         }
         

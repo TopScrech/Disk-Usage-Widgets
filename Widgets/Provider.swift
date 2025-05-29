@@ -3,8 +3,8 @@ import WidgetKit
 struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(
         date: Date(),
-        configuration: ConfigurationAppIntent(),
-        disks: Utilities.previewDisks
+        config: ConfigAppIntent(),
+        disks: Utils.previewDisks
     )
     
     func placeholder(
@@ -14,7 +14,7 @@ struct Provider: AppIntentTimelineProvider {
     }
     
     func snapshot(
-        for configuration: ConfigurationAppIntent,
+        for configuration: ConfigAppIntent,
         in context: Context
     ) -> SimpleEntry {
         let vm = VM()
@@ -22,12 +22,13 @@ struct Provider: AppIntentTimelineProvider {
         
         return SimpleEntry(
             date: Date(),
-            configuration: configuration,
+            config: configuration,
             disks: vm.disks
         )
     }
+    
     func timeline(
-        for configuration: ConfigurationAppIntent,
+        for configuration: ConfigAppIntent,
         in context: Context
     ) -> Timeline<SimpleEntry> {
         let vm = VM()
@@ -36,7 +37,7 @@ struct Provider: AppIntentTimelineProvider {
         let entries: [SimpleEntry] = [
             .init(
                 date: Date(),
-                configuration: configuration,
+                config: configuration,
                 disks: vm.disks
             )
         ]
