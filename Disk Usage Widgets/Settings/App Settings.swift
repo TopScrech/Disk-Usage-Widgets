@@ -29,7 +29,7 @@ struct AppSettings: View {
 #if DEBUG
             Section("Debug") {
                 Button("Reload all widgets") {
-                    WidgetCenter.shared.reloadAllTimelines()
+                    reloadAllWidgets()
                 }
             }
 #endif
@@ -50,6 +50,10 @@ struct AppSettings: View {
         //                }
         //            }
         //            .padding(.top)
+    }
+    
+    private func reloadAllWidgets() {
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
     private var version: String {

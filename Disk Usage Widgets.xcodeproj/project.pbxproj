@@ -204,11 +204,11 @@
 			isa = PBXGroup;
 			children = (
 				F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */,
-				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F3DDD23C2D921C3F002CB1B9 /* macOS.plist */,
 				F3CEC00D2C2ABA6900B44CE4 /* macOS.entitlements */,
 				F32409212C2D3D5700403979 /* Localizable.xcstrings */,
 				F3DB25472C2C514C00A0C066 /* Assets.xcassets */,
+				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F33812CC2C2ABBCD00415506 /* VM.swift */,
 				F326A3C92C2B916100459E3C /* VM Eject.swift */,
 				F33812CE2C2AC1B200415506 /* Disk Entry.swift */,
