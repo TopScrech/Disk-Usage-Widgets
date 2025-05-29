@@ -7,16 +7,19 @@ struct ConfigAppIntent: WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "Configuration"
     static var description: IntentDescription = "Disk Usage Widget Configuration"
     
-    @Parameter(title: "Show refresh button", default: false)
+    @Parameter(title: "Refresh Button", default: true)
     var showRefreshButton: Bool
     
-    @Parameter(title: "Show refresh time", default: true)
+    @Parameter(title: "Disk Name", default: true)
+    var showDiskName: Bool
+    
+    @Parameter(title: "Refresh Time", default: true)
     var showRefreshTime: Bool
     
-    @Parameter(title: "Show total space", default: true)
+    @Parameter(title: "Total Space", default: true)
     var showTotalSpace: Bool
     
-    @Parameter(title: "Show build number", default: false)
+    @Parameter(title: "Build Number", default: false)
     var showBuildNumber: Bool
 }
 

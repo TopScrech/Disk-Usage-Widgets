@@ -27,12 +27,14 @@ struct SmallWidgetView: View {
                 )
             }
             
-            HStack {
-                Label(name, systemImage: disk?.icon ?? "")
-                    .bold()
-                    .secondary()
-                    .padding(.top, 5)
-                    .lineLimit(1)
+            if entry.configuration.showDiskName {
+                HStack {
+                    Label(name, systemImage: disk?.icon ?? "")
+                        .bold()
+                        .secondary()
+                        .padding(.top, 5)
+                        .lineLimit(1)
+                }
             }
         }
         .overlay(alignment: .topLeading) {

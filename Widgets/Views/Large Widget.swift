@@ -102,11 +102,13 @@ fileprivate struct LargeDiskCard: View {
             Spacer()
             
             VStack {
-                Label(disk.name, systemImage: disk.icon)
-                    .title3()
-                    .semibold()
-                    .rounded()
-                    .lineLimit(1)
+                if entry.configuration.showDiskName {
+                    Label(disk.name, systemImage: disk.icon)
+                        .title3()
+                        .semibold()
+                        .rounded()
+                        .lineLimit(1)
+                }
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {

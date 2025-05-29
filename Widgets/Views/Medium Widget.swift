@@ -48,11 +48,13 @@ struct MediumWidgetView: View {
             }
             
             VStack {
-                Label(disk?.name ?? "Unknown", systemImage: icon)
-                    .title3()
-                    .semibold()
-                    .rounded()
-                    .lineLimit(1)
+                if entry.configuration.showDiskName {
+                    Label(disk?.name ?? "Unknown", systemImage: icon)
+                        .title3()
+                        .semibold()
+                        .rounded()
+                        .lineLimit(1)
+                }
                 
                 HStack {
                     if entry.configuration.showRefreshTime {
