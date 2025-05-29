@@ -48,7 +48,7 @@ struct MediumWidgetView: View {
             }
             
             VStack {
-                if entry.configuration.showDiskName {
+                if entry.config.showDiskName {
                     Label(disk?.name ?? "Unknown", systemImage: icon)
                         .title3()
                         .semibold()
@@ -57,11 +57,11 @@ struct MediumWidgetView: View {
                 }
                 
                 HStack {
-                    if entry.configuration.showRefreshTime {
+                    if entry.config.showRefreshTime {
                         Text(Date(), format: .dateTime.hour().minute().second())
                     }
                     
-                    if entry.configuration.showBuildNumber {
+                    if entry.config.showBuildNumber {
                         Text("B\(Utils.buildNumber)")
                     }
                 }
@@ -75,7 +75,7 @@ struct MediumWidgetView: View {
                         Text("Available")     // Available
                         Text("Used")         // Used
                         
-                        if entry.configuration.showTotalSpace {
+                        if entry.config.showTotalSpace {
                             Text("Total") // Total
                         }
                     }
@@ -86,7 +86,7 @@ struct MediumWidgetView: View {
                         Text(available)     // Available
                         Text(used)         // Used
                         
-                        if entry.configuration.showTotalSpace {
+                        if entry.config.showTotalSpace {
                             Text(total) // Total
                         }
                     }
@@ -97,7 +97,7 @@ struct MediumWidgetView: View {
                         Text(availablePercentage) // Available
                         Text(usedPercentage)     // Used
                         
-                        if entry.configuration.showTotalSpace {
+                        if entry.config.showTotalSpace {
                             Text("100 %")     // Total
                         }
                     }
@@ -109,7 +109,7 @@ struct MediumWidgetView: View {
             }
         }
         .overlay(alignment: .topLeading) {
-            if entry.configuration.showRefreshButton {
+            if entry.config.showRefreshButton {
                 Button(intent: RefreshIntent()) {
                     Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
                         .caption2()
@@ -126,7 +126,7 @@ struct MediumWidgetView: View {
 } timeline: {
     SimpleEntry(
         date: Date(),
-        configuration: .init(),
+        config: .init(),
         disks: [Utils.previewDisk]
     )
 }

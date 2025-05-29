@@ -3,7 +3,7 @@ import WidgetKit
 struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(
         date: Date(),
-        configuration: ConfigAppIntent(),
+        config: ConfigAppIntent(),
         disks: Utils.previewDisks
     )
     
@@ -22,10 +22,11 @@ struct Provider: AppIntentTimelineProvider {
         
         return SimpleEntry(
             date: Date(),
-            configuration: configuration,
+            config: configuration,
             disks: vm.disks
         )
     }
+    
     func timeline(
         for configuration: ConfigAppIntent,
         in context: Context
@@ -36,7 +37,7 @@ struct Provider: AppIntentTimelineProvider {
         let entries: [SimpleEntry] = [
             .init(
                 date: Date(),
-                configuration: configuration,
+                config: configuration,
                 disks: vm.disks
             )
         ]

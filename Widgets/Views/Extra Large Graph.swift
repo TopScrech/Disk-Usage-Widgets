@@ -68,7 +68,7 @@ struct ExtraLargeGraph: View {
 } timeline: {
     SimpleEntry(
         date: Date(),
-        configuration: .init(),
+        config: .init(),
         disks: [Utils.previewDisk]
     )
 }

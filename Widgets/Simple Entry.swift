@@ -2,7 +2,7 @@ import WidgetKit
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let configuration: ConfigAppIntent
+    let config: ConfigAppIntent
     
     var disks: [DiskEntry] = []
 }

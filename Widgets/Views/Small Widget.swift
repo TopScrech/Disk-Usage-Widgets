@@ -27,7 +27,7 @@ struct SmallWidgetView: View {
                 )
             }
             
-            if entry.configuration.showDiskName {
+            if entry.config.showDiskName {
                 HStack {
                     Label(name, systemImage: disk?.icon ?? "")
                         .bold()
@@ -38,7 +38,7 @@ struct SmallWidgetView: View {
             }
         }
         .overlay(alignment: .topLeading) {
-            if entry.configuration.showRefreshButton {
+            if entry.config.showRefreshButton {
                 Button(intent: RefreshIntent()) {
                     Image(systemName: "arrow.trianglehead.2.clockwise.rotate.90")
                         .caption2()
@@ -49,11 +49,11 @@ struct SmallWidgetView: View {
         }
         .overlay(alignment: .topTrailing) {
             VStack(alignment: .trailing) {
-                if entry.configuration.showRefreshTime {
+                if entry.config.showRefreshTime {
                     Text(entry.date, format: .dateTime.hour().minute().second())
                 }
                 
-                if entry.configuration.showBuildNumber {
+                if entry.config.showBuildNumber {
                     Text("B\(Utils.buildNumber)")
                 }
             }
@@ -69,7 +69,7 @@ struct SmallWidgetView: View {
 } timeline: {
     SimpleEntry(
         date: Date(),
-        configuration: .init(),
+        config: .init(),
         disks: [Utils.previewDisk]
     )
 }

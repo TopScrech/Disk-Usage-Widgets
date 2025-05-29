@@ -68,7 +68,7 @@ struct Graph: View {
 } timeline: {
     SimpleEntry(
         date: Date(),
-        configuration: .init(),
+        config: .init(),
         disks: [Utils.previewDisk]
     )
 }
