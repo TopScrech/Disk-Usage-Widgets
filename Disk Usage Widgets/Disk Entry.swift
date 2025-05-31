@@ -12,6 +12,10 @@ struct DiskEntry: Identifiable, Equatable {
     let freeSpaceBytes: Int
     let totalSpaceBytes: Int
     
+    var usedSpaceBytes: Int {
+        totalSpaceBytes - freeSpaceBytes
+    }
+    
     var icon: String {
         isLocal ? "externaldrive" : "externaldrive.connected.to.line.below"
     }
@@ -21,7 +25,7 @@ struct DiskEntry: Identifiable, Equatable {
     }
     
     var usedSpace: String {
-        formatBytes(totalSpaceBytes - Int(freeSpaceBytes))
+        formatBytes(totalSpaceBytes - freeSpaceBytes)
     }
     
     var totalSpace: String {
@@ -33,6 +37,6 @@ struct DiskEntry: Identifiable, Equatable {
     }
     
     var usedSpacePercentage: String {
-        String(format: "%.2f %%", (Double(totalSpaceBytes - Int(freeSpaceBytes)) / Double(totalSpaceBytes)) * 100)
+        String(format: "%.2f %%", (Double(totalSpaceBytes - freeSpaceBytes) / Double(totalSpaceBytes)) * 100)
     }
 }

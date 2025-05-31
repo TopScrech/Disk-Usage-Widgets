@@ -39,6 +39,7 @@
 		F39AA8462C2C962600CD84F4 /* Intent Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AA8452C2C962600CD84F4 /* Intent Config.swift */; };
 		F3CEC0052C2ABA6800B44CE4 /* Disk Usage Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */; };
 		F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0062C2ABA6800B44CE4 /* Home View.swift */; };
+		F3D186342DEB6A1F000462A0 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D186332DEB6A1F000462A0 /* SmallWidgetView.swift */; };
 		F3D807252DCD7FA000598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807242DCD7FA000598908 /* ScrechKit */; };
 		F3D807292DCD7FA900598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807282DCD7FA900598908 /* ScrechKit */; };
 		F3D807362DCD8A9B00598908 /* ScrechKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F3D807242DCD7FA000598908 /* ScrechKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -115,6 +116,7 @@
 		F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widgets.swift"; sourceTree = "<group>"; };
 		F3CEC0062C2ABA6800B44CE4 /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
 		F3CEC00D2C2ABA6900B44CE4 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		F3D186332DEB6A1F000462A0 /* SmallWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
 		F3DB25472C2C514C00A0C066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3DDD23C2D921C3F002CB1B9 /* macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = macOS.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 				F397D7932C2AF4A60069F3EB /* Graph.swift */,
 				F32429C72DDD732F000A16E8 /* Extra Large Graph.swift */,
 				F397D7802C2AEE020069F3EB /* Small Widget.swift */,
+				F3D186332DEB6A1F000462A0 /* SmallWidgetView.swift */,
 				F397D78C2C2AF26C0069F3EB /* Medium Widget.swift */,
 				F371A5102C2D6EA6006BDF0D /* Large Widget.swift */,
 				F371A5162C2D7976006BDF0D /* Extra Large Widget.swift */,
@@ -342,6 +345,7 @@
 				F32429C82DDD732F000A16E8 /* Extra Large Graph.swift in Sources */,
 				F397D78E2C2AF2B90069F3EB /* Disk Entry.swift in Sources */,
 				F397D77F2C2AEE020069F3EB /* Widgets Bundle.swift in Sources */,
+				F3D186342DEB6A1F000462A0 /* SmallWidgetView.swift in Sources */,
 				F397D7812C2AEE020069F3EB /* Small Widget.swift in Sources */,
 				F326A3C22C2B7FBB00459E3C /* Disk Usage Widget.swift in Sources */,
 				F371A5112C2D6EA6006BDF0D /* Large Widget.swift in Sources */,
