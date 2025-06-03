@@ -31,21 +31,35 @@ struct HomeView: View {
                 .width(min: 60)
                 
                 TableColumn("Free Space") { disk in
-                    VStack(spacing: 0) {
-                        Text(disk.freeSpace)
+                    HStack(spacing: 5) {
+                        VStack(alignment: .trailing, spacing: 0) {
+                            Text(disk.freeSpace)
+                            
+                            Text(disk.freeSpacePercentage)
+                                .tertiary()
+                        }
                         
-                        Text(disk.freeSpacePercentage)
-                            .tertiary()
+                        Gauge(value: Double(disk.freeSpaceBytes), in: 0...Double(disk.totalSpaceBytes)) {}
+                            .gaugeStyle(.accessoryCircularCapacity)
+                            .scaleEffect(0.6)
+                            .tint(.green)
                     }
                 }
                 .width(min: 100)
                 
                 TableColumn("Used Space") { disk in
-                    VStack(spacing: 0) {
-                        Text(disk.usedSpace)
+                    HStack(spacing: 5) {
+                        VStack(alignment: .trailing, spacing: 0) {
+                            Text(disk.usedSpace)
+                            
+                            Text(disk.usedSpacePercentage)
+                                .tertiary()
+                        }
                         
-                        Text(disk.usedSpacePercentage)
-                            .tertiary()
+                        Gauge(value: Double(disk.usedSpaceBytes), in: 0...Double(disk.totalSpaceBytes)) {}
+                            .gaugeStyle(.accessoryCircularCapacity)
+                            .scaleEffect(0.6)
+                            .tint(.red)
                     }
                 }
                 .width(min: 100)
