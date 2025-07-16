@@ -31,10 +31,16 @@
     },
     "⌘ + R to refresh" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘ + R om te verversen"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⌘ + R для обновления"
+            "value" : "Нажмите ⌘ + R, чтобы обновить"
           }
         }
       }
@@ -47,10 +53,17 @@
             "value" : "100 %"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "Amount" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aantal"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -65,6 +78,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "App"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приложение"
           }
         }
       }
@@ -145,7 +164,20 @@
       }
     },
     "Connected Disks" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verbonden schijven"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подключённые диски"
+          }
+        }
+      }
     },
     "Debug" : {
       "localizations" : {
@@ -181,6 +213,12 @@
     },
     "Disk Usage" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disk Usage"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -190,10 +228,29 @@
       }
     },
     "Disk Usage Widget Configuration" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget configuratie van Disk Usage"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конфигурация виджета Disk Usage"
+          }
+        }
+      }
     },
     "Eject" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwijderen"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -202,8 +259,37 @@
         }
       }
     },
+    "Ejectable" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwijderbaar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Извлекаемый"
+          }
+        }
+      }
+    },
     "Encrypted" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versleuteld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зашифрован"
+          }
+        }
+      }
     },
     "Error" : {
       "localizations" : {
@@ -222,14 +308,17 @@
       }
     },
     "Free Space" : {
-
-    },
-    "isEjectable" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschikbare ruimte"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Возможно извлечь"
+            "value" : "Свободное место"
           }
         }
       }
@@ -255,6 +344,12 @@
     },
     "Path" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pad"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -281,6 +376,12 @@
     },
     "Refresh Button" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verversknop"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -291,6 +392,12 @@
     },
     "Refresh Time" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verversmoment"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -315,8 +422,21 @@
         }
       }
     },
-    "Show in MenuBar" : {
-
+    "Show in Menu Bar" : {
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toon in menubalk"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать в строке меню"
+          }
+        }
+      }
     },
     "Total" : {
       "localizations" : {
@@ -335,10 +455,29 @@
       }
     },
     "Total Space" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Totale ruimte"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Общий объём"
+          }
+        }
+      }
     },
     "Type" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -349,6 +488,12 @@
     },
     "Used" : {
       "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In gebruik"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -358,7 +503,20 @@
       }
     },
     "Used Space" : {
-
+      "localizations" : {
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In gebruik"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Использовано"
+          }
+        }
+      }
     },
     "v%@ (B%@)" : {
       "localizations" : {

@@ -75,7 +75,7 @@ struct HomeView: View {
                 }
                 .width(min: 50)
                 
-                TableColumn("isEjectable") { disk in
+                TableColumn("Ejectable") { disk in
 #if DEBUG
                     if disk.isEjectable {
                         Button("Eject") {
