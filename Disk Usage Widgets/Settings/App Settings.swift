@@ -14,7 +14,7 @@ struct AppSettings: View {
     
     var body: some View {
         Form {
-            Toggle("Show in MenuBar", isOn: $showMenuBarExtra)
+            Toggle("Show in Menu Bar", isOn: $showMenuBarExtra)
 #if os(macOS)
             LaunchAtLogin.Toggle()
 #endif
@@ -38,7 +38,7 @@ struct AppSettings: View {
         .formStyle(.grouped)
         .buttonStyle(.plain)
 #warning("WTF")
-        //            Button(showMenuBarExtra ? "Switch to app" : "Switch to MenuBar") {
+        //            Button(showMenuBarExtra ? "Switch to app" : "Switch to Menu Bar") {
         //                showMenuBarExtra.toggle()
         //
         //                delay(0.5) {
