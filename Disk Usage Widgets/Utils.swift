@@ -1,4 +1,4 @@
-import Foundation
+import ScrechKit
 
 enum Utils {
     static let previewDisk = DiskEntry(
@@ -18,10 +18,6 @@ enum Utils {
     ]
     
     static var buildNumber: String {
-        if let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
-            buildNumber
-        } else {
-            "Unknown"
-        }
+        Bundle.build ?? "Unknown"
     }
 }

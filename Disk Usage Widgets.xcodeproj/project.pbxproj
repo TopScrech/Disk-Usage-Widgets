@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30D8D432E27E38500789662 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F30D8D422E27E38500789662 /* ScrechKit */; };
+		F30D8D452E27E38B00789662 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F30D8D442E27E38B00789662 /* ScrechKit */; };
 		F32409222C2D3D5700403979 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32409212C2D3D5700403979 /* Localizable.xcstrings */; };
 		F32409232C2D3D5700403979 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32409212C2D3D5700403979 /* Localizable.xcstrings */; };
 		F32429C82DDD732F000A16E8 /* Extra Large Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32429C72DDD732F000A16E8 /* Extra Large Graph.swift */; };
@@ -40,9 +42,6 @@
 		F3CEC0052C2ABA6800B44CE4 /* Disk Usage Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */; };
 		F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0062C2ABA6800B44CE4 /* Home View.swift */; };
 		F3D186342DEB6A1F000462A0 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D186332DEB6A1F000462A0 /* SmallWidgetView.swift */; };
-		F3D807252DCD7FA000598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807242DCD7FA000598908 /* ScrechKit */; };
-		F3D807292DCD7FA900598908 /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3D807282DCD7FA900598908 /* ScrechKit */; };
-		F3D807362DCD8A9B00598908 /* ScrechKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = F3D807242DCD7FA000598908 /* ScrechKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
 		F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -72,7 +71,6 @@
 			dstPath = "";
 			dstSubfolder = Frameworks;
 			files = (
-				F3D807362DCD8A9B00598908 /* ScrechKit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 		};
@@ -125,7 +123,7 @@
 		F397D7772C2AEE020069F3EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				F3D807292DCD7FA900598908 /* ScrechKit in Frameworks */,
+				F30D8D452E27E38B00789662 /* ScrechKit in Frameworks */,
 				F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */,
 				F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */,
 			);
@@ -134,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			files = (
 				F358F03F2D2C1F3300BCC07B /* LaunchAtLogin in Frameworks */,
-				F3D807252DCD7FA000598908 /* ScrechKit in Frameworks */,
+				F30D8D432E27E38500789662 /* ScrechKit in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -242,7 +240,7 @@
 			);
 			name = "Widgets Extension";
 			packageProductDependencies = (
-				F3D807282DCD7FA900598908 /* ScrechKit */,
+				F30D8D442E27E38B00789662 /* ScrechKit */,
 			);
 			productName = WidgetsExtension;
 			productReference = F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */;
@@ -266,7 +264,7 @@
 			name = "Disk Usage Widgets";
 			packageProductDependencies = (
 				F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */,
-				F3D807242DCD7FA000598908 /* ScrechKit */,
+				F30D8D422E27E38500789662 /* ScrechKit */,
 			);
 			productName = "Disk Usage Widgets";
 			productReference = F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */;
@@ -693,20 +691,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F30D8D422E27E38500789662 /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
+			productName = ScrechKit;
+		};
+		F30D8D442E27E38B00789662 /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
+			productName = ScrechKit;
+		};
 		F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F358F03D2D2C1F3300BCC07B /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
-		};
-		F3D807242DCD7FA000598908 /* ScrechKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
-			productName = ScrechKit;
-		};
-		F3D807282DCD7FA900598908 /* ScrechKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
-			productName = ScrechKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
