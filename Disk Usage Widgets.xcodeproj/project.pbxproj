@@ -110,6 +110,7 @@
 		F397D7932C2AF4A60069F3EB /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		F397D7952C2AF4BE0069F3EB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F39AA8452C2C962600CD84F4 /* Intent Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Intent Config.swift"; sourceTree = "<group>"; };
+		F3AE99E32E2F892800D70249 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widgets.swift"; sourceTree = "<group>"; };
 		F3CEC0062C2ABA6800B44CE4 /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 		F3CEBFF82C2ABA6800B44CE4 = {
 			isa = PBXGroup;
 			children = (
+				F3AE99E32E2F892800D70249 /* README.md */,
 				F3CEC0032C2ABA6800B44CE4 /* Disk Usage Widgets */,
 				F397D77D2C2AEE020069F3EB /* Widgets */,
 				F33812DA2C2AD3DE00415506 /* Frameworks */,
