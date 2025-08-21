@@ -93,9 +93,9 @@ struct HomeView: View {
                 .width(min: 50)
             }
         }
-        .animation(.default, value: vm.disks)
         .navigationTitle("Connected Disks")
         .title3()
+        .animation(.default, value: vm.disks)
         .scrollIndicators(.never)
         .onReceive(publisher) { _ in
             vm.listAvailableDisks()
