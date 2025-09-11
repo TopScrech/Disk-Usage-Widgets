@@ -39,11 +39,13 @@
 		F397D7942C2AF4A60069F3EB /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D7932C2AF4A60069F3EB /* Graph.swift */; };
 		F397D7962C2AF4BE0069F3EB /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397D7952C2AF4BE0069F3EB /* Provider.swift */; };
 		F39AA8462C2C962600CD84F4 /* Intent Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AA8452C2C962600CD84F4 /* Intent Config.swift */; };
+		F3B75CD92E72A56B0096E65E /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = F3B75CD82E72A56B0096E65E /* AppIcon.icon */; };
+		F3B75CDA2E72A56B0096E65E /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = F3B75CD82E72A56B0096E65E /* AppIcon.icon */; };
+		F3B75CDC2E72A5820096E65E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B75CDB2E72A5820096E65E /* Assets.xcassets */; };
 		F3CEC0052C2ABA6800B44CE4 /* Disk Usage Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */; };
 		F3CEC0072C2ABA6800B44CE4 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CEC0062C2ABA6800B44CE4 /* Home View.swift */; };
 		F3D186342DEB6A1F000462A0 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D186332DEB6A1F000462A0 /* SmallWidgetView.swift */; };
 		F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
-		F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB25472C2C514C00A0C066 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,9 @@
 		F397D7932C2AF4A60069F3EB /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		F397D7952C2AF4BE0069F3EB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F39AA8452C2C962600CD84F4 /* Intent Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Intent Config.swift"; sourceTree = "<group>"; };
+		F3AE99E32E2F892800D70249 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F3B75CD82E72A56B0096E65E /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		F3B75CDB2E72A5820096E65E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CEC0042C2ABA6800B44CE4 /* Disk Usage Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disk Usage Widgets.swift"; sourceTree = "<group>"; };
 		F3CEC0062C2ABA6800B44CE4 /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
@@ -167,6 +172,7 @@
 				F397D77E2C2AEE020069F3EB /* Widgets Bundle.swift */,
 				F397D7842C2AEE030069F3EB /* Widgets.plist */,
 				F397D7852C2AEE030069F3EB /* Widgets.entitlements */,
+				F3B75CDB2E72A5820096E65E /* Assets.xcassets */,
 				F326A3C12C2B7FBB00459E3C /* Disk Usage Widget.swift */,
 				F32429C92DDD7657000A16E8 /* Disk Usage Widget View.swift */,
 				F39AA8452C2C962600CD84F4 /* Intent Config.swift */,
@@ -188,6 +194,7 @@
 		F3CEBFF82C2ABA6800B44CE4 = {
 			isa = PBXGroup;
 			children = (
+				F3AE99E32E2F892800D70249 /* README.md */,
 				F3CEC0032C2ABA6800B44CE4 /* Disk Usage Widgets */,
 				F397D77D2C2AEE020069F3EB /* Widgets */,
 				F33812DA2C2AD3DE00415506 /* Frameworks */,
@@ -212,6 +219,7 @@
 				F3CEC00D2C2ABA6900B44CE4 /* macOS.entitlements */,
 				F32409212C2D3D5700403979 /* Localizable.xcstrings */,
 				F3DB25472C2C514C00A0C066 /* Assets.xcassets */,
+				F3B75CD82E72A56B0096E65E /* AppIcon.icon */,
 				F3CEC0062C2ABA6800B44CE4 /* Home View.swift */,
 				F32A6A672DE8759600ACC72F /* Home View Toolbar.swift */,
 				F33812CC2C2ABBCD00415506 /* VM.swift */,
@@ -278,7 +286,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1630;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					F397D7792C2AEE020069F3EB = {
 						CreatedOnToolsVersion = 16.0;
@@ -318,7 +326,8 @@
 			isa = PBXResourcesBuildPhase;
 			files = (
 				F32409222C2D3D5700403979 /* Localizable.xcstrings in Resources */,
-				F3DB25492C2C514C00A0C066 /* Assets.xcassets in Resources */,
+				F3B75CDC2E72A5820096E65E /* Assets.xcassets in Resources */,
+				F3B75CDA2E72A56B0096E65E /* AppIcon.icon in Resources */,
 			);
 		};
 		F3CEBFFF2C2ABA6800B44CE4 /* Resources */ = {
@@ -326,6 +335,7 @@
 			files = (
 				F32409232C2D3D5700403979 /* Localizable.xcstrings in Resources */,
 				F3DB25482C2C514C00A0C066 /* Assets.xcassets in Resources */,
+				F3B75CD92E72A56B0096E65E /* AppIcon.icon in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -500,11 +510,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.9.9;
+				MARKETING_VERSION = 0.9.10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -562,10 +573,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.9.9;
+				MARKETING_VERSION = 0.9.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
