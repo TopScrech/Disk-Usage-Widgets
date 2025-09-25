@@ -23,5 +23,6 @@ struct HomeViewToolbar: View {
 
 #Preview {
     HomeViewToolbar()
+        .darkSchemePreferred()
         .environment(VM())
 }
