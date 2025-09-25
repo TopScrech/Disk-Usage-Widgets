@@ -77,4 +77,5 @@ struct AppSettings: View {
     @Previewable @State var showMenuBarExtra = false
     
     AppSettings($showMenuBarExtra)
+        .darkSchemePreferred()
 }

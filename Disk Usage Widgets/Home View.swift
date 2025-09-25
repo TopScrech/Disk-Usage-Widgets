@@ -112,4 +112,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .darkSchemePreferred()
 }
