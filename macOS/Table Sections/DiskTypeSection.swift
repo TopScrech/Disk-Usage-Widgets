@@ -17,7 +17,7 @@ struct DiskTypeSection: View {
     }
 }
 
-//#Preview {
-//    DiskTypeSection()
-//        .darkSchemePreferred()
-//}
+#Preview {
+    DiskTypeSection(Utils.previewDisk)
+        .darkSchemePreferred()
+}

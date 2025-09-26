@@ -26,7 +26,7 @@ struct DiskUsedSpaceSection: View {
     }
 }
 
-//#Preview {
-//    DiskUsedSpaceSection()
-//        .darkSchemePreferred()
-//}
+#Preview {
+    DiskUsedSpaceSection(Utils.previewDisk)
+        .darkSchemePreferred()
+}

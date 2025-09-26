@@ -57,8 +57,7 @@ struct DiskEjectableSection: View {
 #endif
 }
 
-//#Preview {
-//    DiskEjectableSection()
-//        .darkSchemePreferred()
-//        .environment(VM())
-//}
+#Preview {
+    DiskEjectableSection(Utils.previewDisk)
+        .darkSchemePreferred()
+}

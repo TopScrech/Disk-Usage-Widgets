@@ -56,10 +56,10 @@ struct HomeView: View {
         .title3()
         .animation(.default, value: vm.disks)
         .scrollIndicators(.never)
-        .onReceive(publisher) { _ in
+        .task {
             vm.listAvailableDisks()
         }
-        .task {
+        .onReceive(publisher) { _ in
             vm.listAvailableDisks()
         }
         .toolbar {
