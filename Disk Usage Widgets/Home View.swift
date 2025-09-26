@@ -40,13 +40,15 @@ struct HomeView: View {
                                 .tertiary()
                         }
                         
+                        Spacer()
+                        
                         Gauge(value: Double(disk.freeSpaceBytes), in: 0...Double(disk.totalSpaceBytes)) {}
                             .gaugeStyle(.accessoryCircularCapacity)
                             .scaleEffect(0.6)
                             .tint(.green)
                     }
                 }
-                .width(min: 100)
+                .width(min: 140)
                 
                 TableColumn("Used Space") { disk in
                     HStack(spacing: 5) {
@@ -57,21 +59,23 @@ struct HomeView: View {
                                 .tertiary()
                         }
                         
+                        Spacer()
+                        
                         Gauge(value: Double(disk.usedSpaceBytes), in: 0...Double(disk.totalSpaceBytes)) {}
                             .gaugeStyle(.accessoryCircularCapacity)
                             .scaleEffect(0.6)
                             .tint(.red)
                     }
                 }
-                .width(min: 100)
+                .width(min: 140)
                 
-                TableColumn("Total Space") { disk in
-                    Text(disk.totalSpace)
+                TableColumn("Total Space") {
+                    Text($0.totalSpace)
                 }
                 .width(min: 100)
                 
-                TableColumn("Path") { disk in
-                    Text(disk.url?.path ?? "-")
+                TableColumn("Path") {
+                    Text($0.url?.path ?? "-")
                 }
                 .width(min: 50)
                 
