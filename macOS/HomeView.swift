@@ -91,7 +91,7 @@ struct HomeView: View {
                         }
                     }
 #else
-                    Text(disk.isEjectable ? "+" : "")
+                    Text(disk.isEjectable ? "Yes" : "No")
 #endif
                 }
                 .width(min: 50)

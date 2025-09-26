@@ -18,17 +18,6 @@
     "%@ 􀞚" : {
       "shouldTranslate" : false
     },
-    "+" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "+"
-          }
-        }
-      },
-      "shouldTranslate" : false
-    },
     "⌘ + R to refresh" : {
       "localizations" : {
         "nl" : {
