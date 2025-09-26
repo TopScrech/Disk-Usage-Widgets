@@ -16,56 +16,23 @@ struct HomeView: View {
     var body: some View {
         VStack {
             Table(vm.disks) {
-                TableColumn("Name") { disk in
-                    Label(disk.name, systemImage: disk.icon)
+                TableColumn("Name") {
+                    Label($0.name, systemImage: $0.icon)
                 }
                 .width(min: 150)
                 
-                TableColumn("Type") { disk in
-                    if disk.isEncrypted {
-                        Text("\(disk.type) 􀞚")
-                            .help("Encrypted")
-                    } else {
-                        Text(disk.type)
-                    }
+                TableColumn("Type") {
+                    DiskTypeSection($0)
                 }
                 .width(min: 60)
                 
-                TableColumn("Free Space") { disk in
-                    HStack(spacing: 5) {
-                        VStack(alignment: .trailing, spacing: 0) {
-                            Text(disk.freeSpace)
-                            
-                            Text(disk.freeSpacePercentage)
-                                .tertiary()
-                        }
-                        
-                        Spacer()
-                        
-                        Gauge(value: Double(disk.freeSpaceBytes), in: 0...Double(disk.totalSpaceBytes)) {}
-                            .gaugeStyle(.accessoryCircularCapacity)
-                            .scaleEffect(0.6)
-                            .tint(.green)
-                    }
+                TableColumn("Free Space") {
+                    DiskFreeSpaceSection($0)
                 }
                 .width(min: 140)
                 
-                TableColumn("Used Space") { disk in
-                    HStack(spacing: 5) {
-                        VStack(alignment: .trailing, spacing: 0) {
-                            Text(disk.usedSpace)
-                            
-                            Text(disk.usedSpacePercentage)
-                                .tertiary()
-                        }
-                        
-                        Spacer()
-                        
-                        Gauge(value: Double(disk.usedSpaceBytes), in: 0...Double(disk.totalSpaceBytes)) {}
-                            .gaugeStyle(.accessoryCircularCapacity)
-                            .scaleEffect(0.6)
-                            .tint(.red)
-                    }
+                TableColumn("Used Space") {
+                    DiskUsedSpaceSection($0)
                 }
                 .width(min: 140)
                 
@@ -79,20 +46,8 @@ struct HomeView: View {
                 }
                 .width(min: 50)
                 
-                TableColumn("Ejectable") { disk in
-#if DEBUG
-                    if disk.isEjectable {
-                        Button("Eject") {
-                            if let url = disk.url?.path {
-                                vm.ejectDisk(url)
-                            } else {
-                                print("Path not found")
-                            }
-                        }
-                    }
-#else
-                    Text(disk.isEjectable ? "Yes" : "No")
-#endif
+                TableColumn("Ejectable") {
+                    DiskEjectableSection($0)
                 }
                 .width(min: 50)
             }

@@ -2,18 +2,18 @@ import Foundation
 
 extension FileManager {
     func volumeUsedDiskSpace(_ url: URL) throws -> Int {
-        let totalCapacity = try self.volumeTotalDiskSpace(url)
-        let freeCapacity = try self.volumeFreeDiskSpace(url)
+        let totalCapacity = try volumeTotalDiskSpace(url)
+        let freeCapacity = try volumeFreeDiskSpace(url)
         
         return totalCapacity - freeCapacity
     }
     
     func volumeFreeDiskSpace(_ url: URL) throws -> Int {
-        let values = try url.resourceValues(
-            forKeys: [.volumeAvailableCapacityKey]
-        )
+        let values = try url.resourceValues(forKeys: [.volumeAvailableCapacityKey])
         
-        guard let capacity = values.volumeAvailableCapacity else {
+        guard
+            let capacity = values.volumeAvailableCapacity
+        else {
             throw NSError(
                 domain: "FileManager+VolumeSize",
                 code: 1,

@@ -18,9 +18,16 @@
 		F326A3C52C2B889D00459E3C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C32C2B884400459E3C /* Utils.swift */; };
 		F326A3C62C2B8CA000459E3C /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CC2C2ABBCD00415506 /* VM.swift */; };
 		F326A3C72C2B8CAD00459E3C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CA2C2ABBA500415506 /* FileManager.swift */; };
-		F326A3CB2C2B916100459E3C /* VMEject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326A3C92C2B916100459E3C /* VMEject.swift */; };
 		F32A6A682DE8759600ACC72F /* HomeViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32A6A672DE8759600ACC72F /* HomeViewToolbar.swift */; };
 		F32A6A692DE8759600ACC72F /* HomeViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32A6A672DE8759600ACC72F /* HomeViewToolbar.swift */; };
+		F33770CE2E867CEF00180B6D /* DiskUsedSpaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33770CD2E867CEF00180B6D /* DiskUsedSpaceSection.swift */; };
+		F33770CF2E867CEF00180B6D /* DiskUsedSpaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33770CD2E867CEF00180B6D /* DiskUsedSpaceSection.swift */; };
+		F33770D12E867D2700180B6D /* DiskFreeSpaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33770D02E867D2700180B6D /* DiskFreeSpaceSection.swift */; };
+		F33770D22E867D2700180B6D /* DiskFreeSpaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33770D02E867D2700180B6D /* DiskFreeSpaceSection.swift */; };
+		F33770D42E867DAD00180B6D /* DiskTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33770D32E867DAD00180B6D /* DiskTypeSection.swift */; };
+		F33770D52E867DAD00180B6D /* DiskTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33770D32E867DAD00180B6D /* DiskTypeSection.swift */; };
+		F33770D92E867DF600180B6D /* DiskEjectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33770D82E867DF600180B6D /* DiskEjectableSection.swift */; };
+		F33770DA2E867DF600180B6D /* DiskEjectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33770D82E867DF600180B6D /* DiskEjectableSection.swift */; };
 		F33812CB2C2ABBA500415506 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CA2C2ABBA500415506 /* FileManager.swift */; };
 		F33812CD2C2ABBCD00415506 /* VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CC2C2ABBCD00415506 /* VM.swift */; };
 		F33812CF2C2AC1B200415506 /* DiskEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33812CE2C2AC1B200415506 /* DiskEntry.swift */; };
@@ -92,8 +99,11 @@
 		F32429C92DDD7657000A16E8 /* DiskUsageWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskUsageWidgetView.swift; sourceTree = "<group>"; };
 		F326A3C12C2B7FBB00459E3C /* DiskUsageWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskUsageWidget.swift; sourceTree = "<group>"; };
 		F326A3C32C2B884400459E3C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		F326A3C92C2B916100459E3C /* VMEject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMEject.swift; sourceTree = "<group>"; };
 		F32A6A672DE8759600ACC72F /* HomeViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewToolbar.swift; sourceTree = "<group>"; };
+		F33770CD2E867CEF00180B6D /* DiskUsedSpaceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskUsedSpaceSection.swift; sourceTree = "<group>"; };
+		F33770D02E867D2700180B6D /* DiskFreeSpaceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFreeSpaceSection.swift; sourceTree = "<group>"; };
+		F33770D32E867DAD00180B6D /* DiskTypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskTypeSection.swift; sourceTree = "<group>"; };
+		F33770D82E867DF600180B6D /* DiskEjectableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskEjectableSection.swift; sourceTree = "<group>"; };
 		F33812CA2C2ABBA500415506 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		F33812CC2C2ABBCD00415506 /* VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.swift; sourceTree = "<group>"; };
 		F33812CE2C2AC1B200415506 /* DiskEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskEntry.swift; sourceTree = "<group>"; };
@@ -155,6 +165,26 @@
 				F371A5162C2D7976006BDF0D /* ExtraLargeWidget.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F33770D62E867DB300180B6D /* Table Sections */ = {
+			isa = PBXGroup;
+			children = (
+				F33770D32E867DAD00180B6D /* DiskTypeSection.swift */,
+				F33770D02E867D2700180B6D /* DiskFreeSpaceSection.swift */,
+				F33770CD2E867CEF00180B6D /* DiskUsedSpaceSection.swift */,
+				F33770D82E867DF600180B6D /* DiskEjectableSection.swift */,
+			);
+			path = "Table Sections";
+			sourceTree = "<group>";
+		};
+		F33770D72E867DBE00180B6D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F326A3C32C2B884400459E3C /* Utils.swift */,
+				F33812CA2C2ABBA500415506 /* FileManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F33812DA2C2AD3DE00415506 /* Frameworks */ = {
@@ -220,13 +250,12 @@
 				F32409212C2D3D5700403979 /* Localizable.xcstrings */,
 				F3DB25472C2C514C00A0C066 /* Assets.xcassets */,
 				F3B75CD82E72A56B0096E65E /* AppIcon.icon */,
+				F33770D72E867DBE00180B6D /* Utils */,
 				F3CEC0062C2ABA6800B44CE4 /* HomeView.swift */,
 				F32A6A672DE8759600ACC72F /* HomeViewToolbar.swift */,
-				F33812CC2C2ABBCD00415506 /* VM.swift */,
-				F326A3C92C2B916100459E3C /* VMEject.swift */,
 				F33812CE2C2AC1B200415506 /* DiskEntry.swift */,
-				F33812CA2C2ABBA500415506 /* FileManager.swift */,
-				F326A3C32C2B884400459E3C /* Utils.swift */,
+				F33812CC2C2ABBCD00415506 /* VM.swift */,
+				F33770D62E867DB300180B6D /* Table Sections */,
 				F39DE6222DCB505F0068894F /* Settings */,
 			);
 			path = macOS;
@@ -348,6 +377,8 @@
 				F397D7942C2AF4A60069F3EB /* Graph.swift in Sources */,
 				F32A6A692DE8759600ACC72F /* HomeViewToolbar.swift in Sources */,
 				F397D7902C2AF36C0069F3EB /* SimpleEntry.swift in Sources */,
+				F33770CF2E867CEF00180B6D /* DiskUsedSpaceSection.swift in Sources */,
+				F33770D52E867DAD00180B6D /* DiskTypeSection.swift in Sources */,
 				F32429CA2DDD7657000A16E8 /* DiskUsageWidgetView.swift in Sources */,
 				F326A3C52C2B889D00459E3C /* Utils.swift in Sources */,
 				F397D7962C2AF4BE0069F3EB /* Provider.swift in Sources */,
@@ -357,6 +388,8 @@
 				F3D186342DEB6A1F000462A0 /* SmallWidgetView.swift in Sources */,
 				F397D7812C2AEE020069F3EB /* SmallWidget.swift in Sources */,
 				F326A3C22C2B7FBB00459E3C /* DiskUsageWidget.swift in Sources */,
+				F33770D12E867D2700180B6D /* DiskFreeSpaceSection.swift in Sources */,
+				F33770D92E867DF600180B6D /* DiskEjectableSection.swift in Sources */,
 				F371A5112C2D6EA6006BDF0D /* LargeWidget.swift in Sources */,
 				F326A3C62C2B8CA000459E3C /* VM.swift in Sources */,
 				F326A3C72C2B8CAD00459E3C /* FileManager.swift in Sources */,
@@ -369,13 +402,16 @@
 			files = (
 				F326A3C42C2B884400459E3C /* Utils.swift in Sources */,
 				F3CEC0072C2ABA6800B44CE4 /* HomeView.swift in Sources */,
+				F33770D42E867DAD00180B6D /* DiskTypeSection.swift in Sources */,
 				F33812CB2C2ABBA500415506 /* FileManager.swift in Sources */,
+				F33770CE2E867CEF00180B6D /* DiskUsedSpaceSection.swift in Sources */,
 				F33812CF2C2AC1B200415506 /* DiskEntry.swift in Sources */,
 				F33812CD2C2ABBCD00415506 /* VM.swift in Sources */,
+				F33770D22E867D2700180B6D /* DiskFreeSpaceSection.swift in Sources */,
 				F32A6A682DE8759600ACC72F /* HomeViewToolbar.swift in Sources */,
-				F326A3CB2C2B916100459E3C /* VMEject.swift in Sources */,
 				F3573BBC2C64CFF90051259E /* AppSettings.swift in Sources */,
 				F3CEC0052C2ABA6800B44CE4 /* DiskUsageWidgets.swift in Sources */,
+				F33770DA2E867DF600180B6D /* DiskEjectableSection.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */

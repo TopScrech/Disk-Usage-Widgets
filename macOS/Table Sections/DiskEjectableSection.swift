@@ -1,8 +1,30 @@
+import SwiftUI
+
+struct DiskEjectableSection: View {
+    private let disk: DiskEntry
+    
+    init(_ disk: DiskEntry) {
+        self.disk = disk
+    }
+    
+    var body: some View {
 #if DEBUG
-
-import Foundation
-
-extension VM { // Doesn't work in sandbox
+        if disk.isEjectable {
+            Button("Eject") {
+                if let url = disk.url?.path {
+                    ejectDisk(url)
+                } else {
+                    print("Path not found")
+                }
+            }
+        }
+#else
+        Text(disk.isEjectable ? "Yes" : "No")
+#endif
+    }
+    
+#if DEBUG
+    // Doesn't work in sandbox
     func ejectDisk(_ diskPath: String) {
         let process = Process()
         process.launchPath = "/usr/sbin/diskutil"
@@ -32,6 +54,11 @@ extension VM { // Doesn't work in sandbox
             print("⛔️ Failed to run diskutil:", error)
         }
     }
+#endif
 }
 
-#endif
+//#Preview {
+//    DiskEjectableSection()
+//        .darkSchemePreferred()
+//        .environment(VM())
+//}
