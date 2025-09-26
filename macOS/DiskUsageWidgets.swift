@@ -10,7 +10,6 @@ struct DiskUsageWidgets: App {
                 HomeView()
             }
         }
-        
 #if os(macOS)
         MenuBarExtra("Menu Bar Extra", systemImage: "externaldrive", isInserted: $showMenuBarExtra) {
             HomeView()

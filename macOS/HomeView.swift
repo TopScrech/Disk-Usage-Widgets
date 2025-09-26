@@ -42,7 +42,7 @@ struct HomeView: View {
                 .width(min: 100)
                 
                 TableColumn("Path") {
-                    Text($0.url?.path ?? "-")
+                    DiskPath($0.url?.path)
                 }
                 .width(min: 50)
                 
