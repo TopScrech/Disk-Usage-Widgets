@@ -7,7 +7,7 @@
       "location" : "https://github.com/TopScrech/LaunchAtLogin",
       "state" : {
         "branch" : "main",
-        "revision" : "2bf099bd06f8f8de4989cbb7dfd721edd585bb0b"
+        "revision" : "b6d02bbe76f22ce9c722ec263939edd01ea8f670"
       }
     },
     {
@@ -16,7 +16,7 @@
       "location" : "https://github.com/TopScrech/ScrechKit",
       "state" : {
         "branch" : "main",
-        "revision" : "28f4be08c8801f324b0c6e107edf5982291296f6"
+        "revision" : "735c132cef69b438430228e911e772b8d26e8a97"
       }
     }
   ],
