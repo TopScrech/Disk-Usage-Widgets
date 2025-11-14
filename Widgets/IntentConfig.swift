@@ -4,8 +4,8 @@ import AppIntents
 struct ConfigAppIntent: WidgetConfigurationIntent {
     static let intentClassName = "ServerUsageIntent"
     
-    static var title: LocalizedStringResource = "Configuration"
-    static var description: IntentDescription = "Disk Usage Widget Configuration"
+    static let title: LocalizedStringResource = "Configuration"
+    static let description: IntentDescription = "Disk Usage Widget Configuration"
     
     @Parameter(title: "Refresh Button", default: true)
     var showRefreshButton: Bool
@@ -24,7 +24,7 @@ struct ConfigAppIntent: WidgetConfigurationIntent {
 }
 
 struct RefreshIntent: AppIntent {
-    static var title: LocalizedStringResource = "Refresh"
+    static let title: LocalizedStringResource = "Refresh"
     
     func perform() async throws -> some IntentResult {
         .result()

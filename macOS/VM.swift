@@ -17,15 +17,9 @@ final class VM {
             return
         }
         
-        var foundDisks: [DiskEntry] = []
-        
-        for volume in volumes {
-            if let disk = processVolume(volume) {
-                foundDisks.append(disk)
-            }
+        disks = volumes.compactMap {
+            processVolume($0)
         }
-        
-        disks = foundDisks
     }
     
     private func processVolume(_ volume: URL) -> DiskEntry? {
@@ -69,7 +63,8 @@ final class VM {
             return disk
             
         } catch {
-            print("Error retrieving resource values for \(volume):", error.localizedDescription)
+            print("Error retrieving resource values for", volume)
+            print(error.localizedDescription)
             
             return nil
         }
