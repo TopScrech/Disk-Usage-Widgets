@@ -58,6 +58,6 @@ struct DiskEjectableSection: View {
 }
 
 #Preview {
-    DiskEjectableSection(Utils.previewDisk)
+    DiskEjectableSection(Preview.disk)
         .darkSchemePreferred()
 }

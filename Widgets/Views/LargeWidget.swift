@@ -149,6 +149,6 @@ fileprivate struct LargeDiskCard: View {
     SimpleEntry(
         date: Date(),
         config: .init(),
-        disks: Utils.previewDisks
+        disks: Preview.disks
     )
 }
