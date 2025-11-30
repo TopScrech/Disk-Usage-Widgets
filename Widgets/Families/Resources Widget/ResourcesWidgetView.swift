@@ -13,6 +13,7 @@ struct ResourcesWidgetView: View {
             if entry.id.isEmpty {
                 Text("Choose a disk")
                     .title3()
+                
                 Text("Edit the widget and pick a volume")
                     .caption2()
                     .secondary()
@@ -37,6 +38,7 @@ struct ResourcesWidgetView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(entry.name)
                     .title3()
+                
                 Text(entry.id)
                     .caption2()
                     .secondary()
