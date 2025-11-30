@@ -2,7 +2,7 @@ import SwiftUI
 import WidgetKit
 
 struct SmallWidgetView: View {
-    private var entry: Provider.Entry
+    private let entry: Provider.Entry
     
     init(_ entry: Provider.Entry) {
         self.entry = entry
@@ -10,10 +10,6 @@ struct SmallWidgetView: View {
     
     private var disk: DiskEntry? {
         entry.disks.first
-    }
-    
-    private var name: String {
-        disk?.name ?? "Unknown"
     }
     
     var body: some View {
@@ -24,7 +20,7 @@ struct SmallWidgetView: View {
             
             if entry.config.showDiskName {
                 HStack {
-                    Label(name, systemImage: disk?.icon ?? "")
+                    Label(disk?.name ?? "Unknown", systemImage: disk?.icon ?? "")
                         .bold()
                         .secondary()
                         .padding(.top, 5)

@@ -3,11 +3,11 @@ import Charts
 import WidgetKit
 
 struct ExtraLargeGraph: View {
-    let disk: DiskEntry
-    let innerRadius: MarkDimension
-    let angularInset: CGFloat
-    let cornerRadius: CGFloat
-    let showOverlay: Bool
+    private let disk: DiskEntry
+    private let innerRadius: MarkDimension
+    private let angularInset: CGFloat
+    private let cornerRadius: CGFloat
+    private let showOverlay: Bool
     
     init(_ disk: DiskEntry, innerRadius: MarkDimension, angularInset: CGFloat, cornerRadius: CGFloat, showOverlay: Bool = true) {
         self.disk = disk

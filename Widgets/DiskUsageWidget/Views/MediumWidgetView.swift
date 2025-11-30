@@ -2,7 +2,7 @@ import SwiftUI
 import WidgetKit
 
 struct MediumWidgetView: View {
-    private var entry: Provider.Entry
+    private let entry: Provider.Entry
     
     init(_ entry: Provider.Entry) {
         self.entry = entry
@@ -10,30 +10,6 @@ struct MediumWidgetView: View {
     
     private var disk: DiskEntry? {
         entry.disks.first
-    }
-    
-    private var available: String {
-        disk?.freeSpace ?? "-"
-    }
-    
-    private var total: String {
-        disk?.totalSpace ?? "-"
-    }
-    
-    private var used: String {
-        disk?.usedSpace ?? "-"
-    }
-    
-    private var availablePercentage: String {
-        disk?.freeSpacePercentage ?? "-"
-    }
-    
-    private var usedPercentage: String {
-        disk?.usedSpacePercentage ?? "-"
-    }
-    
-    private var icon: String {
-        disk?.icon ?? ""
     }
     
     var body: some View {
@@ -44,7 +20,7 @@ struct MediumWidgetView: View {
             
             VStack {
                 if entry.config.showDiskName {
-                    Label(disk?.name ?? "Unknown", systemImage: icon)
+                    Label(disk?.name ?? "Unknown", systemImage: disk?.icon ?? "")
                         .title3()
                         .semibold()
                         .rounded()
@@ -67,8 +43,8 @@ struct MediumWidgetView: View {
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Available")     // Available
-                        Text("Used")         // Used
+                        Text("Available") // Available
+                        Text("Used")     // Used
                         
                         if entry.config.showTotalSpace {
                             Text("Total") // Total
@@ -78,19 +54,19 @@ struct MediumWidgetView: View {
                     .frame(width: 55)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(available)     // Available
-                        Text(used)         // Used
+                        Text(disk?.freeSpace ?? "-")  // Available
+                        Text(disk?.usedSpace ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
-                            Text(total) // Total
+                            Text(disk?.totalSpace ?? "-") // Total
                         }
                     }
                     .bold()
                     .frame(width: 60)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(availablePercentage) // Available
-                        Text(usedPercentage)     // Used
+                        Text(disk?.freeSpacePercentage ?? "-")  // Available
+                        Text(disk?.usedSpacePercentage ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
                             Text("100 %")     // Total

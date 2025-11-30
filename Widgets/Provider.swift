@@ -1,5 +1,4 @@
 import WidgetKit
-import Foundation
 
 struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(date: Date(), config: ConfigAppIntent(), disks: Preview.disks)
@@ -42,23 +41,23 @@ struct Provider: AppIntentTimelineProvider {
         let matchedDisk = matchedDisk(in: vm.disks, id: selectedID)
         
         if let matchedDisk {
-            return ([matchedDisk], false)
+            var disks = vm.disks
+            disks.removeAll { $0 == matchedDisk }
+            disks.insert(matchedDisk, at: 0)
+            
+            return (disks, false)
         }
         
         return ([], true)
     }
     
     private func matchedDisk(in disks: [DiskEntry], id: String) -> DiskEntry? {
-        disks.first { disk in
-            disk.url?.path == id || disk.name == id || disk.localizedName == id
+        disks.first {
+            $0.url?.path == id || $0.name == id || $0.localizedName == id
         }
     }
     
     private func fallbackDisks(_ disks: [DiskEntry]) -> [DiskEntry] {
-        if disks.isEmpty {
-            return Preview.disks
-        }
-        
-        return disks
+        disks.isEmpty ? Preview.disks : disks
     }
 }

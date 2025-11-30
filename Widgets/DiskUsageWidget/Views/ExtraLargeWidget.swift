@@ -2,7 +2,7 @@ import SwiftUI
 import WidgetKit
 
 struct ExtraLargeWidgetView: View {
-    private var entry: Provider.Entry
+    private let entry: Provider.Entry
     
     init(_ entry: Provider.Entry) {
         self.entry = entry
@@ -12,44 +12,15 @@ struct ExtraLargeWidgetView: View {
         entry.disks.first
     }
     
-    private var available: String {
-        disk?.freeSpace ?? "-"
-    }
-    
-    private var total: String {
-        disk?.totalSpace ?? "-"
-    }
-    
-    private var used: String {
-        disk?.usedSpace ?? "-"
-    }
-    
-    private var availablePercentage: String {
-        disk?.freeSpacePercentage ?? "-"
-    }
-    
-    private var usedPercentage: String {
-        disk?.usedSpacePercentage ?? "-"
-    }
-    
-    private var icon: String {
-        disk?.icon ?? ""
-    }
-    
     var body: some View {
         HStack {
             if let disk {
-                ExtraLargeGraph(
-                    disk,
-                    innerRadius: 100,
-                    angularInset: 4,
-                    cornerRadius: 5
-                )
+                ExtraLargeGraph(disk, innerRadius: 100, angularInset: 4, cornerRadius: 5)
             }
             
             VStack {
                 if entry.config.showDiskName {
-                    Label(disk?.name ?? "Unknown", systemImage: icon)
+                    Label(disk?.name ?? "Unknown", systemImage: disk?.icon ?? "")
                         .largeTitle()
                         .semibold()
                         .rounded()
@@ -71,8 +42,8 @@ struct ExtraLargeWidgetView: View {
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Available")     // Available
-                        Text("Used")         // Used
+                        Text("Available") // Available
+                        Text("Used")     // Used
                         
                         if entry.config.showTotalSpace {
                             Text("Total") // Total
@@ -82,22 +53,22 @@ struct ExtraLargeWidgetView: View {
                     .frame(width: 80)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(available)     // Available
-                        Text(used)         // Used
+                        Text(disk?.freeSpace ?? "-")  // Available
+                        Text(disk?.usedSpace ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
-                            Text(total) // Total
+                            Text(disk?.totalSpace ?? "-") // Total
                         }
                     }
                     .bold()
                     .frame(width: 80)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(availablePercentage) // Available
-                        Text(usedPercentage)     // Used
+                        Text(disk?.freeSpacePercentage ?? "-")  // Available
+                        Text(disk?.usedSpacePercentage ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
-                            Text("100 %")     // Total
+                            Text("100 %") // Total
                         }
                     }
                     .bold()
@@ -105,10 +76,8 @@ struct ExtraLargeWidgetView: View {
                 }
                 .lineLimit(1)
                 .title3()
-                //                .footnote()
             }
         }
-        //        .largeTitle()
         .overlay(alignment: .topLeading) {
             if entry.config.showRefreshButton {
                 Button(intent: RefreshIntent()) {
