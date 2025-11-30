@@ -311,7 +311,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Widgets.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -512,7 +512,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
