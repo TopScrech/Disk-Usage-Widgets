@@ -1,6 +1,4 @@
 import AppIntents
-import Foundation
-import SwiftUI
 
 struct DiskIntentTypeAppEntity: AppEntity {
     static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "Disk")
@@ -19,7 +17,9 @@ struct DiskIntentTypeAppEntity: AppEntity {
     var displayRepresentation: DisplayRepresentation {
         DisplayRepresentation(
             title: LocalizedStringResource(stringLiteral: displayString),
-            subtitle: subtitle.map { LocalizedStringResource(stringLiteral: $0) }
+            subtitle: subtitle.map {
+                LocalizedStringResource(stringLiteral: $0)
+            }
         )
     }
 }

@@ -1,5 +1,4 @@
 import WidgetKit
-import Foundation
 
 struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(date: Date(), config: ConfigAppIntent(), disks: Preview.disks)
