@@ -12,22 +12,6 @@ struct MediumWidgetView: View {
         entry.disks.first
     }
     
-    private var available: String {
-        disk?.freeSpace ?? "-"
-    }
-    
-    private var total: String {
-        disk?.totalSpace ?? "-"
-    }
-    
-    private var used: String {
-        disk?.usedSpace ?? "-"
-    }
-    
-    private var icon: String {
-        disk?.icon ?? ""
-    }
-    
     var body: some View {
         HStack {
             if let disk {
@@ -36,7 +20,7 @@ struct MediumWidgetView: View {
             
             VStack {
                 if entry.config.showDiskName {
-                    Label(disk?.name ?? "Unknown", systemImage: icon)
+                    Label(disk?.name ?? "Unknown", systemImage: disk?.icon ?? "")
                         .title3()
                         .semibold()
                         .rounded()
@@ -59,8 +43,8 @@ struct MediumWidgetView: View {
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Available")     // Available
-                        Text("Used")         // Used
+                        Text("Available") // Available
+                        Text("Used")     // Used
                         
                         if entry.config.showTotalSpace {
                             Text("Total") // Total
@@ -70,11 +54,11 @@ struct MediumWidgetView: View {
                     .frame(width: 55)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(available)     // Available
-                        Text(used)         // Used
+                        Text(disk?.freeSpace ?? "-")  // Available
+                        Text(disk?.usedSpace ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
-                            Text(total) // Total
+                            Text(disk?.totalSpace ?? "-") // Total
                         }
                     }
                     .bold()

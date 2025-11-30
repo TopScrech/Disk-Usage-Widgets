@@ -15,12 +15,7 @@ struct ExtraLargeWidgetView: View {
     var body: some View {
         HStack {
             if let disk {
-                ExtraLargeGraph(
-                    disk,
-                    innerRadius: 100,
-                    angularInset: 4,
-                    cornerRadius: 5
-                )
+                ExtraLargeGraph(disk, innerRadius: 100, angularInset: 4, cornerRadius: 5)
             }
             
             VStack {
@@ -81,10 +76,8 @@ struct ExtraLargeWidgetView: View {
                 }
                 .lineLimit(1)
                 .title3()
-                //                .footnote()
             }
         }
-        //        .largeTitle()
         .overlay(alignment: .topLeading) {
             if entry.config.showRefreshButton {
                 Button(intent: RefreshIntent()) {
