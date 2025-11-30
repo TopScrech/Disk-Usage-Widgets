@@ -13,8 +13,6 @@
 		F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DB2C2AD3DE00415506 /* WidgetKit.framework */; };
 		F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DD2C2AD3DE00415506 /* SwiftUI.framework */; };
 		F397D7882C2AEE030069F3EB /* Widgets Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F3F78B682EDC6B55008C32E9 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F78B672EDC6B55008C32E9 /* Intents.framework */; };
-		F3F78B6F2EDC6B55008C32E9 /* Intent Handler.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F3F78B662EDC6B55008C32E9 /* Intent Handler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,13 +23,6 @@
 			remoteGlobalIDString = F397D7792C2AEE020069F3EB;
 			remoteInfo = WidgetsExtension;
 		};
-		F3F78B6D2EDC6B55008C32E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F3CEBFF92C2ABA6800B44CE4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3F78B652EDC6B55008C32E9;
-			remoteInfo = "Intent Handler";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,7 +31,6 @@
 			dstPath = "";
 			dstSubfolder = PlugIns;
 			files = (
-				F3F78B6F2EDC6B55008C32E9 /* Intent Handler.appex in Embed Foundation Extensions */,
 				F397D7882C2AEE030069F3EB /* Widgets Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -69,7 +59,6 @@
 		F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Widgets Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE99E32E2F892800D70249 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3F78B662EDC6B55008C32E9 /* Intent Handler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Intent Handler.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F78B672EDC6B55008C32E9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -102,21 +91,6 @@
 			);
 			target = F397D7792C2AEE020069F3EB /* Widgets Extension */;
 		};
-		F3F78B732EDC6B55008C32E9 /* Exceptions for "Intent Handler" folder in "Intent Handler" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = F3F78B652EDC6B55008C32E9 /* Intent Handler */;
-		};
-		F3F78B8A2EDC71B2008C32E9 /* Exceptions for "Intent Handler" folder in "Widgets Extension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Crypto Price Widget.intentdefinition",
-				IntentHandler.swift,
-			);
-			target = F397D7792C2AEE020069F3EB /* Widgets Extension */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -137,15 +111,6 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		F3F78B692EDC6B55008C32E9 /* Intent Handler */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				F3F78B8A2EDC71B2008C32E9 /* Exceptions for "Intent Handler" folder in "Widgets Extension" target */,
-				F3F78B732EDC6B55008C32E9 /* Exceptions for "Intent Handler" folder in "Intent Handler" target */,
-			);
-			path = "Intent Handler";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,12 +127,6 @@
 			files = (
 				F358F03F2D2C1F3300BCC07B /* LaunchAtLogin in Frameworks */,
 				F30D8D432E27E38500789662 /* ScrechKit in Frameworks */,
-			);
-		};
-		F3F78B632EDC6B55008C32E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			files = (
-				F3F78B682EDC6B55008C32E9 /* Intents.framework in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -189,7 +148,6 @@
 				F3AE99E32E2F892800D70249 /* README.md */,
 				F3839EB82ECF2C8000350A0F /* macOS */,
 				F3839E912ECF2C7800350A0F /* Widgets */,
-				F3F78B692EDC6B55008C32E9 /* Intent Handler */,
 				F33812DA2C2AD3DE00415506 /* Frameworks */,
 				F3CEC0022C2ABA6800B44CE4 /* Products */,
 			);
@@ -200,7 +158,6 @@
 			children = (
 				F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */,
 				F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */,
-				F3F78B662EDC6B55008C32E9 /* Intent Handler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,7 +201,6 @@
 			);
 			dependencies = (
 				F397D7872C2AEE030069F3EB /* PBXTargetDependency */,
-				F3F78B6E2EDC6B55008C32E9 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F3839EB82ECF2C8000350A0F /* macOS */,
@@ -257,24 +213,6 @@
 			productName = "Disk Usage Widgets";
 			productReference = F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F3F78B652EDC6B55008C32E9 /* Intent Handler */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3F78B702EDC6B55008C32E9 /* Build configuration list for PBXNativeTarget "Intent Handler" */;
-			buildPhases = (
-				F3F78B622EDC6B55008C32E9 /* Sources */,
-				F3F78B632EDC6B55008C32E9 /* Frameworks */,
-				F3F78B642EDC6B55008C32E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			fileSystemSynchronizedGroups = (
-				F3F78B692EDC6B55008C32E9 /* Intent Handler */,
-			);
-			name = "Intent Handler";
-			productName = "Intent Handler";
-			productReference = F3F78B662EDC6B55008C32E9 /* Intent Handler.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -291,9 +229,6 @@
 					};
 					F3CEC0002C2ABA6800B44CE4 = {
 						CreatedOnToolsVersion = 16.0;
-					};
-					F3F78B652EDC6B55008C32E9 = {
-						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
@@ -318,7 +253,6 @@
 			targets = (
 				F3CEC0002C2ABA6800B44CE4 /* Disk Usage Widgets */,
 				F397D7792C2AEE020069F3EB /* Widgets Extension */,
-				F3F78B652EDC6B55008C32E9 /* Intent Handler */,
 			);
 		};
 /* End PBXProject section */
@@ -330,11 +264,6 @@
 			);
 		};
 		F3CEBFFF2C2ABA6800B44CE4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			files = (
-			);
-		};
-		F3F78B642EDC6B55008C32E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -352,11 +281,6 @@
 			files = (
 			);
 		};
-		F3F78B622EDC6B55008C32E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			files = (
-			);
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -364,11 +288,6 @@
 			isa = PBXTargetDependency;
 			target = F397D7792C2AEE020069F3EB /* Widgets Extension */;
 			targetProxy = F397D7862C2AEE030069F3EB /* PBXContainerItemProxy */;
-		};
-		F3F78B6E2EDC6B55008C32E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F3F78B652EDC6B55008C32E9 /* Intent Handler */;
-			targetProxy = F3F78B6D2EDC6B55008C32E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -643,77 +562,6 @@
 			};
 			name = Release;
 		};
-		F3F78B712EDC6B55008C32E9 /* Debug configuration for PBXNativeTarget "Intent Handler" */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Intent Handler/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Intent Handler";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.debug.Intent-Handler";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F3F78B722EDC6B55008C32E9 /* Release configuration for PBXNativeTarget "Intent Handler" */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Intent Handler/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Intent Handler";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.Intent-Handler";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -738,14 +586,6 @@
 			buildConfigurations = (
 				F3CEC0112C2ABA6900B44CE4 /* Debug configuration for PBXNativeTarget "Disk Usage Widgets" */,
 				F3CEC0122C2ABA6900B44CE4 /* Release configuration for PBXNativeTarget "Disk Usage Widgets" */,
-			);
-			defaultConfigurationName = Release;
-		};
-		F3F78B702EDC6B55008C32E9 /* Build configuration list for PBXNativeTarget "Intent Handler" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3F78B712EDC6B55008C32E9 /* Debug configuration for PBXNativeTarget "Intent Handler" */,
-				F3F78B722EDC6B55008C32E9 /* Release configuration for PBXNativeTarget "Intent Handler" */,
 			);
 			defaultConfigurationName = Release;
 		};

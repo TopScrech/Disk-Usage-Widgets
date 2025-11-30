@@ -1,4 +1,5 @@
 import WidgetKit
+import Foundation
 
 struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(date: Date(), config: ConfigAppIntent(), disks: Preview.disks)
@@ -19,28 +20,38 @@ struct Provider: AppIntentTimelineProvider {
     }
     
     private func entry(for configuration: ConfigAppIntent) -> SimpleEntry {
-        let disks = disks(for: configuration)
-        return SimpleEntry(date: Date(), config: configuration, disks: disks)
+        let result = disks(for: configuration)
+        
+        return SimpleEntry(
+            date: Date(),
+            config: configuration,
+            disks: result.disks,
+            selectedDiskNotFound: result.selectedDiskNotFound
+        )
     }
     
-    private func disks(for configuration: ConfigAppIntent) -> [DiskEntry] {
+    private func disks(for configuration: ConfigAppIntent) -> (disks: [DiskEntry], selectedDiskNotFound: Bool) {
         let vm = VM()
         vm.listAvailableDisks()
         
         guard let selection = configuration.selectedDisk else {
-            return fallbackDisks(vm.disks)
+            return (fallbackDisks(vm.disks), false)
         }
         
         let selectedID = selection.id
-        let matchedDisk = vm.disks.first { disk in
-            disk.url?.path == selectedID || disk.name == selectedID || disk.localizedName == selectedID
-        }
+        let matchedDisk = matchedDisk(in: vm.disks, id: selectedID)
         
         if let matchedDisk {
-            return [matchedDisk]
+            return ([matchedDisk], false)
         }
         
-        return fallbackDisks(vm.disks)
+        return ([], true)
+    }
+    
+    private func matchedDisk(in disks: [DiskEntry], id: String) -> DiskEntry? {
+        disks.first { disk in
+            disk.url?.path == id || disk.name == id || disk.localizedName == id
+        }
     }
     
     private func fallbackDisks(_ disks: [DiskEntry]) -> [DiskEntry] {

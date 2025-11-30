@@ -26,7 +26,26 @@ struct DiskIntentTypeAppEntity: AppEntity {
     
     struct DiskIntentTypeAppEntityQuery: EntityQuery {
         func entities(for identifiers: [DiskIntentTypeAppEntity.ID]) async throws -> [DiskIntentTypeAppEntity] {
-            disks().filter { identifiers.contains($0.id) }
+            let availableDisks = disks()
+            
+            var found = availableDisks.filter {
+                identifiers.contains($0.id)
+            }
+            
+            let missingIDs = identifiers.filter { id in
+                !found.contains(where: { $0.id == id })
+            }
+            
+            let missingEntities = missingIDs.map { id in
+                let displayName = URL(fileURLWithPath: id).lastPathComponent.isEmpty
+                    ? id
+                    : URL(fileURLWithPath: id).lastPathComponent
+                
+                return DiskIntentTypeAppEntity(id: id, displayString: displayName)
+            }
+            
+            found.append(contentsOf: missingEntities)
+            return found
         }
         
         func suggestedEntities() async throws -> [DiskIntentTypeAppEntity] {

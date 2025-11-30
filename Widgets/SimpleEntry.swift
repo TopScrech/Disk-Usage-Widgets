@@ -5,4 +5,5 @@ struct SimpleEntry: TimelineEntry {
     let config: ConfigAppIntent
     
     var disks: [DiskEntry] = []
+    var selectedDiskNotFound = false
 }
