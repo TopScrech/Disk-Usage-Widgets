@@ -37,7 +37,7 @@ struct AppSettings: View {
         .frame(width: 500, height: 600)
         .formStyle(.grouped)
         .buttonStyle(.plain)
-#warning("WTF")
+#warning("Works weirdly")
         //            Button(showMenuBarExtra ? "Switch to app" : "Switch to Menu Bar") {
         //                showMenuBarExtra.toggle()
         //

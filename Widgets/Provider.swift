@@ -41,7 +41,11 @@ struct Provider: AppIntentTimelineProvider {
         let matchedDisk = matchedDisk(in: vm.disks, id: selectedID)
         
         if let matchedDisk {
-            return ([matchedDisk], false)
+            var disks = vm.disks
+            disks.removeAll { $0 == matchedDisk }
+            disks.insert(matchedDisk, at: 0)
+            
+            return (disks, false)
         }
         
         return ([], true)
