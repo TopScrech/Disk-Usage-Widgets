@@ -19,12 +19,7 @@ struct SmallWidgetView: View {
     var body: some View {
         VStack {
             if let disk {
-                Graph(
-                    disk,
-                    innerRadius: 40,
-                    angularInset: 4,
-                    cornerRadius: 3
-                )
+                Graph(disk, innerRadius: 40, angularInset: 4, cornerRadius: 3)
             }
             
             if entry.config.showDiskName {
@@ -67,9 +62,5 @@ struct SmallWidgetView: View {
 #Preview(as: .systemSmall) {
     DiskUsageWidget()
 } timeline: {
-    SimpleEntry(
-        date: Date(),
-        config: .init(),
-        disks: [Preview.disk]
-    )
+    SimpleEntry(date: Date(), config: .init(), disks: [Preview.disk])
 }

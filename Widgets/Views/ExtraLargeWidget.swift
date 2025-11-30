@@ -124,9 +124,5 @@ struct ExtraLargeWidgetView: View {
 #Preview(as: .systemExtraLarge) {
     DiskUsageWidget()
 } timeline: {
-    SimpleEntry(
-        date: Date(),
-        config: .init(),
-        disks: [Preview.disk]
-    )
+    SimpleEntry(date: Date(), config: .init(), disks: [Preview.disk])
 }

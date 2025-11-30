@@ -114,9 +114,5 @@ import WidgetKit
 //#Preview(as: .systemSmall) {
 //    DiskUsageWidget()
 //} timeline: {
-//    SimpleEntry(
-//        date: Date(),
-//        config: .init(),
-//        disks: [Utils.previewDisk]
-//    )
+//    SimpleEntry(date: Date(), config: .init(), disks: [Utils.previewDisk])
 //}

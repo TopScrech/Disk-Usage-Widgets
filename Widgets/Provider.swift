@@ -1,52 +1,29 @@
 import WidgetKit
 
 struct Provider: AppIntentTimelineProvider {
-    private let previewEntry = SimpleEntry(
-        date: Date(),
-        config: ConfigAppIntent(),
-        disks: Preview.disks
-    )
+    private let previewEntry = SimpleEntry(date: Date(), config: ConfigAppIntent(), disks: Preview.disks)
     
-    func placeholder(
-        in context: Context
-    ) -> SimpleEntry {
+    func placeholder(in context: Context) -> SimpleEntry {
         previewEntry
     }
     
-    func snapshot(
-        for configuration: ConfigAppIntent,
-        in context: Context
-    ) -> SimpleEntry {
+    func snapshot(for configuration: ConfigAppIntent, in context: Context) -> SimpleEntry {
         let vm = VM()
         vm.listAvailableDisks()
         
-        return SimpleEntry(
-            date: Date(),
-            config: configuration,
-            disks: vm.disks
-        )
+        return SimpleEntry(date: Date(), config: configuration, disks: vm.disks)
     }
     
-    func timeline(
-        for configuration: ConfigAppIntent,
-        in context: Context
-    ) -> Timeline<SimpleEntry> {
+    func timeline(for configuration: ConfigAppIntent, in context: Context) -> Timeline<SimpleEntry> {
         let vm = VM()
         vm.listAvailableDisks()
         
         let entries: [SimpleEntry] = [
-            .init(
-                date: Date(),
-                config: configuration,
-                disks: vm.disks
-            )
+            .init(date: Date(), config: configuration, disks: vm.disks)
         ]
-        let nextUpdate = Date().addingTimeInterval(5 * 60) // 5 minutes
         
-        let timeline = Timeline(
-            entries: entries,
-            policy: .after(nextUpdate)
-        )
+        let nextUpdate = Date().addingTimeInterval(5 * 60) // 5m
+        let timeline = Timeline(entries: entries, policy: .after(nextUpdate))
         
         return timeline
     }

@@ -146,9 +146,5 @@ fileprivate struct LargeDiskCard: View {
 #Preview(as: .systemExtraLarge) {
     DiskUsageWidget()
 } timeline: {
-    SimpleEntry(
-        date: Date(),
-        config: .init(),
-        disks: Preview.disks
-    )
+    SimpleEntry(date: Date(), config: .init(), disks: Preview.disks)
 }
