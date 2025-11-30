@@ -6,12 +6,8 @@ struct DiskUsageWidget: Widget {
     private let provider = Provider()
     
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(
-            kind: kind,
-            intent: ConfigAppIntent.self,
-            provider: provider
-        ) { entry in
-            DiskUsageWidgetView(entry)
+        AppIntentConfiguration(kind: kind, intent: ConfigAppIntent.self, provider: provider) {
+            DiskUsageWidgetView($0)
                 .containerBackground(.ultraThinMaterial, for: .widget)
         }
         .configurationDisplayName("Disk Usage")

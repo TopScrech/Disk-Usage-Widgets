@@ -9,27 +9,29 @@ struct SmallWidgetView: View {
     }
     
     private var disk: DiskEntry? {
-        entry.disks.first
-    }
-    
-    private var name: String {
-        disk?.name ?? "Unknown"
+        entry.disk
     }
     
     var body: some View {
         VStack {
-            if let disk {
-                Graph(
-                    disk,
-                    innerRadius: 40,
-                    angularInset: 4,
-                    cornerRadius: 3
-                )
+            Group {
+                if let disk {
+                    Graph(
+                        disk,
+                        innerRadius: 40,
+                        angularInset: 4,
+                        cornerRadius: 3
+                    )
+                } else {
+                    MissingDiskView(
+                        isSelectedDiskMissing: entry.isSelectedDiskMissing
+                    )
+                }
             }
             
-            if entry.config.showDiskName {
+            if entry.config.showDiskName, let disk {
                 HStack {
-                    Label(name, systemImage: disk?.icon ?? "")
+                    Label(disk.name, systemImage: disk.icon)
                         .bold()
                         .secondary()
                         .padding(.top, 5)
@@ -70,6 +72,7 @@ struct SmallWidgetView: View {
     SimpleEntry(
         date: Date(),
         config: .init(),
-        disks: [Preview.disk]
+        disk: Preview.disk,
+        isSelectedDiskMissing: false
     )
 }

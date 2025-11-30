@@ -3,6 +3,6 @@ import WidgetKit
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let config: ConfigAppIntent
-    
-    var disks: [DiskEntry] = []
+    let disk: DiskEntry?
+    let isSelectedDiskMissing: Bool
 }

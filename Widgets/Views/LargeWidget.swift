@@ -8,40 +8,24 @@ struct LargeWidgetView: View {
         self.entry = entry
     }
     
-    private var disks: [DiskEntry] {
-        entry.disks.prefix(3).map {
-            $0
-        }
+    private var disk: DiskEntry? {
+        entry.disk
     }
     
     var body: some View {
         GeometryReader { geo in
-            let height = geo.size.height * 0.30
+            let height = geo.size.height * 0.60
             
-            VStack(spacing: 5) {
-                Group {
-                    if disks.count > 0 {
-                        LargeDiskCard(entry, disk: disks[0])
-                            .frame(height: height)
-                    }
-                    
-                    if disks.count > 1 {
-                        Divider()
-                            .frame(height: 0)
-                            .padding(.vertical, 5)
-                        
-                        LargeDiskCard(entry, disk: disks[1])
-                            .frame(height: height)
-                    }
-                    
-                    if disks.count > 2 {
-                        Divider()
-                            .frame(height: 0)
-                            .padding(.vertical, 5)
-                        
-                        LargeDiskCard(entry, disk: disks[2])
-                            .frame(height: height)
-                    }
+            Group {
+                if let disk {
+                    LargeDiskCard(entry, disk: disk)
+                        .frame(height: height)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    MissingDiskView(
+                        isSelectedDiskMissing: entry.isSelectedDiskMissing
+                    )
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
         }
@@ -149,6 +133,7 @@ fileprivate struct LargeDiskCard: View {
     SimpleEntry(
         date: Date(),
         config: .init(),
-        disks: Preview.disks
+        disk: Preview.disk,
+        isSelectedDiskMissing: false
     )
 }

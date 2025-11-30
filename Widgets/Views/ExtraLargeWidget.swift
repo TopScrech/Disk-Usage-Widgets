@@ -9,7 +9,7 @@ struct ExtraLargeWidgetView: View {
     }
     
     private var disk: DiskEntry? {
-        entry.disks.first
+        entry.disk
     }
     
     private var available: String {
@@ -37,75 +37,81 @@ struct ExtraLargeWidgetView: View {
     }
     
     var body: some View {
-        HStack {
+        ZStack {
             if let disk {
-                ExtraLargeGraph(
-                    disk,
-                    innerRadius: 100,
-                    angularInset: 4,
-                    cornerRadius: 5
-                )
-            }
-            
-            VStack {
-                if entry.config.showDiskName {
-                    Label(disk?.name ?? "Unknown", systemImage: icon)
-                        .largeTitle()
-                        .semibold()
-                        .rounded()
-                        .lineLimit(1)
-                }
-                
                 HStack {
-                    if entry.config.showRefreshTime {
-                        Text(Date(), format: .dateTime.hour().minute().second())
-                    }
+                    ExtraLargeGraph(
+                        disk,
+                        innerRadius: 100,
+                        angularInset: 4,
+                        cornerRadius: 5
+                    )
                     
-                    if entry.config.showBuildNumber {
-                        Text("B\(Utils.buildNumber)")
+                    VStack {
+                        if entry.config.showDiskName {
+                            Label(disk.name, systemImage: icon)
+                                .largeTitle()
+                                .semibold()
+                                .rounded()
+                                .lineLimit(1)
+                        }
+                        
+                        HStack {
+                            if entry.config.showRefreshTime {
+                                Text(Date(), format: .dateTime.hour().minute().second())
+                            }
+                            
+                            if entry.config.showBuildNumber {
+                                Text("B\(Utils.buildNumber)")
+                            }
+                        }
+                        .tertiary()
+                        
+                        Spacer()
+                        
+                        HStack(spacing: 2) {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Available")     // Available
+                                Text("Used")         // Used
+                                
+                                if entry.config.showTotalSpace {
+                                    Text("Total") // Total
+                                }
+                            }
+                            .secondary()
+                            .frame(width: 80)
+                            
+                            VStack(alignment: .trailing, spacing: 2) {
+                                Text(available)     // Available
+                                Text(used)         // Used
+                                
+                                if entry.config.showTotalSpace {
+                                    Text(total) // Total
+                                }
+                            }
+                            .bold()
+                            .frame(width: 80)
+                            
+                            VStack(alignment: .trailing, spacing: 2) {
+                                Text(availablePercentage) // Available
+                                Text(usedPercentage)     // Used
+                                
+                                if entry.config.showTotalSpace {
+                                    Text("100 %")     // Total
+                                }
+                            }
+                            .bold()
+                            .frame(width: 80)
+                        }
+                        .lineLimit(1)
+                        .title3()
+                        //                .footnote()
                     }
                 }
-                .tertiary()
-                
-                Spacer()
-                
-                HStack(spacing: 2) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Available")     // Available
-                        Text("Used")         // Used
-                        
-                        if entry.config.showTotalSpace {
-                            Text("Total") // Total
-                        }
-                    }
-                    .secondary()
-                    .frame(width: 80)
-                    
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text(available)     // Available
-                        Text(used)         // Used
-                        
-                        if entry.config.showTotalSpace {
-                            Text(total) // Total
-                        }
-                    }
-                    .bold()
-                    .frame(width: 80)
-                    
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text(availablePercentage) // Available
-                        Text(usedPercentage)     // Used
-                        
-                        if entry.config.showTotalSpace {
-                            Text("100 %")     // Total
-                        }
-                    }
-                    .bold()
-                    .frame(width: 80)
-                }
-                .lineLimit(1)
-                .title3()
-                //                .footnote()
+            } else {
+                MissingDiskView(
+                    isSelectedDiskMissing: entry.isSelectedDiskMissing
+                )
             }
         }
         //        .largeTitle()
@@ -127,6 +133,7 @@ struct ExtraLargeWidgetView: View {
     SimpleEntry(
         date: Date(),
         config: .init(),
-        disks: [Preview.disk]
+        disk: Preview.disk,
+        isSelectedDiskMissing: false
     )
 }
