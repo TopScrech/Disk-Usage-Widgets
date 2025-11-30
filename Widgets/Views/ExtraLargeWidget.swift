@@ -24,18 +24,6 @@ struct ExtraLargeWidgetView: View {
         disk?.usedSpace ?? "-"
     }
     
-    private var availablePercentage: String {
-        disk?.freeSpacePercentage ?? "-"
-    }
-    
-    private var usedPercentage: String {
-        disk?.usedSpacePercentage ?? "-"
-    }
-    
-    private var icon: String {
-        disk?.icon ?? ""
-    }
-    
     var body: some View {
         HStack {
             if let disk {
@@ -49,7 +37,7 @@ struct ExtraLargeWidgetView: View {
             
             VStack {
                 if entry.config.showDiskName {
-                    Label(disk?.name ?? "Unknown", systemImage: icon)
+                    Label(disk?.name ?? "Unknown", systemImage: disk?.icon ?? "")
                         .largeTitle()
                         .semibold()
                         .rounded()
@@ -93,8 +81,8 @@ struct ExtraLargeWidgetView: View {
                     .frame(width: 80)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(availablePercentage) // Available
-                        Text(usedPercentage)     // Used
+                        Text(disk?.freeSpacePercentage ?? "-")  // Available
+                        Text(disk?.usedSpacePercentage ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
                             Text("100 %")     // Total
