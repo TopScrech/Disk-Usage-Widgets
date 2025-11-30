@@ -9,13 +9,7 @@ struct ExtraLargeGraph: View {
     let cornerRadius: CGFloat
     let showOverlay: Bool
     
-    init(
-        _ disk: DiskEntry,
-        innerRadius: MarkDimension,
-        angularInset: CGFloat,
-        cornerRadius: CGFloat,
-        showOverlay: Bool = true
-    ) {
+    init(_ disk: DiskEntry, innerRadius: MarkDimension, angularInset: CGFloat, cornerRadius: CGFloat, showOverlay: Bool = true) {
         self.disk = disk
         self.innerRadius = innerRadius
         self.angularInset = angularInset
@@ -66,9 +60,5 @@ struct ExtraLargeGraph: View {
 #Preview(as: .systemExtraLarge) {
     DiskUsageWidget()
 } timeline: {
-    SimpleEntry(
-        date: Date(),
-        config: .init(),
-        disks: [Utils.previewDisk]
-    )
+    SimpleEntry(date: Date(), config: .init(), disks: [Preview.disk])
 }

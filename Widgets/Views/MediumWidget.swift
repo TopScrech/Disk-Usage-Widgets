@@ -39,12 +39,7 @@ struct MediumWidgetView: View {
     var body: some View {
         HStack {
             if let disk {
-                Graph(
-                    disk,
-                    innerRadius: 40,
-                    angularInset: 4,
-                    cornerRadius: 5
-                )
+                Graph(disk, innerRadius: 40, angularInset: 4, cornerRadius: 5)
             }
             
             VStack {
@@ -124,9 +119,5 @@ struct MediumWidgetView: View {
 #Preview(as: .systemMedium) {
     DiskUsageWidget()
 } timeline: {
-    SimpleEntry(
-        date: Date(),
-        config: .init(),
-        disks: [Utils.previewDisk]
-    )
+    SimpleEntry(date: Date(), config: .init(), disks: [Preview.disk])
 }
