@@ -12,20 +12,20 @@ struct ResourcesWidgetView: View {
         VStack(alignment: .leading, spacing: 8) {
             if entry.id.isEmpty {
                 Text("Choose a disk")
-                    .font(.headline)
+                    .title3()
                 Text("Edit the widget and pick a volume")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .caption2()
+                    .secondary()
             } else {
                 header
                 usage
                 
                 Text(entry.date, style: .time)
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .caption2()
+                    .secondary()
                 
                 Button("Refresh", intent: RefreshIntent())
-                    .font(.caption)
+                    .caption2()
             }
         }
         .padding()
@@ -36,16 +36,16 @@ struct ResourcesWidgetView: View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
                 Text(entry.name)
-                    .font(.headline)
+                    .title3()
                 Text(entry.id)
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .caption2()
+                    .secondary()
             }
             
             Spacer()
             
             Text(entry.state.capitalized)
-                .font(.caption)
+                .caption2()
                 .padding(.horizontal, 8)
                 .padding(.vertical, 4)
                 .background(.quaternary, in: .capsule)
@@ -74,8 +74,8 @@ struct ResourcesWidgetView: View {
                 }
             } else {
                 Text("No usage yet")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .caption2()
+                    .secondary()
             }
         }
     }
