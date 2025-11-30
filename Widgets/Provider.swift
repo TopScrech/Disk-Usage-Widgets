@@ -1,30 +1,29 @@
 import WidgetKit
 
-struct Provider: IntentTimelineProvider {
+struct Provider: AppIntentTimelineProvider {
     private let previewEntry = SimpleEntry(date: Date(), config: ConfigAppIntent(), disks: Preview.disks)
-    private let defaultConfig = ConfigAppIntent()
     
     func placeholder(in context: Context) -> SimpleEntry {
         previewEntry
     }
     
-    func getSnapshot(for configuration: CryptoPriceConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-        completion(entry(for: configuration))
+    func snapshot(for configuration: ConfigAppIntent, in context: Context) async -> SimpleEntry {
+        entry(for: configuration)
     }
     
-    func getTimeline(for configuration: CryptoPriceConfigurationIntent, in context: Context, completion: @escaping @Sendable (Timeline<SimpleEntry>) -> Void) {
+    func timeline(for configuration: ConfigAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
         let entry = entry(for: configuration)
         let nextUpdate = Calendar.current.date(byAdding: .minute, value: 5, to: Date()) ?? Date().addingTimeInterval(5 * 60)
         
-        completion(Timeline(entries: [entry], policy: .after(nextUpdate)))
+        return Timeline(entries: [entry], policy: .after(nextUpdate))
     }
     
-    private func entry(for configuration: CryptoPriceConfigurationIntent) -> SimpleEntry {
+    private func entry(for configuration: ConfigAppIntent) -> SimpleEntry {
         let disks = disks(for: configuration)
-        return SimpleEntry(date: Date(), config: defaultConfig, disks: disks)
+        return SimpleEntry(date: Date(), config: configuration, disks: disks)
     }
     
-    private func disks(for configuration: CryptoPriceConfigurationIntent) -> [DiskEntry] {
+    private func disks(for configuration: ConfigAppIntent) -> [DiskEntry] {
         let vm = VM()
         vm.listAvailableDisks()
         
@@ -32,7 +31,7 @@ struct Provider: IntentTimelineProvider {
             return fallbackDisks(vm.disks)
         }
         
-        let selectedID = selection.id ?? selection.identifier ?? ""
+        let selectedID = selection.id
         let matchedDisk = vm.disks.first { disk in
             disk.url?.path == selectedID || disk.name == selectedID || disk.localizedName == selectedID
         }

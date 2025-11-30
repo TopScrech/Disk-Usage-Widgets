@@ -1,11 +1,17 @@
 import SwiftUI
 import AppIntents
 
-struct ConfigAppIntent: WidgetConfigurationIntent {
-    static let intentClassName = "DiskUsageIntent"
+struct ConfigAppIntent: AppIntent, WidgetConfigurationIntent, CustomIntentMigratedAppIntent {
+    static let intentClassName = "CryptoPriceConfigurationIntent"
     
     static let title: LocalizedStringResource = "Configuration"
     static let description: IntentDescription = "Disk Usage Widget Configuration"
+    
+    // Not for shortcuts
+    static let isDiscoverable = false
+    
+    @Parameter(title: "Disk")
+    var selectedDisk: DiskIntentTypeAppEntity?
     
     @Parameter(title: "Refresh Button", default: true)
     var showRefreshButton: Bool
@@ -21,6 +27,17 @@ struct ConfigAppIntent: WidgetConfigurationIntent {
     
     @Parameter(title: "Build Number", default: false)
     var showBuildNumber: Bool
+    
+    static var parameterSummary: some ParameterSummary {
+        Summary {
+            \.$selectedDisk
+            \.$showRefreshButton
+            \.$showDiskName
+            \.$showRefreshTime
+            \.$showTotalSpace
+            \.$showBuildNumber
+        }
+    }
 }
 
 struct RefreshIntent: AppIntent {
