@@ -3,8 +3,8 @@ import WidgetKit
 
 #warning("Implement new widget")
 //struct SmallWidgetView: View {
-//    private var entry: Provider.Entry
-//    
+//    private let entry: Provider.Entry
+//
 //    init(_ entry: Provider.Entry) {
 //        self.entry = entry
 //    }

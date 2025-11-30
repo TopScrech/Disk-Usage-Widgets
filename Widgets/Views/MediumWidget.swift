@@ -2,7 +2,7 @@ import SwiftUI
 import WidgetKit
 
 struct MediumWidgetView: View {
-    private var entry: Provider.Entry
+    private let entry: Provider.Entry
     
     init(_ entry: Provider.Entry) {
         self.entry = entry
@@ -22,14 +22,6 @@ struct MediumWidgetView: View {
     
     private var used: String {
         disk?.usedSpace ?? "-"
-    }
-    
-    private var availablePercentage: String {
-        disk?.freeSpacePercentage ?? "-"
-    }
-    
-    private var usedPercentage: String {
-        disk?.usedSpacePercentage ?? "-"
     }
     
     private var icon: String {
@@ -89,8 +81,8 @@ struct MediumWidgetView: View {
                     .frame(width: 60)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(availablePercentage) // Available
-                        Text(usedPercentage)     // Used
+                        Text(disk?.freeSpacePercentage ?? "-")  // Available
+                        Text(disk?.usedSpacePercentage ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
                             Text("100 %")     // Total

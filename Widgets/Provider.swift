@@ -49,16 +49,12 @@ struct Provider: AppIntentTimelineProvider {
     }
     
     private func matchedDisk(in disks: [DiskEntry], id: String) -> DiskEntry? {
-        disks.first { disk in
-            disk.url?.path == id || disk.name == id || disk.localizedName == id
+        disks.first {
+            $0.url?.path == id || $0.name == id || $0.localizedName == id
         }
     }
     
     private func fallbackDisks(_ disks: [DiskEntry]) -> [DiskEntry] {
-        if disks.isEmpty {
-            return Preview.disks
-        }
-        
-        return disks
+        disks.isEmpty ? Preview.disks : disks
     }
 }

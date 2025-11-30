@@ -2,7 +2,7 @@ import SwiftUI
 import WidgetKit
 
 struct ExtraLargeWidgetView: View {
-    private var entry: Provider.Entry
+    private let entry: Provider.Entry
     
     init(_ entry: Provider.Entry) {
         self.entry = entry
@@ -10,18 +10,6 @@ struct ExtraLargeWidgetView: View {
     
     private var disk: DiskEntry? {
         entry.disks.first
-    }
-    
-    private var available: String {
-        disk?.freeSpace ?? "-"
-    }
-    
-    private var total: String {
-        disk?.totalSpace ?? "-"
-    }
-    
-    private var used: String {
-        disk?.usedSpace ?? "-"
     }
     
     var body: some View {
@@ -59,8 +47,8 @@ struct ExtraLargeWidgetView: View {
                 
                 HStack(spacing: 2) {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Available")     // Available
-                        Text("Used")         // Used
+                        Text("Available") // Available
+                        Text("Used")     // Used
                         
                         if entry.config.showTotalSpace {
                             Text("Total") // Total
@@ -70,11 +58,11 @@ struct ExtraLargeWidgetView: View {
                     .frame(width: 80)
                     
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(available)     // Available
-                        Text(used)         // Used
+                        Text(disk?.freeSpace ?? "-")  // Available
+                        Text(disk?.usedSpace ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
-                            Text(total) // Total
+                            Text(disk?.totalSpace ?? "-") // Total
                         }
                     }
                     .bold()
@@ -85,7 +73,7 @@ struct ExtraLargeWidgetView: View {
                         Text(disk?.usedSpacePercentage ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
-                            Text("100 %")     // Total
+                            Text("100 %") // Total
                         }
                     }
                     .bold()
