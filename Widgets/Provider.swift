@@ -28,7 +28,7 @@ struct Provider: IntentTimelineProvider {
         let vm = VM()
         vm.listAvailableDisks()
         
-        guard let selection = configuration.selectedServer else {
+        guard let selection = configuration.selectedDisk else {
             return fallbackDisks(vm.disks)
         }
         

@@ -45,40 +45,14 @@ struct ResourcesWidgetView: View {
             }
             
             Spacer()
-            
-            Text(entry.state.capitalized)
-                .caption2()
-                .padding(.horizontal, 8)
-                .padding(.vertical, 4)
-                .background(.quaternary, in: .capsule)
         }
     }
     
     private var usage: some View {
         VStack(alignment: .leading, spacing: 8) {
-            if let usage = entry.usage {
-                Gauge(value: usage.cpu / 100) {
-                    Text("CPU")
-                } currentValueLabel: {
-                    Text("\(usage.cpu, specifier: "%.0f")%")
-                }
-                
-                Gauge(value: min(usage.memory / 64, 1)) {
-                    Text("RAM1")
-                } currentValueLabel: {
-                    Text("\(usage.memory, specifier: "%.0f") GB")
-                }
-                
-                Gauge(value: min(usage.disk / 512, 1)) {
-                    Text("Disk")
-                } currentValueLabel: {
-                    Text("\(usage.disk, specifier: "%.0f") GB")
-                }
-            } else {
-                Text("No usage yet")
-                    .caption2()
-                    .secondary()
-            }
+            Text("No")
+                .caption2()
+                .secondary()
         }
     }
 }
@@ -89,8 +63,6 @@ struct ResourcesWidgetView: View {
     ResourcesUsageEntry(
         date: .now,
         name: "Preview Disk",
-        id: "disk-preview",
-        state: "idle",
-        usage: .init(memory: 18, cpu: 36, disk: 240)
+        id: "disk-preview"
     )
 }

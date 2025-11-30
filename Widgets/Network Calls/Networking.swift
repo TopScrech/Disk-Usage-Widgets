@@ -1,7 +1,7 @@
 import Foundation
 
 struct Networking {
-    static func fetchServers() async -> [Asset] {
+    static func fetchDisks() async -> [Asset] {
         let volumes = FileManager.default.mountedVolumeURLs(
             includingResourceValuesForKeys: [.volumeNameKey, .volumeLocalizedNameKey],
             options: .skipHiddenVolumes
@@ -25,17 +25,5 @@ struct Networking {
         }
         
         return disks
-    }
-    
-    static func fetchResourceUsage(_ id: String) async -> AssetDetails {
-        let cpu = Double.random(in: 5...92)
-        let memory = Double.random(in: 4...64)
-        let disk = Double.random(in: 32...512)
-        
-        let states = ["running", "idle", "offline"]
-        let state = states.randomElement() ?? "running"
-        
-        let usage = UsageAttributes(memory: memory, cpu: cpu, disk: disk)
-        return AssetDetails(state: state, usage: usage)
     }
 }

@@ -2,7 +2,7 @@ import SwiftUI
 import AppIntents
 
 struct ConfigAppIntent: WidgetConfigurationIntent {
-    static let intentClassName = "ServerUsageIntent"
+    static let intentClassName = "DiskUsageIntent"
     
     static let title: LocalizedStringResource = "Configuration"
     static let description: IntentDescription = "Disk Usage Widget Configuration"

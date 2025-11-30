@@ -10,56 +10,38 @@ struct ResourcesTimelineProvider: IntentTimelineProvider {
     }
     
     func getTimeline(for configuration: CryptoPriceConfigurationIntent, in context: Context, completion: @escaping @Sendable (Timeline<ResourcesUsageEntry>) -> Void) {
-        guard let selectedServer = configuration.selectedServer else {
+        guard let selectedDisk = configuration.selectedDisk else {
             executeTimelineCompletion(
                 completion,
-                timelineEntry: ResourcesUsageEntry(date: Date(), name: "", id: "", state: "No disk selected")
+                timelineEntry: ResourcesUsageEntry(date: Date(), name: "", id: "")
             )
             
             return
         }
         
-        let serverIDForRequest = selectedServer.id ?? selectedServer.identifier ?? UUID().uuidString
-        let serverIDForEntry = selectedServer.id ?? selectedServer.identifier ?? ""
-        let serverName = selectedServer.name ?? selectedServer.displayString
+        let diskIDForEntry = selectedDisk.id ?? selectedDisk.identifier ?? ""
+        let diskName = selectedDisk.name ?? selectedDisk.displayString
         
         Task { @MainActor in
-            let usage = await Networking.fetchResourceUsage(serverIDForRequest)
-            
-            let entry = ResourcesUsageEntry(
-                date: Date(),
-                name: serverName,
-                id: serverIDForEntry,
-                state: usage.state,
-                usage: usage.usage
-            )
-            
+            let entry = ResourcesUsageEntry(date: Date(), name: diskName, id: diskIDForEntry)
             executeTimelineCompletion(completion, timelineEntry: entry)
         }
     }
     
     private func snapshotEntry(for configuration: CryptoPriceConfigurationIntent) -> ResourcesUsageEntry {
-        guard let selection = configuration.selectedServer else {
+        guard let selection = configuration.selectedDisk else {
             return sampleEntry()
         }
         
         return ResourcesUsageEntry(
             date: Date(),
             name: selection.name ?? "Snapshot Disk",
-            id: selection.id ?? "snapshot-id",
-            state: "running",
-            usage: .init(memory: 32, cpu: 54, disk: 280)
+            id: selection.id ?? "snapshot-id"
         )
     }
     
     private func sampleEntry() -> ResourcesUsageEntry {
-        ResourcesUsageEntry(
-            date: Date(),
-            name: "Preview Disk",
-            id: "disk-0",
-            state: "running",
-            usage: .init(memory: 24, cpu: 73, disk: 220)
-        )
+        ResourcesUsageEntry(date: Date(), name: "Preview Disk", id: "disk-0")
     }
     
     private func executeTimelineCompletion(

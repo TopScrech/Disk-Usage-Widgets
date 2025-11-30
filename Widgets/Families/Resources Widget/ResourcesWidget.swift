@@ -17,11 +17,5 @@ struct ResourcesWidget: Widget {
 #Preview(as: .systemMedium) {
     ResourcesWidget()
 } timeline: {
-    ResourcesUsageEntry(
-        date: .now,
-        name: "Preview Disk",
-        id: "disk-preview",
-        state: "running",
-        usage: .init(memory: 16, cpu: 42, disk: 180)
-    )
+    ResourcesUsageEntry(date: .now, name: "Preview Disk", id: "disk-preview")
 }

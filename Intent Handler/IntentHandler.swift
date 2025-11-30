@@ -1,15 +1,7 @@
-//
-//  IntentHandler.swift
-//  Intent Handler
-//
-//  Created by Sergei Saliukov on 30.11.2025.
-//
-
 import Intents
 
 class IntentHandler: INExtension, CryptoPriceConfigurationIntentHandling {
-    
-    func provideSelectedServerOptionsCollection(for intent: CryptoPriceConfigurationIntent) async throws -> INObjectCollection<Crypto> {
+    func provideSelectedDiskOptionsCollection(for intent: CryptoPriceConfigurationIntent) async throws -> INObjectCollection<Crypto> {
         let volumes = FileManager.default.mountedVolumeURLs(
             includingResourceValuesForKeys: [.volumeNameKey, .volumeLocalizedNameKey],
             options: .skipHiddenVolumes
