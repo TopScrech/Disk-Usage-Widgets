@@ -6,7 +6,7 @@ struct DiskUsageWidget: Widget {
     private let provider = Provider()
     
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: ConfigAppIntent.self, provider: provider) {
+        IntentConfiguration(kind: kind, intent: CryptoPriceConfigurationIntent.self, provider: provider) {
             DiskUsageWidgetView($0)
                 .containerBackground(.ultraThinMaterial, for: .widget)
         }

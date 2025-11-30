@@ -62,7 +62,7 @@ struct ResourcesWidgetView: View {
                 }
                 
                 Gauge(value: min(usage.memory / 64, 1)) {
-                    Text("Memory")
+                    Text("RAM1")
                 } currentValueLabel: {
                     Text("\(usage.memory, specifier: "%.0f") GB")
                 }
