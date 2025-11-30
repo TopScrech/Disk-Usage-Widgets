@@ -4,5 +4,6 @@ import SwiftUI
 struct WidgetsBundle: WidgetBundle {
     var body: some Widget {
         DiskUsageWidget()
+        ResourcesWidget()
     }
 }
