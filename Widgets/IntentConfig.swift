@@ -7,9 +7,6 @@ struct ConfigAppIntent: WidgetConfigurationIntent {
     static let title: LocalizedStringResource = "Configuration"
     static let description: IntentDescription = "Disk Usage Widget Configuration"
     
-    @Parameter(title: "Disk")
-    var selectedDisk: DiskSelection?
-    
     @Parameter(title: "Refresh Button", default: true)
     var showRefreshButton: Bool
     
@@ -24,17 +21,6 @@ struct ConfigAppIntent: WidgetConfigurationIntent {
     
     @Parameter(title: "Build Number", default: false)
     var showBuildNumber: Bool
-    
-    static var parameterSummary: some ParameterSummary {
-        Summary("Configure Disk Usage") {
-            \.$selectedDisk
-            \.$showDiskName
-            \.$showRefreshTime
-            \.$showTotalSpace
-            \.$showRefreshButton
-            \.$showBuildNumber
-        }
-    }
 }
 
 struct RefreshIntent: AppIntent {
