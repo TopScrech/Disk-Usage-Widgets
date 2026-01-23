@@ -33,10 +33,12 @@ struct DiskEntry: Identifiable, Equatable {
     }
     
     var freeSpacePercentage: String {
-        String(format: "%.2f %%", (Double(freeSpaceBytes) / Double(totalSpaceBytes)) * 100)
+        let value = (Double(freeSpaceBytes) / Double(totalSpaceBytes))
+        return value.formatted(.percentRounded(2))
     }
     
     var usedSpacePercentage: String {
-        String(format: "%.2f %%", (Double(totalSpaceBytes - freeSpaceBytes) / Double(totalSpaceBytes)) * 100)
+        let value = (Double(totalSpaceBytes - freeSpaceBytes) / Double(totalSpaceBytes))
+        return value.formatted(.percentRounded(2))
     }
 }
