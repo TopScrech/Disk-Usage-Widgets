@@ -1,4 +1,5 @@
 import ScrechKit
+import OSLog
 
 @Observable
 final class VM {
@@ -7,13 +8,10 @@ final class VM {
     private let fm = FileManager.default
     
     func listAvailableDisks() {
-        let volumes = fm.mountedVolumeURLs(
-            includingResourceValuesForKeys: nil,
-            options: .skipHiddenVolumes
-        )
+        let volumes = fm.mountedVolumeURLs(includingResourceValuesForKeys: nil, options: .skipHiddenVolumes)
         
         guard let volumes else {
-            print("Failed to retrieve mounted volume URL's")
+            Logger().error("Failed to retrieve mounted volume URL's")
             return
         }
         
@@ -63,9 +61,7 @@ final class VM {
             return disk
             
         } catch {
-            print("Error retrieving resource values for", volume)
-            print(error.localizedDescription)
-            
+            Logger().error("Error retrieving resource values for \(volume): \(error)")
             return nil
         }
     }
