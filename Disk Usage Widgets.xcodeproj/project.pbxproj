@@ -59,6 +59,7 @@
 		F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Widgets Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE99E32E2F892800D70249 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3E066452F467F0E001B77CD /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		F3F78B672EDC6B55008C32E9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -146,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				F3AE99E32E2F892800D70249 /* README.md */,
+				F3E066452F467F0E001B77CD /* LICENSE.txt */,
 				F3839EB82ECF2C8000350A0F /* macOS */,
 				F3839E912ECF2C7800350A0F /* Widgets */,
 				F33812DA2C2AD3DE00415506 /* Frameworks */,
