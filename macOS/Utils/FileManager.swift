@@ -9,7 +9,16 @@ extension FileManager {
     }
     
     func volumeFreeDiskSpace(_ url: URL) throws -> Int {
-        let values = try url.resourceValues(forKeys: [.volumeAvailableCapacityKey])
+        let values = try url.resourceValues(
+            forKeys: [
+                .volumeAvailableCapacityForImportantUsageKey,
+                .volumeAvailableCapacityKey
+            ]
+        )
+        
+        if let capacity = values.volumeAvailableCapacityForImportantUsage {
+            return Int(capacity)
+        }
         
         guard let capacity = values.volumeAvailableCapacity else {
             throw NSError(
