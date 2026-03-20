@@ -33,12 +33,13 @@ final class VM {
             
             let resourceValues = try volume.resourceValues(forKeys: keys)
             
-            guard let name =          resourceValues.volumeName,
-                  let localizedName = resourceValues.volumeLocalizedName,
-                  let isLocal =       resourceValues.volumeIsLocal,
-                  let type =          resourceValues.volumeTypeName,
-                  let isEjectable =   resourceValues.volumeIsEjectable,
-                  let isEncrypted =   resourceValues.volumeIsEncrypted
+            guard
+                let name =          resourceValues.volumeName,
+                let localizedName = resourceValues.volumeLocalizedName,
+                let isLocal =       resourceValues.volumeIsLocal,
+                let type =          resourceValues.volumeTypeName,
+                let isEjectable =   resourceValues.volumeIsEjectable,
+                let isEncrypted =   resourceValues.volumeIsEncrypted
             else {
                 return nil
             }
