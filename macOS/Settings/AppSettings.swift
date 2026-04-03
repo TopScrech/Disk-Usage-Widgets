@@ -6,6 +6,10 @@ struct AppSettings: View {
     @Environment(\.openWindow) private var openWindow
     @Environment(\.dismissWindow) private var dismissWindow
     
+    @AppStorage("hideWindowOnLaunch") private var hideWindowOnLaunch = false
+    @AppStorage("keepsWindowOnTop") private var keepsWindowOnTop = false
+    @AppStorage(DockIconVisibilityController.hidesDockIconDefaultsKey) private var hidesDockIcon = false
+    
     @Binding private var showMenuBarExtra: Bool
     
     init(_ showMenuBarExtra: Binding<Bool>) {
@@ -14,10 +18,14 @@ struct AppSettings: View {
     
     var body: some View {
         Form {
-            Toggle("Show in Menu Bar", isOn: $showMenuBarExtra)
-#if os(macOS)
-            LaunchAtLogin.Toggle()
-#endif
+            Section("Launch") {
+                LaunchAtLogin.Toggle("Launch at login")
+                Toggle("Hide window on launch", isOn: $hideWindowOnLaunch)
+                Toggle("Hide Dock icon", isOn: $hidesDockIcon)
+                Toggle("Keep on top of other windows", isOn: $keepsWindowOnTop)
+                Toggle("Show in Menu Bar", isOn: $showMenuBarExtra)
+            }
+            
             HStack {
                 Text("App Version")
                 
@@ -37,6 +45,10 @@ struct AppSettings: View {
         .frame(width: 500, height: 600)
         .formStyle(.grouped)
         .buttonStyle(.plain)
+        .background(MainWindowLevelView(keepsWindowOnTop: keepsWindowOnTop))
+        .onChange(of: hidesDockIcon, initial: true) { _, newValue in
+            DockIconVisibilityController.setDockIconHidden(newValue)
+        }
 #warning("Works weirdly")
         //            Button(showMenuBarExtra ? "Switch to app" : "Switch to Menu Bar") {
         //                showMenuBarExtra.toggle()
