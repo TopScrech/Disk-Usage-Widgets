@@ -49,19 +49,6 @@ struct AppSettings: View {
         .onChange(of: hidesDockIcon, initial: true) { _, newValue in
             DockIconVisibilityController.setDockIconHidden(newValue)
         }
-#warning("Works weirdly")
-        //            Button(showMenuBarExtra ? "Switch to app" : "Switch to Menu Bar") {
-        //                showMenuBarExtra.toggle()
-        //
-        //                delay(0.5) {
-        //                    if showMenuBarExtra {
-        //                        openWindow(id: "app")
-        //                    } else {
-        //                        dismissWindow(id: "app")
-        //                    }
-        //                }
-        //            }
-        //            .padding(.top)
     }
     
     private func reloadAllWidgets() {
