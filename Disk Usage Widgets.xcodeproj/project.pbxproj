@@ -243,6 +243,9 @@
 				ru,
 				nl,
 				uk,
+				de,
+				tr,
+				fr,
 			);
 			mainGroup = F3CEBFF82C2ABA6800B44CE4;
 			packageReferences = (
