@@ -1,892 +1,1558 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+  "sourceLanguage": "en",
+  "strings": {
+    "": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         }
       },
-      "shouldTranslate" : false
+      "shouldTranslate": false
     },
-    "-" : {
-      "shouldTranslate" : false
+    "-": {
+      "shouldTranslate": false
     },
-    "%@ 􀞚" : {
-      "shouldTranslate" : false
+    "%@ 􀞚": {
+      "shouldTranslate": false
     },
-    "⌘ + R to refresh" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⌘ + R om te verversen"
+    "⌘ + R to refresh": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌘ + R om te verversen"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Нажмите ⌘ + R, чтобы обновить"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нажмите ⌘ + R, чтобы обновить"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⌘ + R, щоб оновити"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌘ + R, щоб оновити"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌘ + R zum Aktualisieren"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌘ + R pour actualiser"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yenilemek için ⌘ + R"
           }
         }
       }
     },
-    "100 %" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "100 %"
+    "100 %": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "100 %"
           }
         }
       },
-      "shouldTranslate" : false
+      "shouldTranslate": false
     },
-    "Amount" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aantal"
+    "Amount": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aantal"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Количество"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Количество"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кількість"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кількість"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anzahl"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quantité"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Miktar"
           }
         }
       }
     },
-    "App" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App"
+    "App": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Приложение"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Приложение"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Застосунок"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Застосунок"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uygulama"
           }
         }
       }
     },
-    "App Version" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App Versie"
+    "App Version": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App Versie"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Версия приложения"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Версия приложения"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Версія застосунку"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Версія застосунку"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Version"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version de l’app"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uygulama Sürümü"
           }
         }
       }
     },
-    "Available" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beschikbaar"
+    "Available": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beschikbaar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Доступно"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Доступно"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Доступно"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Доступно"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verfügbar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disponible"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kullanılabilir"
           }
         }
       }
     },
-    "B%@" : {
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "B%@"
+    "B%@": {
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "B%@"
           }
         }
       },
-      "shouldTranslate" : false
+      "shouldTranslate": false
     },
-    "Build Number" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buildnummer"
+    "Build Number": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buildnummer"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Номер Сборки"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Номер Сборки"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Номер збірки"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Номер збірки"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Build-Nummer"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Numéro de build"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Derleme Numarası"
           }
         }
       }
     },
-    "Configuration" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configuratie"
+    "Configuration": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuratie"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Конфигурация"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Конфигурация"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Конфігурація"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Конфігурація"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konfiguration"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuration"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yapılandırma"
           }
         }
       }
     },
-    "Connected Disks" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbonden schijven"
+    "Connected Disks": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbonden schijven"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Подключённые диски"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Подключённые диски"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Підключені диски"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Підключені диски"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbundene Laufwerke"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disques connectés"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bağlı Diskler"
           }
         }
       }
     },
-    "Debug" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Debug"
+    "Debug": {
+      "extractionState": "stale",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debug"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отладка"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отладка"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Налагодження"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Налагодження"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debug"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Débogage"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hata Ayıklama"
           }
         }
       }
     },
-    "Disk" : {
-      "comment" : "Name of the type of entity that can be selected in an `AppIntentTypePicker`.",
-      "isCommentAutoGenerated" : true,
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schijf"
+    "Disk": {
+      "comment": "Name of the type of entity that can be selected in an `AppIntentTypePicker`.",
+      "isCommentAutoGenerated": true,
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schijf"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Диск"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Диск"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Диск"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Диск"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laufwerk"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disque"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk"
           }
         }
       }
     },
-    "Disk Name" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disk Naam"
+    "Disk Name": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Naam"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Название Диска"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название Диска"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва диска"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва диска"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laufwerksname"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom du disque"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Adı"
           }
         }
       }
     },
-    "Disk Usage" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disk Usage"
+    "Disk Usage": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Usage"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disk Usage"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Usage"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disk Usage"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Usage"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Usage"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Usage"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Usage"
           }
         }
       }
     },
-    "Disk Usage Widget Configuration" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget configuratie van Disk Usage"
+    "Disk Usage Widget Configuration": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget configuratie van Disk Usage"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Конфигурация виджета Disk Usage"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Конфигурация виджета Disk Usage"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Конфігурація віджета Disk Usage"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Конфігурація віджета Disk Usage"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget-Konfiguration für Disk Usage"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuration du widget Disk Usage"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk Usage araç takımı yapılandırması"
           }
         }
       }
     },
-    "Eject" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verwijderen"
+    "Eject": {
+      "extractionState": "stale",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwijderen"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Извлечь"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Извлечь"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вийняти"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вийняти"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auswerfen"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Éjecter"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çıkar"
           }
         }
       }
     },
-    "Ejectable" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verwijderbaar"
+    "Ejectable": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwijderbaar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Извлекаемый"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Извлекаемый"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Знімний"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Знімний"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auswerfbar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Éjectable"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çıkarılabilir"
           }
         }
       }
     },
-    "Encrypted" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versleuteld"
+    "Encrypted": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versleuteld"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Зашифрован"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зашифрован"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Зашифровано"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зашифровано"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verschlüsselt"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chiffré"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Şifreli"
           }
         }
       }
     },
-    "Error" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fout"
+    "Error": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fout"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ошибка"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ошибка"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Помилка"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Помилка"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erreur"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hata"
           }
         }
       }
     },
-    "Free Space" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beschikbare ruimte"
+    "Free Space": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beschikbare ruimte"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Свободное место"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свободное место"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вільне місце"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вільне місце"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Freier Speicherplatz"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Espace libre"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boş Alan"
           }
         }
       }
     },
-    "Hide Dock icon" : {
-      "comment" : "A toggle to hide the app's dock icon.",
-      "isCommentAutoGenerated" : true,
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dock-pictogram verbergen"
+    "Hide Dock icon": {
+      "comment": "A toggle to hide the app's dock icon.",
+      "isCommentAutoGenerated": true,
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock-pictogram verbergen"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скрыть значок в Dock"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скрыть значок в Dock"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Приховати піктограму в Dock"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Приховати піктограму в Dock"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock-Symbol ausblenden"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masquer l’icône du Dock"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dock simgesini gizle"
           }
         }
       }
     },
-    "Hide window on launch" : {
-      "comment" : "A toggle that hides the window when the app launches.",
-      "isCommentAutoGenerated" : true,
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Venster verbergen bij starten"
+    "Hide window on launch": {
+      "comment": "A toggle that hides the window when the app launches.",
+      "isCommentAutoGenerated": true,
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Venster verbergen bij starten"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скрывать окно при запуске"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скрывать окно при запуске"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Приховувати вікно під час запуску"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Приховувати вікно під час запуску"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fenster beim Start ausblenden"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masquer la fenêtre au lancement"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başlangıçta pencereyi gizle"
           }
         }
       }
     },
-    "Info about your disk usage" : {
-      "comment" : "Description of the Disk Usage Widget.",
-      "isCommentAutoGenerated" : true,
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Info over je schijfgebruik"
+    "Info about your disk usage": {
+      "comment": "Description of the Disk Usage Widget.",
+      "isCommentAutoGenerated": true,
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Info over je schijfgebruik"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Информация об использовании диска"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Информация об использовании диска"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Інформація про використання диска"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Інформація про використання диска"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informationen zur Speichernutzung"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Infos sur votre utilisation du disque"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disk kullanımınız hakkında bilgi"
           }
         }
       }
     },
-    "Keep on top of other windows" : {
-      "comment" : "A toggle that lets the user choose whether to keep the app on top of other windows.",
-      "isCommentAutoGenerated" : true,
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Boven andere vensters houden"
+    "Keep on top of other windows": {
+      "comment": "A toggle that lets the user choose whether to keep the app on top of other windows.",
+      "isCommentAutoGenerated": true,
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boven andere vensters houden"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Поверх других окон"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поверх других окон"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Поверх інших вікон"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поверх інших вікон"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über anderen Fenstern halten"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Garder au-dessus des autres fenêtres"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diğer pencerelerin üzerinde tut"
           }
         }
       }
     },
-    "Launch" : {
-      "comment" : "A section in the app settings.",
-      "isCommentAutoGenerated" : true,
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opstarten"
+    "Launch": {
+      "comment": "A section in the app settings.",
+      "isCommentAutoGenerated": true,
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opstarten"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Запуск"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запуск"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Запуск"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запуск"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lancement"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başlatma"
           }
         }
       }
     },
-    "Menu Bar Extra" : {
-      "shouldTranslate" : false
+    "Menu Bar Extra": {
+      "shouldTranslate": false
     },
-    "Name" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Naam"
+    "Name": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Naam"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Имя"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Имя"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ad"
           }
         }
       }
     },
-    "No" : {
-      "comment" : "A placeholder text indicating that there is no usage data for a disk.",
-      "isCommentAutoGenerated" : true,
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nee"
+    "No": {
+      "comment": "A placeholder text indicating that there is no usage data for a disk.",
+      "isCommentAutoGenerated": true,
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nee"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Нет"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нет"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ні"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ні"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nein"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yok"
           }
         }
       }
     },
-    "Path" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pad"
+    "Path": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pad"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Путь"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Путь"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Шлях"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шлях"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pfad"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chemin"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yol"
           }
         }
       }
     },
-    "Refresh" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verversen"
+    "Refresh": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verversen"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Обновить"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обновить"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Оновити"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оновити"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualisieren"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualiser"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yenile"
           }
         }
       }
     },
-    "Refresh Button" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verversknop"
+    "Refresh Button": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verversknop"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кнопка Обновления"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кнопка Обновления"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кнопка оновлення"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кнопка оновлення"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualisierungstaste"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bouton d’actualisation"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yenile Düğmesi"
           }
         }
       }
     },
-    "Refresh Time" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verversmoment"
+    "Refresh Time": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verversmoment"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Время Обновления"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Время Обновления"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Час оновлення"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Час оновлення"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualisierungszeit"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heure d’actualisation"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yenileme Zamanı"
           }
         }
       }
     },
-    "Selected disk not found" : {
-      "comment" : "A message displayed when the selected disk for a disk usage widget is not found.",
-      "isCommentAutoGenerated" : true,
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geselecteerde schijf niet gevonden"
+    "Selected disk not found": {
+      "comment": "A message displayed when the selected disk for a disk usage widget is not found.",
+      "isCommentAutoGenerated": true,
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geselecteerde schijf niet gevonden"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выбранный диск не найден"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбранный диск не найден"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вибраний диск не знайдено"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вибраний диск не знайдено"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausgewähltes Laufwerk nicht gefunden"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disque sélectionné introuvable"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seçilen disk bulunamadı"
           }
         }
       }
     },
-    "Show in Menu Bar" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon in menubalk"
+    "Show in Menu Bar": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon in menubalk"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показать в строке меню"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показать в строке меню"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показувати в рядку меню"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показувати в рядку меню"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Menüleiste anzeigen"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher dans la barre des menus"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menü çubuğunda göster"
           }
         }
       }
     },
-    "Total" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Totaal"
+    "Total": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Totaal"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Всего"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Всего"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Усього"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Усього"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesamt"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toplam"
           }
         }
       }
     },
-    "Total Space" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Totale ruimte"
+    "Total Space": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Totale ruimte"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Общий объём"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Общий объём"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Загальний обсяг"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Загальний обсяг"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesamtspeicherplatz"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Espace total"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toplam Alan"
           }
         }
       }
     },
-    "Type" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Type"
+    "Type": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Type"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Тип"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тип"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Тип"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тип"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Typ"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Type"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tür"
           }
         }
       }
     },
-    "Used" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In gebruik"
+    "Used": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In gebruik"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Использовано"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Использовано"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Використано"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Використано"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Belegt"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisé"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kullanılan"
           }
         }
       }
     },
-    "Used Space" : {
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In gebruik"
+    "Used Space": {
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In gebruik"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Использовано"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Использовано"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Використано"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Використано"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Belegter Speicherplatz"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Espace utilisé"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kullanılan Alan"
           }
         }
       }
     },
-    "v%@ (B%@)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "v%1$@ (B%2$@)"
+    "v%@ (B%@)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "v%1$@ (B%2$@)"
           }
         }
       },
-      "shouldTranslate" : false
+      "shouldTranslate": false
     },
-    "Widget configuration" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget configuratie"
+    "Widget configuration": {
+      "extractionState": "stale",
+      "localizations": {
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget configuratie"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Конфигурация виджета"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Конфигурация виджета"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Конфігурація віджета"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Конфігурація віджета"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget-Konfiguration"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuration du widget"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Araç takımı yapılandırması"
           }
         }
       }
     }
   },
-  "version" : "1.1"
+  "version": "1.1"
 }
