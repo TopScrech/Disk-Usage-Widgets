@@ -36,7 +36,7 @@ struct AppSettings: View {
             }
 #if DEBUG
             Section("Debug") {
-                Button("Reload all widgets") {
+                Button(String("Reload all widgets")) {
                     reloadAllWidgets()
                 }
             }
