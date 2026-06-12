@@ -1,0 +1,9 @@
+{
+  "id" : "5c537373-c890-4778-9b93-482edc70825d",
+  "targets" : [
+    {
+      "id" : "0A631A77-8EEE-4F59-95D6-AAEAF1C27306",
+      "name" : "Disk Usage Widgets"
+    }
+  ]
+}
