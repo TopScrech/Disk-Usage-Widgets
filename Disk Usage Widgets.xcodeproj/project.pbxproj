@@ -12,7 +12,7 @@
 		F358F03F2D2C1F3300BCC07B /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */; };
 		F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DB2C2AD3DE00415506 /* WidgetKit.framework */; };
 		F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DD2C2AD3DE00415506 /* SwiftUI.framework */; };
-		F397D7882C2AEE030069F3EB /* Widgets Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F397D7882C2AEE030069F3EB /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,7 @@
 			dstPath = "";
 			dstSubfolder = PlugIns;
 			files = (
-				F397D7882C2AEE030069F3EB /* Widgets Extension.appex in Embed Foundation Extensions */,
+				F397D7882C2AEE030069F3EB /* Widgets.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 		};
@@ -56,29 +56,29 @@
 /* Begin PBXFileReference section */
 		F33812DB2C2AD3DE00415506 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F33812DD2C2AD3DE00415506 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Widgets Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F397D77A2C2AEE020069F3EB /* Widgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE99E32E2F892800D70249 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Disk Usage Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CEC0012C2ABA6800B44CE4 /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E066452F467F0E001B77CD /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		F3F78B672EDC6B55008C32E9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F3839EA12ECF2C7800350A0F /* Exceptions for "Widgets" folder in "Widgets Extension" target */ = {
+		F3839EA12ECF2C7800350A0F /* Exceptions for "Widgets" folder in "Widgets" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Widgets.plist,
 			);
-			target = F397D7792C2AEE020069F3EB /* Widgets Extension */;
+			target = F397D7792C2AEE020069F3EB /* Widgets */;
 		};
-		F3839ED32ECF2C8000350A0F /* Exceptions for "macOS" folder in "Disk Usage Widgets" target */ = {
+		F3839ED32ECF2C8000350A0F /* Exceptions for "macOS" folder in "macOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				macOS.plist,
 			);
-			target = F3CEC0002C2ABA6800B44CE4 /* Disk Usage Widgets */;
+			target = F3CEC0002C2ABA6800B44CE4 /* macOS */;
 		};
-		F3839ED42ECF2C8000350A0F /* Exceptions for "macOS" folder in "Widgets Extension" target */ = {
+		F3839ED42ECF2C8000350A0F /* Exceptions for "macOS" folder in "Widgets" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AppIcon.icon,
@@ -90,7 +90,7 @@
 				Utils/Utils.swift,
 				VM.swift,
 			);
-			target = F397D7792C2AEE020069F3EB /* Widgets Extension */;
+			target = F397D7792C2AEE020069F3EB /* Widgets */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -98,7 +98,7 @@
 		F3839E912ECF2C7800350A0F /* Widgets */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				F3839EA12ECF2C7800350A0F /* Exceptions for "Widgets" folder in "Widgets Extension" target */,
+				F3839EA12ECF2C7800350A0F /* Exceptions for "Widgets" folder in "Widgets" target */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -106,8 +106,8 @@
 		F3839EB82ECF2C8000350A0F /* macOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				F3839ED32ECF2C8000350A0F /* Exceptions for "macOS" folder in "Disk Usage Widgets" target */,
-				F3839ED42ECF2C8000350A0F /* Exceptions for "macOS" folder in "Widgets Extension" target */,
+				F3839ED32ECF2C8000350A0F /* Exceptions for "macOS" folder in "macOS" target */,
+				F3839ED42ECF2C8000350A0F /* Exceptions for "macOS" folder in "Widgets" target */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -158,8 +158,8 @@
 		F3CEC0022C2ABA6800B44CE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */,
-				F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */,
+				F3CEC0012C2ABA6800B44CE4 /* macOS.app */,
+				F397D77A2C2AEE020069F3EB /* Widgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F397D7792C2AEE020069F3EB /* Widgets Extension */ = {
+		F397D7792C2AEE020069F3EB /* Widgets */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "Widgets Extension" */;
+			buildConfigurationList = F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "Widgets" */;
 			buildPhases = (
 				F397D7762C2AEE020069F3EB /* Sources */,
 				F397D7772C2AEE020069F3EB /* Frameworks */,
@@ -181,17 +181,17 @@
 			fileSystemSynchronizedGroups = (
 				F3839E912ECF2C7800350A0F /* Widgets */,
 			);
-			name = "Widgets Extension";
+			name = Widgets;
 			packageProductDependencies = (
 				F30D8D442E27E38B00789662 /* ScrechKit */,
 			);
 			productName = WidgetsExtension;
-			productReference = F397D77A2C2AEE020069F3EB /* Widgets Extension.appex */;
+			productReference = F397D77A2C2AEE020069F3EB /* Widgets.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		F3CEC0002C2ABA6800B44CE4 /* Disk Usage Widgets */ = {
+		F3CEC0002C2ABA6800B44CE4 /* macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3CEC0102C2ABA6900B44CE4 /* Build configuration list for PBXNativeTarget "Disk Usage Widgets" */;
+			buildConfigurationList = F3CEC0102C2ABA6900B44CE4 /* Build configuration list for PBXNativeTarget "macOS" */;
 			buildPhases = (
 				F3CEBFFD2C2ABA6800B44CE4 /* Sources */,
 				F3CEBFFE2C2ABA6800B44CE4 /* Frameworks */,
@@ -207,13 +207,13 @@
 			fileSystemSynchronizedGroups = (
 				F3839EB82ECF2C8000350A0F /* macOS */,
 			);
-			name = "Disk Usage Widgets";
+			name = macOS;
 			packageProductDependencies = (
 				F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */,
 				F30D8D422E27E38500789662 /* ScrechKit */,
 			);
 			productName = "Disk Usage Widgets";
-			productReference = F3CEC0012C2ABA6800B44CE4 /* Disk Usage Widgets.app */;
+			productReference = F3CEC0012C2ABA6800B44CE4 /* macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -257,8 +257,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3CEC0002C2ABA6800B44CE4 /* Disk Usage Widgets */,
-				F397D7792C2AEE020069F3EB /* Widgets Extension */,
+				F3CEC0002C2ABA6800B44CE4 /* macOS */,
+				F397D7792C2AEE020069F3EB /* Widgets */,
 			);
 		};
 /* End PBXProject section */
@@ -292,13 +292,13 @@
 /* Begin PBXTargetDependency section */
 		F397D7872C2AEE030069F3EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F397D7792C2AEE020069F3EB /* Widgets Extension */;
+			target = F397D7792C2AEE020069F3EB /* Widgets */;
 			targetProxy = F397D7862C2AEE030069F3EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F397D78A2C2AEE030069F3EB /* Debug configuration for PBXNativeTarget "Widgets Extension" */ = {
+		F397D78A2C2AEE030069F3EB /* Debug configuration for PBXNativeTarget "Widgets" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -331,7 +331,7 @@
 			};
 			name = Debug;
 		};
-		F397D78B2C2AEE030069F3EB /* Release configuration for PBXNativeTarget "Widgets Extension" */ = {
+		F397D78B2C2AEE030069F3EB /* Release configuration for PBXNativeTarget "Widgets" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -496,7 +496,7 @@
 			};
 			name = Release;
 		};
-		F3CEC0112C2ABA6900B44CE4 /* Debug configuration for PBXNativeTarget "Disk Usage Widgets" */ = {
+		F3CEC0112C2ABA6900B44CE4 /* Debug configuration for PBXNativeTarget "macOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -533,7 +533,7 @@
 			};
 			name = Debug;
 		};
-		F3CEC0122C2ABA6900B44CE4 /* Release configuration for PBXNativeTarget "Disk Usage Widgets" */ = {
+		F3CEC0122C2ABA6900B44CE4 /* Release configuration for PBXNativeTarget "macOS" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -573,11 +573,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "Widgets Extension" */ = {
+		F397D7892C2AEE030069F3EB /* Build configuration list for PBXNativeTarget "Widgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F397D78A2C2AEE030069F3EB /* Debug configuration for PBXNativeTarget "Widgets Extension" */,
-				F397D78B2C2AEE030069F3EB /* Release configuration for PBXNativeTarget "Widgets Extension" */,
+				F397D78A2C2AEE030069F3EB /* Debug configuration for PBXNativeTarget "Widgets" */,
+				F397D78B2C2AEE030069F3EB /* Release configuration for PBXNativeTarget "Widgets" */,
 			);
 			defaultConfigurationName = Release;
 		};
@@ -589,11 +589,11 @@
 			);
 			defaultConfigurationName = Release;
 		};
-		F3CEC0102C2ABA6900B44CE4 /* Build configuration list for PBXNativeTarget "Disk Usage Widgets" */ = {
+		F3CEC0102C2ABA6900B44CE4 /* Build configuration list for PBXNativeTarget "macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3CEC0112C2ABA6900B44CE4 /* Debug configuration for PBXNativeTarget "Disk Usage Widgets" */,
-				F3CEC0122C2ABA6900B44CE4 /* Release configuration for PBXNativeTarget "Disk Usage Widgets" */,
+				F3CEC0112C2ABA6900B44CE4 /* Debug configuration for PBXNativeTarget "macOS" */,
+				F3CEC0122C2ABA6900B44CE4 /* Release configuration for PBXNativeTarget "macOS" */,
 			);
 			defaultConfigurationName = Release;
 		};

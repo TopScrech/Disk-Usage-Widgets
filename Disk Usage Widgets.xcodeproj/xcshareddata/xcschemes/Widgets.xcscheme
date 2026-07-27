@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F397D7792C2AEE020069F3EB"
-               BuildableName = "Widgets Extension.appex"
-               BlueprintName = "Widgets Extension"
+               BuildableName = "Widgets.appex"
+               BlueprintName = "Widgets"
                ReferencedContainer = "container:Disk Usage Widgets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,8 +31,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3CEC0002C2ABA6800B44CE4"
-               BuildableName = "Disk Usage Widgets.app"
-               BlueprintName = "Disk Usage Widgets"
+               BuildableName = "macOS.app"
+               BlueprintName = "macOS"
                ReferencedContainer = "container:Disk Usage Widgets.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F397D7792C2AEE020069F3EB"
-            BuildableName = "Widgets Extension.appex"
-            BlueprintName = "Widgets Extension"
+            BuildableName = "Widgets.appex"
+            BlueprintName = "Widgets"
             ReferencedContainer = "container:Disk Usage Widgets.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
@@ -73,8 +73,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3CEC0002C2ABA6800B44CE4"
-            BuildableName = "Disk Usage Widgets.app"
-            BlueprintName = "Disk Usage Widgets"
+            BuildableName = "macOS.app"
+            BlueprintName = "macOS"
             ReferencedContainer = "container:Disk Usage Widgets.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -114,8 +114,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3CEC0002C2ABA6800B44CE4"
-            BuildableName = "Disk Usage Widgets.app"
-            BlueprintName = "Disk Usage Widgets"
+            BuildableName = "macOS.app"
+            BlueprintName = "macOS"
             ReferencedContainer = "container:Disk Usage Widgets.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
