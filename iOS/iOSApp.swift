@@ -1,11 +1,4 @@
-//
-//  iOSApp.swift
-//  iOS
-//
-//  Created by Sergei Saliukov on 27/07/2026.
-//
-
-import SwiftUI
+import ScrechKit
 
 @main
 struct iOSApp: App {

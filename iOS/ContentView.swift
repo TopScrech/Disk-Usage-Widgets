@@ -1,21 +1,23 @@
-//
-//  ContentView.swift
-//  iOS
-//
-//  Created by Sergei Saliukov on 27/07/2026.
-//
-
-import SwiftUI
+import ScrechKit
 
 struct ContentView: View {
+    @Environment(\.scenePhase) private var scenePhase
+
+    @State private var vm = StorageVM()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            StorageOverviewView()
+                .environment(vm)
+                .navigationTitle("Disk Usage")
         }
-        .padding()
+        .task {
+            vm.refresh()
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            guard newPhase == .active else { return }
+            vm.refresh()
+        }
     }
 }
 

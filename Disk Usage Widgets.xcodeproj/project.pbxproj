@@ -13,10 +13,19 @@
 		F397D77B2C2AEE020069F3EB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DB2C2AD3DE00415506 /* WidgetKit.framework */; };
 		F397D77C2C2AEE020069F3EB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33812DD2C2AD3DE00415506 /* SwiftUI.framework */; };
 		F397D7882C2AEE030069F3EB /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F3AC8C30301808C400DADBFE /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F3AC8C35301808C400DADBFE /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3AC8C34301808C400DADBFE /* ScrechKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F397D7862C2AEE030069F3EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3CEBFF92C2ABA6800B44CE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F397D7792C2AEE020069F3EB;
+			remoteInfo = WidgetsExtension;
+		};
+		F3AC8C31301808C400DADBFE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F3CEBFF92C2ABA6800B44CE4 /* Project object */;
 			proxyType = 1;
@@ -32,6 +41,15 @@
 			dstSubfolder = PlugIns;
 			files = (
 				F397D7882C2AEE030069F3EB /* Widgets.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+		F3AC8C32301808C400DADBFE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				F3AC8C30301808C400DADBFE /* Widgets.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 		};
@@ -132,6 +150,7 @@
 		F3AC8C1E301808C300DADBFE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				F3AC8C35301808C400DADBFE /* ScrechKit in Frameworks */,
 			);
 		};
 		F3CEBFFE2C2ABA6800B44CE4 /* Frameworks */ = {
@@ -209,13 +228,20 @@
 				F3AC8C1D301808C300DADBFE /* Sources */,
 				F3AC8C1E301808C300DADBFE /* Frameworks */,
 				F3AC8C1F301808C300DADBFE /* Resources */,
+				F3AC8C32301808C400DADBFE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
+			);
+			dependencies = (
+				F3AC8C33301808C400DADBFE /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F3AC8C22301808C300DADBFE /* iOS */,
 			);
 			name = iOS;
+			packageProductDependencies = (
+				F3AC8C34301808C400DADBFE /* ScrechKit */,
+			);
 			productName = iOS;
 			productReference = F3AC8C21301808C300DADBFE /* iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -340,6 +366,11 @@
 			target = F397D7792C2AEE020069F3EB /* Widgets */;
 			targetProxy = F397D7862C2AEE030069F3EB /* PBXContainerItemProxy */;
 		};
+		F3AC8C33301808C400DADBFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F397D7792C2AEE020069F3EB /* Widgets */;
+			targetProxy = F3AC8C31301808C400DADBFE /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -348,7 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = Widgets/Widgets.entitlements;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = Widgets/Widgets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -371,7 +402,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -380,13 +411,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = Widgets/Widgets.entitlements;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = Widgets/Widgets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgets/Widgets.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Debug";
+				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Widgets";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,7 +434,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -417,6 +448,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Widgets";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -427,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.topscrech.Disk-Usage-Widgets.debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -439,7 +471,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -454,6 +486,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Disk Usage Widgets";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,7 +509,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -751,6 +784,11 @@
 			productName = ScrechKit;
 		};
 		F30D8D442E27E38B00789662 /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
+			productName = ScrechKit;
+		};
+		F3AC8C34301808C400DADBFE /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
 			productName = ScrechKit;
