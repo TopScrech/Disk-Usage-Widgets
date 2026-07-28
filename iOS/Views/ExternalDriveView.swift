@@ -48,7 +48,7 @@ struct ExternalDriveView: View {
 
 #Preview {
     ExternalDriveView(
-        drive: ExternalDriveSnapshot(id: Data(), storage: .preview),
+        drive: ExternalDriveSnapshot(id: UUID(), storage: .preview),
         forgetAction: {}
     )
     .padding()

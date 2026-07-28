@@ -15,6 +15,7 @@
 		F397D7882C2AEE030069F3EB /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F3AC8C30301808C400DADBFE /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F397D77A2C2AEE020069F3EB /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F3AC8C35301808C400DADBFE /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3AC8C34301808C400DADBFE /* ScrechKit */; };
+		F3AC8D603018B50000DADBFE /* Appearance in Frameworks */ = {isa = PBXBuildFile; productRef = F3AC8D623018B50000DADBFE /* Appearance */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		F3AC8C1E301808C300DADBFE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				F3AC8D603018B50000DADBFE /* Appearance in Frameworks */,
 				F3AC8C35301808C400DADBFE /* ScrechKit in Frameworks */,
 			);
 		};
@@ -249,6 +251,7 @@
 			);
 			name = iOS;
 			packageProductDependencies = (
+				F3AC8D623018B50000DADBFE /* Appearance */,
 				F3AC8C34301808C400DADBFE /* ScrechKit */,
 			);
 			productName = iOS;
@@ -318,6 +321,7 @@
 			);
 			mainGroup = F3CEBFF82C2ABA6800B44CE4;
 			packageReferences = (
+				F3AC8D613018B50000DADBFE /* XCRemoteSwiftPackageReference "Appearance" */,
 				F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */,
 				F358F03D2D2C1F3300BCC07B /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 			);
@@ -768,6 +772,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F3AC8D613018B50000DADBFE /* XCRemoteSwiftPackageReference "Appearance" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TopScrech/Appearance";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TopScrech/ScrechKit";
@@ -787,6 +799,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F3AC8D623018B50000DADBFE /* Appearance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3AC8D613018B50000DADBFE /* XCRemoteSwiftPackageReference "Appearance" */;
+			productName = Appearance;
+		};
 		F30D8D422E27E38500789662 /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;

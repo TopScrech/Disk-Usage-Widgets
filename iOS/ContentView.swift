@@ -4,19 +4,32 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
 
     @State private var vm = StorageVM()
+    @State private var isSettingsPresented = false
+    @State private var settingsHapticTrigger = false
 
     var body: some View {
         NavigationStack {
             StorageOverviewView()
                 .environment(vm)
                 .navigationTitle("Disk Usage")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Settings", systemImage: "gear") {
+                            settingsHapticTrigger.toggle()
+                            isSettingsPresented = true
+                        }
+                        .labelStyle(.iconOnly)
+                        .hapticOn(settingsHapticTrigger, as: .selection)
+                    }
+                }
         }
-        .task {
-            vm.refresh()
+        .task(id: scenePhase) {
+            guard scenePhase == .active else { return }
+            await vm.monitorStorage()
         }
-        .onChange(of: scenePhase) { _, newPhase in
-            guard newPhase == .active else { return }
-            vm.refresh()
+        .sheet(isPresented: $isSettingsPresented) {
+            SettingsView()
+                .environment(vm)
         }
     }
 }

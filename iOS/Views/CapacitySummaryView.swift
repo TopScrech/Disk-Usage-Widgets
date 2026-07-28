@@ -1,8 +1,12 @@
 import ScrechKit
 
 struct CapacitySummaryView: View {
-    let snapshot: StorageSnapshot
-
+    private let snapshot: StorageSnapshot
+    
+    init(_ snapshot: StorageSnapshot) {
+        self.snapshot = snapshot
+    }
+    
     var body: some View {
         VStack {
             CapacityMetricView(
@@ -11,14 +15,14 @@ struct CapacitySummaryView: View {
                 systemImage: "checkmark.circle.fill",
                 color: .green
             )
-
+            
             CapacityMetricView(
                 title: "Used",
                 bytes: snapshot.usedBytes,
                 systemImage: "internaldrive.fill",
                 color: .blue
             )
-
+            
             CapacityMetricView(
                 title: "Total",
                 bytes: snapshot.totalBytes,
@@ -31,6 +35,6 @@ struct CapacitySummaryView: View {
 }
 
 #Preview {
-    CapacitySummaryView(snapshot: .preview)
+    CapacitySummaryView(.preview)
         .padding()
 }

@@ -1,6 +1,15 @@
 {
-  "originHash" : "e7b983fabc6fbf96c473abd3e6abe69af8890f1a21f62ef1f3a93989da8234fe",
+  "originHash" : "68e582d19febfdfe0853f1513c976394d215b360a437897230cd89a61ba5d518",
   "pins" : [
+    {
+      "identity" : "appearance",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TopScrech/Appearance",
+      "state" : {
+        "revision" : "a4f7de766bbf2a9f29d8fe0cf1579f9642f312d5",
+        "version" : "1.0.2"
+      }
+    },
     {
       "identity" : "launchatlogin",
       "kind" : "remoteSourceControl",

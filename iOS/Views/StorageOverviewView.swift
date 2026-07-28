@@ -2,34 +2,34 @@ import ScrechKit
 
 struct StorageOverviewView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-    @Environment(StorageVM.self) private var viewModel
-
+    @Environment(StorageVM.self) private var vm
+    
     var body: some View {
         ScrollView {
-            if let snapshot = viewModel.snapshot {
+            if let snapshot = vm.snapshot {
                 VStack {
                     if horizontalSizeClass == .regular {
                         HStack {
                             StorageGaugeView(snapshot: snapshot)
-                            CapacitySummaryView(snapshot: snapshot)
+                            CapacitySummaryView(snapshot)
                         }
                     } else {
                         VStack {
                             StorageGaugeView(snapshot: snapshot)
-                            CapacitySummaryView(snapshot: snapshot)
+                            CapacitySummaryView(snapshot)
                         }
                     }
-
+                    
                     CapacityBreakdownView(snapshot: snapshot)
                     ExternalDrivesView()
                     StorageStatusView(snapshot: snapshot)
                     WidgetInstructionsView()
                 }
                 .padding()
-            } else if let errorMessage = viewModel.errorMessage {
+            } else if let errorMessage = vm.errorMessage {
                 StorageUnavailableView(
                     message: errorMessage,
-                    retryAction: viewModel.refresh
+                    retryAction: vm.refresh
                 )
             } else {
                 ProgressView("Reading storage…")
@@ -38,7 +38,7 @@ struct StorageOverviewView: View {
         }
         .background(.gray.opacity(0.08))
         .refreshable {
-            viewModel.refresh()
+            vm.refresh()
         }
     }
 }

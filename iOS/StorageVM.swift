@@ -5,30 +5,78 @@ import WidgetKit
 final class StorageVM {
     private(set) var snapshot: StorageSnapshot?
     private(set) var externalDrives: [ExternalDriveSnapshot] = []
+    private(set) var savedExternalDrives: [SavedExternalDrive]
     private(set) var errorMessage: String?
     private(set) var externalDriveErrorMessage: String?
     private(set) var isRefreshing = false
 
-    private var externalDriveBookmarks: [Data]
-
     var hasSavedExternalDrives: Bool {
-        !externalDriveBookmarks.isEmpty
+        !savedExternalDrives.isEmpty
     }
 
     init() {
-        externalDriveBookmarks = UserDefaults.standard.array(
-            forKey: Self.externalDriveBookmarksKey
-        ) as? [Data] ?? []
+        if
+            let savedData = UserDefaults.standard.data(forKey: Self.savedExternalDrivesKey),
+            let drives = try? JSONDecoder().decode([SavedExternalDrive].self, from: savedData)
+        {
+            savedExternalDrives = drives
+        } else {
+            let bookmarks = UserDefaults.standard.array(
+                forKey: Self.legacyExternalDriveBookmarksKey
+            ) as? [Data] ?? []
+
+            savedExternalDrives = bookmarks.map {
+                SavedExternalDrive(
+                    id: UUID(),
+                    name: Self.savedDriveName(for: $0),
+                    bookmark: $0
+                )
+            }
+
+            saveExternalDrives()
+        }
     }
 
     func refresh() {
+        refresh(reloadWidgets: true)
+    }
+
+    func monitorStorage() async {
+        refresh()
+
+        while !Task.isCancelled {
+            do {
+                try await Task.sleep(for: .seconds(1))
+            } catch {
+                return
+            }
+
+            refresh(reloadWidgets: false)
+        }
+    }
+
+    func isExternalDriveConnected(id: UUID) -> Bool {
+        externalDrives.contains { $0.id == id }
+    }
+
+    func clearSavedExternalDrives() {
+        savedExternalDrives = []
+        externalDrives = []
+        externalDriveErrorMessage = nil
+        saveExternalDrives()
+    }
+
+    private func refresh(reloadWidgets: Bool) {
         isRefreshing = true
         defer { isRefreshing = false }
 
         do {
             snapshot = try readStorage(at: .documentsDirectory, fallbackName: "Device Storage")
             errorMessage = nil
-            WidgetCenter.shared.reloadAllTimelines()
+
+            if reloadWidgets {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -45,23 +93,37 @@ final class StorageVM {
         }
     }
 
-    func forgetExternalDrive(id: Data) {
-        externalDriveBookmarks.removeAll { $0 == id }
+    func forgetExternalDrive(id: UUID) {
+        savedExternalDrives.removeAll { $0.id == id }
         externalDrives.removeAll { $0.id == id }
-        saveExternalDriveBookmarks()
+        saveExternalDrives()
     }
 
     private func addExternalDrive(at url: URL) {
         do {
+            let isAccessing = url.startAccessingSecurityScopedResource()
+            defer {
+                if isAccessing {
+                    url.stopAccessingSecurityScopedResource()
+                }
+            }
+
+            let storage = try readStorage(at: url, fallbackName: "External Drive")
             let bookmark = try url.bookmarkData(
                 options: .minimalBookmark,
                 includingResourceValuesForKeys: nil,
                 relativeTo: nil
             )
 
-            if !externalDriveBookmarks.contains(where: { bookmarkTargetsSameURL($0, url) }) {
-                externalDriveBookmarks.append(bookmark)
-                saveExternalDriveBookmarks()
+            if !savedExternalDrives.contains(where: { bookmarkTargetsSameURL($0.bookmark, url) }) {
+                savedExternalDrives.append(
+                    SavedExternalDrive(
+                        id: UUID(),
+                        name: storage.name,
+                        bookmark: bookmark
+                    )
+                )
+                saveExternalDrives()
             }
 
             externalDriveErrorMessage = nil
@@ -72,11 +134,14 @@ final class StorageVM {
     }
 
     private func refreshExternalDrives() {
-        externalDrives = externalDriveBookmarks.compactMap { bookmark in
+        var refreshedDrives: [ExternalDriveSnapshot] = []
+        var updatedSavedDrives = savedExternalDrives
+
+        for index in updatedSavedDrives.indices {
             do {
                 var isStale = false
                 let url = try URL(
-                    resolvingBookmarkData: bookmark,
+                    resolvingBookmarkData: updatedSavedDrives[index].bookmark,
                     options: .withoutUI,
                     relativeTo: nil,
                     bookmarkDataIsStale: &isStale
@@ -88,13 +153,24 @@ final class StorageVM {
                     }
                 }
 
-                return ExternalDriveSnapshot(
-                    id: bookmark,
-                    storage: try readStorage(at: url, fallbackName: "External Drive")
+                let storage = try readStorage(at: url, fallbackName: "External Drive")
+                updatedSavedDrives[index].name = storage.name
+                refreshedDrives.append(
+                    ExternalDriveSnapshot(
+                        id: updatedSavedDrives[index].id,
+                        storage: storage
+                    )
                 )
             } catch {
-                return nil
+                continue
             }
+        }
+
+        externalDrives = refreshedDrives
+
+        if updatedSavedDrives != savedExternalDrives {
+            savedExternalDrives = updatedSavedDrives
+            saveExternalDrives()
         }
     }
 
@@ -146,9 +222,25 @@ final class StorageVM {
         return bookmarkedURL.standardizedFileURL == url.standardizedFileURL
     }
 
-    private func saveExternalDriveBookmarks() {
-        UserDefaults.standard.set(externalDriveBookmarks, forKey: Self.externalDriveBookmarksKey)
+    private func saveExternalDrives() {
+        guard let data = try? JSONEncoder().encode(savedExternalDrives) else { return }
+        UserDefaults.standard.set(data, forKey: Self.savedExternalDrivesKey)
     }
 
-    private static let externalDriveBookmarksKey = "externalDriveBookmarks"
+    private static func savedDriveName(for bookmark: Data) -> String {
+        var isStale = false
+        guard let url = try? URL(
+            resolvingBookmarkData: bookmark,
+            options: .withoutUI,
+            relativeTo: nil,
+            bookmarkDataIsStale: &isStale
+        ) else {
+            return "External Drive"
+        }
+
+        return url.lastPathComponent.isEmpty ? "External Drive" : url.lastPathComponent
+    }
+
+    private static let savedExternalDrivesKey = "savedExternalDrives"
+    private static let legacyExternalDriveBookmarksKey = "externalDriveBookmarks"
 }
