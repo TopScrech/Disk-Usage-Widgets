@@ -24,6 +24,7 @@ struct ExternalDriveList: View {
                 .buttonStyle(.bordered)
                 .hapticOn(trigger, as: .selection)
             }
+            .padding(.bottom, 5)
             
             if vm.externalDrives.isEmpty {
                 Label(
@@ -44,7 +45,7 @@ struct ExternalDriveList: View {
                 .transition(.opacity)
             } else {
                 ForEach(vm.externalDrives) { drive in
-                    ExternalDriveCard(drive: drive) {
+                    ExternalDriveCard(drive) {
                         vm.forgetExternalDrive(id: drive.id)
                     }
                     .transition(.move(edge: .top).combined(with: .opacity))

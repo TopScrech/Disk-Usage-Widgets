@@ -1,8 +1,13 @@
 import ScrechKit
 
 struct ExternalDriveCard: View {
-    let drive: ExternalDriveSnapshot
-    let forgetAction: () -> Void
+    private let drive: ExternalDriveSnapshot
+    private let forgetAction: () -> Void
+    
+    init(_ drive: ExternalDriveSnapshot, forgetAction: @escaping () -> Void) {
+        self.drive = drive
+        self.forgetAction = forgetAction
+    }
     
     @State private var trigger = false
     
@@ -39,18 +44,15 @@ struct ExternalDriveCard: View {
             .secondary()
             
             Text(drive.storage.fileSystem)
-                .caption()
+                .caption(.semibold, design: .monospaced)
                 .secondary()
+                .padding(.top, 1)
         }
-        .padding()
         .background(.background, in: .rect(cornerRadius: 20))
     }
 }
 
 #Preview {
-    ExternalDriveCard(
-        drive: ExternalDriveSnapshot(id: UUID(), storage: .preview),
-        forgetAction: {}
-    )
-    .padding()
+    ExternalDriveCard(ExternalDriveSnapshot(id: UUID(), storage: .preview)) {}
+        .padding()
 }

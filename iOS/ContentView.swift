@@ -9,7 +9,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            StorageOverviewView()
+            StorageOverview()
                 .environment(vm)
                 .navigationTitle("Disk Usage")
                 .toolbar {

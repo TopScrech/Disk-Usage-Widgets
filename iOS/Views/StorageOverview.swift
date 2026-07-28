@@ -1,6 +1,6 @@
 import ScrechKit
 
-struct StorageOverviewView: View {
+struct StorageOverview: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @Environment(StorageVM.self) private var vm
     
@@ -20,7 +20,6 @@ struct StorageOverviewView: View {
                         }
                     }
                     
-                    CapacityBreakdownView(snapshot: snapshot)
                     ExternalDriveList()
                     StorageStatusView(snapshot: snapshot)
                     WidgetInstructionsView()
@@ -45,7 +44,7 @@ struct StorageOverviewView: View {
 
 #Preview {
     NavigationStack {
-        StorageOverviewView()
+        StorageOverview()
             .environment(StorageVM())
     }
 }
