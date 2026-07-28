@@ -10,8 +10,8 @@ struct WidgetInstructionsView: View {
             Text("2. Choose Add Widget and search for Disk Usage")
             Text("3. Pick a size, add it, then place it where you like")
         }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical)
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(.blue.opacity(0.1), in: .rect(cornerRadius: 20))
         .accessibilityElement(children: .contain)
     }
