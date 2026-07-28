@@ -19,6 +19,7 @@ struct ExternalDriveList: View {
                     trigger.toggle()
                     isImporterPresented = true
                 }
+                .symbolVariant(.fill)
                 .labelStyle(.iconOnly)
                 .buttonStyle(.bordered)
                 .hapticOn(trigger, as: .selection)

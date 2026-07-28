@@ -1,6 +1,6 @@
 import ScrechKit
 
-struct StorageStatus: View {
+struct StorageStatusView: View {
     let snapshot: StorageSnapshot
     
     var body: some View {
@@ -26,6 +26,6 @@ struct StorageStatus: View {
 }
 
 #Preview {
-    StorageStatus(snapshot: .preview)
+    StorageStatusView(snapshot: .preview)
         .padding()
 }

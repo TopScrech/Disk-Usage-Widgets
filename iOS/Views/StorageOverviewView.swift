@@ -22,7 +22,7 @@ struct StorageOverviewView: View {
                     
                     CapacityBreakdownView(snapshot: snapshot)
                     ExternalDriveList()
-                    StorageStatus(snapshot: snapshot)
+                    StorageStatusView(snapshot: snapshot)
                     WidgetInstructionsView()
                 }
                 .padding()
