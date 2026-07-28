@@ -30,6 +30,7 @@ struct CapacityBreakdownView: View {
                 }
             }
             .footnote()
+            .monospacedDigit()
             .secondary()
         }
         .padding()

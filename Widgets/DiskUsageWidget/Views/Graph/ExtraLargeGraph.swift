@@ -43,6 +43,7 @@ struct ExtraLargeGraph: View {
                         Text("Available")
                         
                         Text(disk.freeSpace)
+                            .monospacedDigit()
                             .frame(width: 150)
                             .lineLimit(1)
                             .scaledToFit()

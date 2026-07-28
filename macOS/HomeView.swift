@@ -37,6 +37,7 @@ struct HomeView: View {
                 
                 TableColumn("Total Space") {
                     Text($0.totalSpace)
+                        .monospacedDigit()
                 }
                 .width(min: 100)
                 

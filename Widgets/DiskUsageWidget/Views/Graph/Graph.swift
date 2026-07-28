@@ -44,6 +44,7 @@ struct Graph: View {
                             .footnote()
                         
                         Text(disk.freeSpace)
+                            .monospacedDigit()
                             .frame(width: 70)
                             .lineLimit(1)
                             .scaledToFit()

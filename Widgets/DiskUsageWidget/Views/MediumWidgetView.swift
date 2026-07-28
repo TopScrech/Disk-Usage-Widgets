@@ -62,6 +62,7 @@ struct MediumWidgetView: View {
                         }
                     }
                     .bold()
+                    .monospacedDigit()
                     .frame(width: 60)
                     
                     VStack(alignment: .trailing, spacing: 2) {
@@ -73,6 +74,7 @@ struct MediumWidgetView: View {
                         }
                     }
                     .bold()
+                    .monospacedDigit()
                     .frame(width: 60)
                 }
                 .lineLimit(1)

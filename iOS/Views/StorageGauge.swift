@@ -22,6 +22,7 @@ struct StorageGauge: View {
             VStack {
                 Text(snapshot.usedFraction, format: .percent.precision(.fractionLength(0)))
                     .largeTitle(.bold)
+                    .monospacedDigit()
                     .numericTransition(snapshot.usedFraction)
                 
                 Text("Used")

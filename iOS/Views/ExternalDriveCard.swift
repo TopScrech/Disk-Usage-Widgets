@@ -35,6 +35,7 @@ struct ExternalDriveCard: View {
                 Text("\(drive.storage.totalBytes, format: .byteCount(style: .file)) total")
             }
             .footnote()
+            .monospacedDigit()
             .secondary()
             
             Text(drive.storage.fileSystem)

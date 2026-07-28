@@ -20,6 +20,7 @@ struct CapacityMetricView: View {
                 
                 Text(bytes, format: .byteCount(style: .file))
                     .title2(.bold)
+                    .monospacedDigit()
                     .numericTransition(bytes)
             }
             
