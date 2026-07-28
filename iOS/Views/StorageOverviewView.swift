@@ -21,6 +21,7 @@ struct StorageOverviewView: View {
                     }
 
                     CapacityBreakdownView(snapshot: snapshot)
+                    ExternalDrivesView()
                     StorageStatusView(snapshot: snapshot)
                     WidgetInstructionsView()
                 }

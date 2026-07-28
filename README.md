@@ -7,4 +7,4 @@
 - macOS 14+
 - iOS and iPadOS 17+
 
-The iPhone and iPad app shows live device capacity, storage guidance, and includes Home Screen widgets in multiple sizes
+The iPhone and iPad app shows live device and user-approved external-drive capacity, storage guidance, and includes Home Screen widgets in multiple sizes
