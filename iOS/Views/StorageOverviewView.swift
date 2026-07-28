@@ -22,7 +22,6 @@ struct StorageOverviewView: View {
 
                     CapacityBreakdownView(snapshot: snapshot)
                     StorageStatusView(snapshot: snapshot)
-                    StorageDetailsView(snapshot: snapshot)
                     WidgetInstructionsView()
                 }
                 .padding()

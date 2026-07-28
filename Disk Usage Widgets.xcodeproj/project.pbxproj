@@ -111,6 +111,14 @@
 			);
 			target = F397D7792C2AEE020069F3EB /* Widgets */;
 		};
+		F3AC8D573018B04500DADBFE /* Exceptions for "macOS" folder in "iOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppIcon.icon,
+				Assets.xcassets,
+			);
+			target = F3AC8C20301808C300DADBFE /* iOS */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -127,6 +135,7 @@
 			exceptions = (
 				F3839ED32ECF2C8000350A0F /* Exceptions for "macOS" folder in "macOS" target */,
 				F3839ED42ECF2C8000350A0F /* Exceptions for "macOS" folder in "Widgets" target */,
+				F3AC8D573018B04500DADBFE /* Exceptions for "macOS" folder in "iOS" target */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -788,15 +797,15 @@
 			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
 			productName = ScrechKit;
 		};
-		F3AC8C34301808C400DADBFE /* ScrechKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
-			productName = ScrechKit;
-		};
 		F358F03E2D2C1F3300BCC07B /* LaunchAtLogin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F358F03D2D2C1F3300BCC07B /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
+		};
+		F3AC8C34301808C400DADBFE /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
+			productName = ScrechKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
