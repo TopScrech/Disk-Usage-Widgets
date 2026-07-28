@@ -1,11 +1,11 @@
 import ScrechKit
 import UniformTypeIdentifiers
 
-struct ExternalDrivesView: View {
+struct ExternalDriveList: View {
     @Environment(StorageVM.self) private var vm
     
     @State private var isImporterPresented = false
-    @State private var addHapticTrigger = false
+    @State private var trigger = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,12 +16,12 @@ struct ExternalDrivesView: View {
                 Spacer()
                 
                 Button("Add Drive", systemImage: "externaldrive.badge.plus") {
-                    addHapticTrigger.toggle()
+                    trigger.toggle()
                     isImporterPresented = true
                 }
                 .labelStyle(.iconOnly)
                 .buttonStyle(.bordered)
-                .hapticOn(addHapticTrigger, as: .selection)
+                .hapticOn(trigger, as: .selection)
             }
             
             if vm.externalDrives.isEmpty {
@@ -43,12 +43,9 @@ struct ExternalDrivesView: View {
                 .transition(.opacity)
             } else {
                 ForEach(vm.externalDrives) { drive in
-                    ExternalDriveView(
-                        drive: drive,
-                        forgetAction: {
-                            vm.forgetExternalDrive(id: drive.id)
-                        }
-                    )
+                    ExternalDriveCard(drive: drive) {
+                        vm.forgetExternalDrive(id: drive.id)
+                    }
                     .transition(.move(edge: .top).combined(with: .opacity))
                 }
             }
@@ -62,17 +59,14 @@ struct ExternalDrivesView: View {
         .padding()
         .background(.background, in: .rect(cornerRadius: 20))
         .animation(.snappy, value: vm.externalDrives.map(\.id))
-        .fileImporter(
-            isPresented: $isImporterPresented,
-            allowedContentTypes: [.folder]
-        ) {
+        .fileImporter(isPresented: $isImporterPresented, allowedContentTypes: [.folder]) {
             vm.addExternalDrive(from: $0)
         }
     }
 }
 
 #Preview {
-    ExternalDrivesView()
+    ExternalDriveList()
         .environment(StorageVM())
         .padding()
 }

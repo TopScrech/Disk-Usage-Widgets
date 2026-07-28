@@ -772,14 +772,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F3AC8D613018B50000DADBFE /* XCRemoteSwiftPackageReference "Appearance" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/TopScrech/Appearance";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TopScrech/ScrechKit";
@@ -796,14 +788,17 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		F3AC8D613018B50000DADBFE /* XCRemoteSwiftPackageReference "Appearance" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TopScrech/Appearance";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F3AC8D623018B50000DADBFE /* Appearance */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F3AC8D613018B50000DADBFE /* XCRemoteSwiftPackageReference "Appearance" */;
-			productName = Appearance;
-		};
 		F30D8D422E27E38500789662 /* ScrechKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
@@ -823,6 +818,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F33812D02C2AC50600415506 /* XCRemoteSwiftPackageReference "ScrechKit" */;
 			productName = ScrechKit;
+		};
+		F3AC8D623018B50000DADBFE /* Appearance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3AC8D613018B50000DADBFE /* XCRemoteSwiftPackageReference "Appearance" */;
+			productName = Appearance;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

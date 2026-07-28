@@ -3,7 +3,7 @@ import ScrechKit
 struct StorageUnavailableView: View {
     let message: String
     let retryAction: () -> Void
-
+    
     var body: some View {
         ContentUnavailableView {
             Label("Storage Unavailable", systemImage: "externaldrive.badge.exclamationmark")

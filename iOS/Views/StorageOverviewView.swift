@@ -10,19 +10,19 @@ struct StorageOverviewView: View {
                 VStack {
                     if horizontalSizeClass == .regular {
                         HStack {
-                            StorageGaugeView(snapshot: snapshot)
+                            StorageGauge(snapshot: snapshot)
                             CapacitySummaryView(snapshot)
                         }
                     } else {
                         VStack {
-                            StorageGaugeView(snapshot: snapshot)
+                            StorageGauge(snapshot: snapshot)
                             CapacitySummaryView(snapshot)
                         }
                     }
                     
                     CapacityBreakdownView(snapshot: snapshot)
-                    ExternalDrivesView()
-                    StorageStatusView(snapshot: snapshot)
+                    ExternalDriveList()
+                    StorageStatus(snapshot: snapshot)
                     WidgetInstructionsView()
                 }
                 .padding()

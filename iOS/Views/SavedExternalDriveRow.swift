@@ -1,14 +1,14 @@
 import ScrechKit
 
-struct SavedExternalDriveRowView: View {
+struct SavedExternalDriveRow: View {
     let drive: SavedExternalDrive
     let isConnected: Bool
-
+    
     var body: some View {
         Label {
             VStack(alignment: .leading) {
                 Text(drive.name)
-
+                
                 Text(isConnected ? "Connected" : "Disconnected")
                     .caption()
                     .secondary()
@@ -22,7 +22,7 @@ struct SavedExternalDriveRowView: View {
 
 #Preview {
     List {
-        SavedExternalDriveRowView(
+        SavedExternalDriveRow(
             drive: SavedExternalDrive(
                 id: UUID(),
                 name: "Archive",

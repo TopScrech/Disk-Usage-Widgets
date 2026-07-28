@@ -1,42 +1,42 @@
 import ScrechKit
 
-struct ExternalDriveView: View {
+struct ExternalDriveCard: View {
     let drive: ExternalDriveSnapshot
     let forgetAction: () -> Void
-
-    @State private var forgetHapticTrigger = false
-
+    
+    @State private var trigger = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Label(drive.storage.name, systemImage: "externaldrive.connected.to.line.below")
                     .headline()
-
+                
                 Spacer()
-
+                
                 Button("Forget Drive", systemImage: "xmark") {
-                    forgetHapticTrigger.toggle()
+                    trigger.toggle()
                     forgetAction()
                 }
-                    .labelStyle(.iconOnly)
-                    .buttonStyle(.borderless)
-                    .hapticOn(forgetHapticTrigger, as: .warning)
+                .labelStyle(.iconOnly)
+                .buttonStyle(.borderless)
+                .hapticOn(trigger, as: .warning)
             }
-
+            
             ProgressView(value: drive.storage.usedFraction)
                 .tint(.blue)
                 .accessibilityLabel("Used capacity")
-
+            
             HStack {
                 Text("\(drive.storage.availableBytes, format: .byteCount(style: .file)) available")
-
+                
                 Spacer()
-
+                
                 Text("\(drive.storage.totalBytes, format: .byteCount(style: .file)) total")
             }
             .footnote()
             .secondary()
-
+            
             Text(drive.storage.fileSystem)
                 .caption()
                 .secondary()
@@ -47,7 +47,7 @@ struct ExternalDriveView: View {
 }
 
 #Preview {
-    ExternalDriveView(
+    ExternalDriveCard(
         drive: ExternalDriveSnapshot(id: UUID(), storage: .preview),
         forgetAction: {}
     )

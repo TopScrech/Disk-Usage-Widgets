@@ -2,11 +2,11 @@ import ScrechKit
 
 struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
-
+    
     @State private var vm = StorageVM()
     @State private var isSettingsPresented = false
     @State private var settingsHapticTrigger = false
-
+    
     var body: some View {
         NavigationStack {
             StorageOverviewView()

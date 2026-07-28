@@ -5,7 +5,7 @@ struct CapacityMetricView: View {
     let bytes: Int64
     let systemImage: String
     let color: Color
-
+    
     var body: some View {
         HStack {
             Image(systemName: systemImage)
@@ -13,16 +13,16 @@ struct CapacityMetricView: View {
                 .foregroundStyle(color)
                 .frame(width: 44, height: 44)
                 .background(color.opacity(0.12), in: .rect(cornerRadius: 12))
-
+            
             VStack(alignment: .leading) {
                 Text(title)
                     .secondary()
-
+                
                 Text(bytes, format: .byteCount(style: .file))
                     .title2(.bold)
                     .numericTransition(bytes)
             }
-
+            
             Spacer()
         }
         .padding()

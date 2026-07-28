@@ -1,22 +1,22 @@
 import ScrechKit
 
-struct StorageStatusView: View {
+struct StorageStatus: View {
     let snapshot: StorageSnapshot
-
+    
     var body: some View {
         HStack {
             Image(systemName: snapshot.status.systemImage)
                 .title()
                 .foregroundStyle(snapshot.status.color)
-
+            
             VStack(alignment: .leading) {
                 Text(snapshot.status.title)
                     .headline()
-
+                
                 Text(snapshot.status.message)
                     .secondary()
             }
-
+            
             Spacer()
         }
         .padding()
@@ -26,6 +26,6 @@ struct StorageStatusView: View {
 }
 
 #Preview {
-    StorageStatusView(snapshot: .preview)
+    StorageStatus(snapshot: .preview)
         .padding()
 }

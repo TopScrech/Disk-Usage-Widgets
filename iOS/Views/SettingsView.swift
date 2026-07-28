@@ -30,7 +30,7 @@ struct SettingsView: View {
                         )
                     } else {
                         ForEach(vm.savedExternalDrives) {
-                            SavedExternalDriveRowView(
+                            SavedExternalDriveRow(
                                 drive: $0,
                                 isConnected: vm.isExternalDriveConnected(id: $0.id)
                             )
