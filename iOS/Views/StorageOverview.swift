@@ -8,6 +8,8 @@ struct StorageOverview: View {
         ScrollView {
             if let snapshot = vm.snapshot {
                 VStack {
+                    StorageStatusView(snapshot: snapshot)
+
                     if horizontalSizeClass == .regular {
                         HStack {
                             StorageGauge(snapshot: snapshot)
@@ -21,7 +23,6 @@ struct StorageOverview: View {
                     }
                     
                     ExternalDriveList()
-                    StorageStatusView(snapshot: snapshot)
                     WidgetInstructionsView()
                 }
                 .padding()

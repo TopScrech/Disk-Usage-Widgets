@@ -1,4 +1,4 @@
-import ScrechKit
+import SwiftUI
 
 enum StorageStatus: Sendable {
     case comfortable, limited, critical

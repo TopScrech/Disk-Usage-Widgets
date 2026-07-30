@@ -2,31 +2,15 @@ import ScrechKit
 
 struct ExternalDriveCard: View {
     private let drive: ExternalDriveSnapshot
-    private let forgetAction: () -> Void
     
-    init(_ drive: ExternalDriveSnapshot, forgetAction: @escaping () -> Void) {
+    init(_ drive: ExternalDriveSnapshot) {
         self.drive = drive
-        self.forgetAction = forgetAction
     }
-    
-    @State private var trigger = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Label(drive.storage.name, systemImage: "externaldrive.connected.to.line.below")
-                    .headline()
-                
-                Spacer()
-                
-                Button("Forget Drive", systemImage: "xmark") {
-                    trigger.toggle()
-                    forgetAction()
-                }
-                .labelStyle(.iconOnly)
-                .buttonStyle(.borderless)
-                .hapticOn(trigger, as: .warning)
-            }
+            Label(drive.storage.name, systemImage: "externaldrive.connected.to.line.below")
+                .headline()
             
             ProgressView(value: drive.storage.usedFraction)
                 .tint(.blue)
@@ -53,6 +37,6 @@ struct ExternalDriveCard: View {
 }
 
 #Preview {
-    ExternalDriveCard(ExternalDriveSnapshot(id: UUID(), storage: .preview)) {}
+    ExternalDriveCard(ExternalDriveSnapshot(id: UUID(), storage: .preview))
         .padding()
 }

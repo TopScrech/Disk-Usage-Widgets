@@ -29,11 +29,20 @@ struct SettingsView: View {
                             description: Text("Drives added from the main page appear here")
                         )
                     } else {
-                        ForEach(vm.savedExternalDrives) {
+                        ForEach(vm.savedExternalDrives) { drive in
                             SavedExternalDriveRow(
-                                drive: $0,
-                                isConnected: vm.isExternalDriveConnected(id: $0.id)
+                                drive: drive,
+                                isConnected: vm.isExternalDriveConnected(id: drive.id)
                             )
+                            .swipeActions(edge: .trailing) {
+                                Button(
+                                    "Delete Drive",
+                                    systemImage: "trash",
+                                    role: .destructive
+                                ) {
+                                    vm.forgetExternalDrive(id: drive.id)
+                                }
+                            }
                         }
                     }
                 }

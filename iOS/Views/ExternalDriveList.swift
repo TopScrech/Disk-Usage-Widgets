@@ -45,9 +45,7 @@ struct ExternalDriveList: View {
                 .transition(.opacity)
             } else {
                 ForEach(vm.externalDrives) { drive in
-                    ExternalDriveCard(drive) {
-                        vm.forgetExternalDrive(id: drive.id)
-                    }
+                    ExternalDriveCard(drive)
                     .transition(.move(edge: .top).combined(with: .opacity))
                 }
             }

@@ -120,6 +120,58 @@
 			);
 			target = F3AC8C20301808C300DADBFE /* iOS */;
 		};
+		F3AC8E51301AA5DF00DADBFE /* Exceptions for "iOS" folder in "Widgets" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContentView.swift,
+				iOSApp.swift,
+				Models/ExternalDriveSnapshot.swift,
+				Models/SavedExternalDrive.swift,
+				Models/StorageReadError.swift,
+				"Models/StorageSnapshot + Preview.swift",
+				Models/StorageSnapshot.swift,
+				Models/StorageStatus.swift,
+				StorageVM.swift,
+				Views/CapacityMetricView.swift,
+				Views/CapacitySummaryView.swift,
+				Views/ExternalDriveCard.swift,
+				Views/ExternalDriveList.swift,
+				Views/SavedExternalDriveRow.swift,
+				Views/SettingsView.swift,
+				Views/StorageGauge.swift,
+				Views/StorageOverview.swift,
+				Views/StorageStatusView.swift,
+				Views/StorageUnavailableView.swift,
+				Views/WidgetInstructionsView.swift,
+			);
+			target = F397D7792C2AEE020069F3EB /* Widgets */;
+		};
+		F3AC8E52301AA5DF00DADBFE /* Exceptions for "iOS" folder in "iOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContentView.swift,
+				iOSApp.swift,
+				Models/ExternalDriveSnapshot.swift,
+				Models/SavedExternalDrive.swift,
+				Models/StorageReadError.swift,
+				"Models/StorageSnapshot + Preview.swift",
+				Models/StorageSnapshot.swift,
+				Models/StorageStatus.swift,
+				StorageVM.swift,
+				Views/CapacityMetricView.swift,
+				Views/CapacitySummaryView.swift,
+				Views/ExternalDriveCard.swift,
+				Views/ExternalDriveList.swift,
+				Views/SavedExternalDriveRow.swift,
+				Views/SettingsView.swift,
+				Views/StorageGauge.swift,
+				Views/StorageOverview.swift,
+				Views/StorageStatusView.swift,
+				Views/StorageUnavailableView.swift,
+				Views/WidgetInstructionsView.swift,
+			);
+			target = F3AC8C20301808C300DADBFE /* iOS */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -141,8 +193,12 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		F3AC8C22301808C300DADBFE /* iOS */ = {
+		F3AC8E3C301AA5DE00DADBFE /* iOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F3AC8E51301AA5DF00DADBFE /* Exceptions for "iOS" folder in "Widgets" target */,
+				F3AC8E52301AA5DF00DADBFE /* Exceptions for "iOS" folder in "iOS" target */,
+			);
 			path = iOS;
 			sourceTree = "<group>";
 		};
@@ -190,8 +246,8 @@
 				F3AE99E32E2F892800D70249 /* README.md */,
 				F3839EB82ECF2C8000350A0F /* macOS */,
 				F3839E912ECF2C7800350A0F /* Widgets */,
+				F3AC8E3C301AA5DE00DADBFE /* iOS */,
 				F3E066452F467F0E001B77CD /* LICENSE.txt */,
-				F3AC8C22301808C300DADBFE /* iOS */,
 				F33812DA2C2AD3DE00415506 /* Frameworks */,
 				F3CEC0022C2ABA6800B44CE4 /* Products */,
 			);
@@ -223,6 +279,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				F3839E912ECF2C7800350A0F /* Widgets */,
+				F3AC8E3C301AA5DE00DADBFE /* iOS */,
 			);
 			name = Widgets;
 			packageProductDependencies = (
@@ -245,9 +302,6 @@
 			);
 			dependencies = (
 				F3AC8C33301808C400DADBFE /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F3AC8C22301808C300DADBFE /* iOS */,
 			);
 			name = iOS;
 			packageProductDependencies = (
