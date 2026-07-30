@@ -11,7 +11,7 @@ struct CapacityMetricView: View {
             Image(systemName: systemImage)
                 .title2()
                 .foregroundStyle(color)
-                .frame(width: 44, height: 44)
+                .frame(44)
                 .background(color.opacity(0.12), in: .rect(cornerRadius: 12))
             
             VStack(alignment: .leading) {
