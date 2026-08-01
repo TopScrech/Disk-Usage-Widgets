@@ -15,26 +15,15 @@ struct ExternalDriveList: View {
                 
                 Spacer()
                 
-                Button("Add Drive", systemImage: "externaldrive.badge.plus") {
-                    trigger.toggle()
-                    isImporterPresented = true
-                }
-                .symbolVariant(.fill)
-                .labelStyle(.iconOnly)
-                .buttonStyle(.bordered)
-                .hapticOn(trigger, as: .selection)
+                Button("Add Drive", systemImage: "externaldrive.badge.plus", action: addDrive)
+                    .symbolVariant(.fill)
+                    .labelStyle(.iconOnly)
+                    .buttonStyle(.bordered)
+                    .hapticOn(trigger, as: .selection)
             }
             .padding(.bottom, 5)
             
             if vm.externalDrives.isEmpty {
-                Label(
-                    vm.hasSavedExternalDrives
-                    ? "Saved drives are disconnected"
-                    : "No external drives added",
-                    systemImage: "externaldrive.badge.questionmark"
-                )
-                .secondary()
-                
                 Text(
                     vm.hasSavedExternalDrives
                     ? "Reconnect a saved drive"
@@ -46,7 +35,7 @@ struct ExternalDriveList: View {
             } else {
                 ForEach(vm.externalDrives) { drive in
                     ExternalDriveCard(drive)
-                    .transition(.move(edge: .top).combined(with: .opacity))
+                        .transition(.move(edge: .top).combined(with: .opacity))
                 }
             }
             
@@ -62,6 +51,11 @@ struct ExternalDriveList: View {
         .fileImporter(isPresented: $isImporterPresented, allowedContentTypes: [.folder]) {
             vm.addExternalDrive(from: $0)
         }
+    }
+    
+    private func addDrive() {
+        trigger.toggle()
+        isImporterPresented = true
     }
 }
 
