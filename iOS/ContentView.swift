@@ -12,6 +12,7 @@ struct ContentView: View {
             StorageOverview()
                 .environment(vm)
                 .navigationTitle("Disk Usage")
+                .toolbarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button("Settings", systemImage: "gear") {
