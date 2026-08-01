@@ -29,10 +29,7 @@ struct StorageOverview: View {
                 }
                 .padding()
             } else if let errorMessage = vm.errorMessage {
-                StorageUnavailableView(
-                    message: errorMessage,
-                    retryAction: vm.refresh
-                )
+                StorageUnavailableView(message: errorMessage, retryAction: vm.refresh)
             } else {
                 ProgressView("Reading storage…")
                     .containerRelativeFrame([.horizontal, .vertical])
