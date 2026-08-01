@@ -9,10 +9,11 @@ struct CapacityMetricView: View {
     var body: some View {
         HStack {
             Image(systemName: systemImage)
+                .offset(x: 3)
                 .title2()
                 .foregroundStyle(color)
-                .frame(44)
-                .background(color.opacity(0.12), in: .rect(cornerRadius: 12))
+                .frame(60)
+                .background(color.opacity(0.12), in: .rect)
             
             VStack(alignment: .leading) {
                 Text(title)
@@ -26,7 +27,7 @@ struct CapacityMetricView: View {
             
             Spacer()
         }
-        .padding()
-        .background(.background, in: .rect(cornerRadius: 20))
+        .background(.background, in: .capsule)
+        .clipShape(.capsule)
     }
 }
