@@ -18,6 +18,8 @@ struct StorageOverview: View {
                     } else {
                         VStack {
                             StorageGauge(snapshot: snapshot)
+                                .padding(.vertical)
+                            
                             CapacitySummaryView(snapshot)
                         }
                     }
