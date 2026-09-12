@@ -80,6 +80,7 @@
 		F3AE99E32E2F892800D70249 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F3CEC0012C2ABA6800B44CE4 /* macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E066452F467F0E001B77CD /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F3ED29273055FB0E00B6F884 /* AGENTS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AGENTS.md; sourceTree = "<group>"; };
 		F3F78B672EDC6B55008C32E9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -217,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				F3AE99E32E2F892800D70249 /* README.md */,
+				F3ED29273055FB0E00B6F884 /* AGENTS.md */,
 				F3839EB82ECF2C8000350A0F /* macOS */,
 				F3839E912ECF2C7800350A0F /* Widgets */,
 				F3AC8E3C301AA5DE00DADBFE /* iOS */,
