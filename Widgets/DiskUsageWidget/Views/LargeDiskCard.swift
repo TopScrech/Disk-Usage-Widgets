@@ -40,6 +40,7 @@ struct LargeDiskCard: View {
                         Text(disk.totalSpace) // Total
                     }
                     .bold()
+                    .monospacedDigit()
                     .frame(width: 70)
                     
                     VStack(alignment: .trailing, spacing: 2) {
@@ -48,6 +49,7 @@ struct LargeDiskCard: View {
                         Text("100 %")                 // Total
                     }
                     .bold()
+                    .monospacedDigit()
                     .frame(width: 70)
                 }
                 .lineLimit(1)

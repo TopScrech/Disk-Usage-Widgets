@@ -12,7 +12,7 @@ struct HomeViewToolbar: View {
                 .bold()
         }
         .keyboardShortcut("r")
-        .help("⌘ + R to refresh")
+        .help("⌘ R to refresh")
     }
     
     private func refresh() {

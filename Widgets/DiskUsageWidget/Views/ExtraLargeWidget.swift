@@ -61,6 +61,7 @@ struct ExtraLargeWidgetView: View {
                         }
                     }
                     .bold()
+                    .monospacedDigit()
                     .frame(width: 80)
                     
                     VStack(alignment: .trailing, spacing: 2) {
@@ -72,6 +73,7 @@ struct ExtraLargeWidgetView: View {
                         }
                     }
                     .bold()
+                    .monospacedDigit()
                     .frame(width: 80)
                 }
                 .lineLimit(1)

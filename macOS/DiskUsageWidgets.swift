@@ -15,6 +15,7 @@ struct DiskUsageWidgets: App {
             NavigationStack {
                 HomeView()
             }
+            .frame(minWidth: 600, minHeight: 200)
             .background(MainWindowLevelView(keepsWindowOnTop: keepsWindowOnTop))
             .task {
                 await applyLaunchWindowPreference()

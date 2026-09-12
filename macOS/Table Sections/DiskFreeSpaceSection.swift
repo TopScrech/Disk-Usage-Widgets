@@ -15,6 +15,7 @@ struct DiskFreeSpaceSection: View {
                 Text(disk.freeSpacePercentage)
                     .tertiary()
             }
+            .monospacedDigit()
             
             Spacer()
             
