@@ -18,7 +18,7 @@ final class VM {
         disks = [disk]
 #else
         let volumes = fm.mountedVolumeURLs(includingResourceValuesForKeys: nil, options: .skipHiddenVolumes)
-        ç
+        
         guard let volumes else {
             Logger().error("Failed to retrieve mounted volume URL's")
             return
