@@ -46,7 +46,7 @@ struct LargeDiskCard: View {
                     VStack(alignment: .trailing, spacing: 2) {
                         Text(disk.freeSpacePercentage)  // Available
                         Text(disk.usedSpacePercentage) // Used
-                        Text("100 %")                 // Total
+                        Text(1.0, format: .percent.precision(.fractionLength(0)))                 // Total
                     }
                     .bold()
                     .monospacedDigit()
