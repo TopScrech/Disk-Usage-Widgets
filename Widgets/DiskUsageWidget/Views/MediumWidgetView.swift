@@ -70,7 +70,7 @@ struct MediumWidgetView: View {
                         Text(disk?.usedSpacePercentage ?? "-") // Used
                         
                         if entry.config.showTotalSpace {
-                            Text("100 %")     // Total
+                            Text(1.0, format: .percent.precision(.fractionLength(0)))     // Total
                         }
                     }
                     .bold()
