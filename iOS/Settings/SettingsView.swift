@@ -47,14 +47,16 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section {
-                    Button("Clear Saved Drives", systemImage: "trash") {
-                        clearHapticTrigger.toggle()
-                        vm.clearSavedExternalDrives()
+                if !vm.savedExternalDrives.isEmpty {
+                    Section {
+                        Button("Clear saved drives", systemImage: "trash") {
+                            clearHapticTrigger.toggle()
+                            vm.clearSavedExternalDrives()
+                        }
+                        .foregroundStyle(.red)
+                        .disabled(vm.savedExternalDrives.isEmpty)
+                        .hapticOn(clearHapticTrigger, as: .warning)
                     }
-                    .foregroundStyle(.red)
-                    .disabled(vm.savedExternalDrives.isEmpty)
-                    .hapticOn(clearHapticTrigger, as: .warning)
                 }
             }
             .navigationTitle("Settings")
