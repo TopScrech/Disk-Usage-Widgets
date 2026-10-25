@@ -28,7 +28,7 @@ struct ContentView: View {
             guard scenePhase == .active else { return }
             await vm.monitorStorage()
         }
-        .sheet(isPresented: $isSettingsPresented) {
+        .sheet($isSettingsPresented) {
             SettingsView()
                 .environment(vm)
         }
