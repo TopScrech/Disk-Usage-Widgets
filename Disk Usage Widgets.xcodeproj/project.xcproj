@@ -41,6 +41,13 @@
     { "path": "README.md" },
     { "path": "AGENTS.md" },
     {
+      "path": "Localizable.xcstrings",
+      "target-membership": [
+        "macOS/resources",
+        "Widgets/resources",
+        "iOS/resources",
+      ],
+    }, {
       "kind": "folder",
       "path": "macOS",
       "target-membership": [
@@ -58,7 +65,6 @@
             "AppIcon.icon",
             "DiskEntry.swift",
             "HomeViewToolbar.swift",
-            "Localizable.xcstrings",
             "Utils/FileManager.swift",
             "Utils/Preview.swift",
             "Utils/Utils.swift",
