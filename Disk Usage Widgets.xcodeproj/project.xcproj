@@ -102,6 +102,7 @@
             "External Drives/ExternalDriveList.swift",
             "External Drives/ExternalDriveSnapshot.swift",
             "External Drives/SavedExternalDrive.swift",
+            "Settings/AppearancePreferenceModifier.swift",
             "Settings/SavedExternalDriveRow.swift",
             "Settings/SettingsView.swift",
             "Storage/CapacityMetricView.swift",

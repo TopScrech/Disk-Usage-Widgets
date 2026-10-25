@@ -1,6 +1,7 @@
 import ScrechKit
 
 struct ContentView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @Environment(\.scenePhase) private var scenePhase
     
     @State private var vm = StorageVM()
@@ -31,7 +32,9 @@ struct ContentView: View {
         .sheet($isSettingsPresented) {
             SettingsView()
                 .environment(vm)
+                .modifier(AppearancePreferenceModifier(presentingColorScheme: colorScheme))
         }
+        .modifier(AppearancePreferenceModifier())
     }
 }
 
