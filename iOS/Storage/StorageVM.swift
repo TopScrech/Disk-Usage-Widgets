@@ -71,7 +71,7 @@ final class StorageVM {
         defer { isRefreshing = false }
         
         do {
-            snapshot = try readStorage(at: .documentsDirectory, fallbackName: "Device Storage")
+            snapshot = try readStorage(at: .documentsDirectory, fallbackName: String(localized: "Device Storage"))
             errorMessage = nil
             
             if reloadWidgets {
@@ -108,7 +108,7 @@ final class StorageVM {
                 }
             }
             
-            let storage = try readStorage(at: url, fallbackName: "External Drive")
+            let storage = try readStorage(at: url, fallbackName: String(localized: "External Drive"))
             let bookmark = try url.bookmarkData(
                 options: .minimalBookmark,
                 includingResourceValuesForKeys: nil,
@@ -153,7 +153,7 @@ final class StorageVM {
                     }
                 }
                 
-                let storage = try readStorage(at: url, fallbackName: "External Drive")
+                let storage = try readStorage(at: url, fallbackName: String(localized: "External Drive"))
                 updatedSavedDrives[index].name = storage.name
                 refreshedDrives.append(
                     ExternalDriveSnapshot(
@@ -238,10 +238,10 @@ final class StorageVM {
             relativeTo: nil,
             bookmarkDataIsStale: &isStale
         ) else {
-            return "External Drive"
+            return String(localized: "External Drive")
         }
         
-        return url.lastPathComponent.isEmpty ? "External Drive" : url.lastPathComponent
+        return url.lastPathComponent.isEmpty ? String(localized: "External Drive") : url.lastPathComponent
     }
     
     private static let savedExternalDrivesKey = "savedExternalDrives"
