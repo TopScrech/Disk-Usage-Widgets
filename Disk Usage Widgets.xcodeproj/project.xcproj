@@ -169,11 +169,32 @@
   ],
   "targets": [
     {
+      "name": "Check Package Updates",
+      "id": "28BD08FF21F04E48B65C205E",
+      "kind": "aggregate",
+      "build-phases": [
+        {
+          "kind": "script",
+          "name": "Check Package Updates",
+          "run-on-every-build": true,
+          "shell": "/bin/sh",
+          "script": "/usr/bin/python3 \"$SRCROOT/Scripts/check-package-updates.py\""
+        }
+      ],
+      "build-settings": {
+        "SDKROOT": "macosx",
+        "SUPPORTED_PLATFORMS": "macosx",
+        "ENABLE_USER_SCRIPT_SANDBOXING": "NO",
+        "SKIP_INSTALL": "YES"
+      }
+    },
+    {
       "name": "macOS",
       "id": "F3CEC0002C2ABA6800B44CE4",
       "product": "Products/macOS.app",
       "product-type": "application",
       "dependencies": [
+        "Check Package Updates",
         { "kind": "package", "package": "SwiftLintPlugins", "product-name": "SwiftLintBuildToolPlugin", "product-type": "build-tool-plugin" },
         "Widgets",
       ],
@@ -241,6 +262,7 @@
       "product": "Products/Widgets.appex",
       "product-type": "app-extension",
       "dependencies": [
+        "Check Package Updates",
         { "kind": "package", "package": "SwiftLintPlugins", "product-name": "SwiftLintBuildToolPlugin", "product-type": "build-tool-plugin" },
       ],
       "build-phases": [
@@ -296,6 +318,7 @@
       "product": "Products/iOS.app",
       "product-type": "application",
       "dependencies": [
+        "Check Package Updates",
         { "kind": "package", "package": "SwiftLintPlugins", "product-name": "SwiftLintBuildToolPlugin", "product-type": "build-tool-plugin" },
         "Widgets",
       ],
